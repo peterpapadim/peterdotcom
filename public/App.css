@@ -11,6 +11,10 @@ body {
     font-family: avenir;
 }
 
+.navDots-container{
+  height: 50%;
+}
+
 .navDots{
   float: right;
   position: relative;
@@ -29,16 +33,22 @@ body {
   background-repeat: no-repeat;
 }
 
+
+.arrow-container{
+  text-align: right;
+}
+
 .arrow{
-  float: right;
-  padding-right: 25px;
+  /*float: right;*/
+  margin-right: 10%;
 }
 
 .arrow:hover{
   cursor: pointer;
   background-image: url('down_white_hovered.svg');
   background-repeat: no-repeat;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  /*padding-right: 12px;*/
 }
 
 

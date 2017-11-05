@@ -52,9 +52,11 @@ class Intro extends Component {
           </div>
           {this.navDots()}
         </div>
-        <div className="row arrow">
-          <img src={Arrow}
-            onClick={() => this.handleDotClick("about-container")} />
+        <div className="row">
+          <div className="arrow-container col-12">
+            <img className="arrow" src={Arrow}
+              onClick={() => this.handleDotClick("about-container")} />
+          </div>
         </div>
       </div>
     )
