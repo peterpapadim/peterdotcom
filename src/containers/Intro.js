@@ -11,7 +11,7 @@ class Intro extends Component {
   navDots = () => {
     return(
       <div className="col-6">
-        <div className="navDots">
+        <div className="navDots-intro">
           <div className="row navDot">
             <img src={NavdotActive} />
           </div>
@@ -26,7 +26,6 @@ class Intro extends Component {
             <img src={NavdotInactive} />
           </div>
         </div>
-
       </div>
     )
   }

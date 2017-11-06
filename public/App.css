@@ -9,13 +9,14 @@
 
 body {
     font-family: avenir;
+    color: white;
 }
 
 .navDots-container{
   height: 50%;
 }
 
-.navDots{
+.navDots-intro{
   float: right;
   position: relative;
   top: 50%;
@@ -23,8 +24,16 @@ body {
   margin-right: 15px;
 }
 
+.navDots-about{
+  float: right;
+  position: relative;
+  top: 15%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+}
+
 .navDot{
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .navDot:hover{
@@ -75,27 +84,39 @@ body {
   margin-top: 300px;
   margin-left: 30px;
   bottom: 0;
-  font-size: 4vh;
+  font-size: 3.5vh;
 }
 
 
 #about-container{
   width: 100%;
   height:100vh;
+  background-image: url('header2_gradient.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.title-container{
-  height: 25%;
+#headshot-container{
+  /*background: black;*/
+  height: 42.5%;
 }
 
-.title{
-  color: blue;
-  width: 150px;
-  border: 3px solid blue;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  padding-bottom: 10px;
-  margin-left: 30px;
-  margin-top: 50px;
+#headshot{
+  max-width: 40vh;
+  padding-top: 20%;
+  padding-left: 15%;
+}
+
+#bio-container{
+  height: 42.5%;
+  /*background: green;*/
+}
+
+#bio{
+  margin-top: 10%;
+  padding-left: 10%;
+  font-size: 2.1vh;
+  position: relative;
+  top: 20%;
+  transform: translateY(-25%);
 }
