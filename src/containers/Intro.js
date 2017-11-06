@@ -4,13 +4,14 @@ import { IntroBlurb } from '../components/IntroBlurb';
 import NavdotInactive from '../assets/navdot_inactive_white.svg';
 import NavdotActive from '../assets/navdot_active_white.svg';
 import Arrow from '../assets/down_white.svg';
+import Rocket from '../assets/rocket_icon.svg';
 var smoothScroll = require('smoothscroll');
 
 class Intro extends Component {
 
   navDots = () => {
     return(
-      <div className="col-6">
+      <div className="col-2">
         <div className="navDots-intro">
           <div className="row navDot">
             <img src={NavdotActive} />
@@ -46,8 +47,11 @@ class Intro extends Component {
           </div>
         </div>
         <div id="intro-blurb-container" className="row">
-          <div id="intro-blurb-container-content" className="col-6">
+          <div id="intro-blurb-container-content" className="col-5">
             <IntroBlurb />
+          </div>
+          <div className="col-5">
+            <img src={Rocket} id="rocket-icon"/>
           </div>
           {this.navDots()}
         </div>
