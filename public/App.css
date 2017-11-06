@@ -32,6 +32,14 @@ body {
   margin-right: 15px;
 }
 
+.navDots-skills{
+  float: right;
+  position: relative;
+  top: 15%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+}
+
 .navDot{
   margin-bottom: 7px;
 }
@@ -81,9 +89,10 @@ body {
 }
 
 #rocket-icon{
-  max-width: 100%;
-  padding-left: 60%;
-  padding-top: 20%;
+  max-width: 80%;
+  float: right;
+  padding-right: 10%;
+  padding-top: 10%;
 }
 
 #intro-blurb-container{
@@ -97,6 +106,11 @@ body {
   bottom: 0;
   font-size: 4.2vh;
 }
+
+
+
+
+
 
 
 #about-container{
@@ -130,4 +144,47 @@ body {
   position: relative;
   top: 20%;
   transform: translateY(-25%);
+}
+
+
+
+
+
+
+#skills-container{
+  width: 100%;
+  height:100vh;
+  background-image: url('header_gradient.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#protractor-icon-container{
+  height: 45%;
+}
+
+#protractor-icon{
+  max-width: 75%;
+  float: right;
+  padding-right: 5%;
+  padding-top: 20%;
+}
+
+#my-skills-container{
+  height: 40%;
+}
+
+#tech-skills-container{
+  margin-left: 25px;
+  margin-right: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+#skills-title{
+  font-size: 2.0vh;
+}
+
+#skills-list{
+  font-size: 4.2vh;
 }

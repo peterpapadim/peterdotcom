@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Intro from './containers/Intro';
 import About from './containers/About';
-var smoothScroll = require('smoothscroll');
+import Skills from './containers/Skills';
+// var smoothScroll = require('smoothscroll');
 
 class App extends Component {
 
@@ -33,6 +34,7 @@ class App extends Component {
       <div id="App" className="App">
         <Intro />
         <About />
+        <Skills />
       </div>
     );
   }

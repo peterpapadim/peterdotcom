@@ -18,10 +18,11 @@ class Intro extends Component {
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
-            onClick={() => this.handleDotClick("about-container")}/>
+            onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotInactive} />
+            <img src={NavdotInactive}
+            onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive} />

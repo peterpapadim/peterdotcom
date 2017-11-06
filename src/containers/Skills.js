@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import { Bio } from '../components/Bio';
-import Headshot from '../assets/peter_headshot.png';
+import { TechSkills } from '../components/TechSkills';
+import Arrow from '../assets/down_white.svg';
+import Protractor from '../assets/protractor_icon.svg'
 import NavdotInactive from '../assets/navdot_inactive_white.svg';
 import NavdotActive from '../assets/navdot_active_white.svg';
-import Arrow from '../assets/down_white.svg';
 var smoothScroll = require('smoothscroll');
 
-class About extends Component {
+class Skills extends Component {
+
+  handleDotClick = (id) => {
+    let element = document.getElementById(id)
+    smoothScroll(element, 1000)
+  }
 
   navDots = () => {
     return(
       <div className="col-2">
-        <div className="navDots-about">
+        <div className="navDots-skills">
           <div className="row navDot">
             <img src={NavdotInactive}
             onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotActive} />
+            <img src={NavdotInactive}
+            onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotInactive}
+            <img src={NavdotActive}
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
@@ -31,25 +37,21 @@ class About extends Component {
     )
   }
 
-  handleDotClick = (id) => {
-    let element = document.getElementById(id)
-    smoothScroll(element, 1000)
-  }
-
-
   render(){
     return(
-      <div id="about-container" className="container-fluid">
-        <div className="row" id="headshot-container">
+      <div className="container-fluid" id="skills-container">
+        <div className="row" id="protractor-icon-container">
           <div className="col-4">
-              <img id="headshot"src={Headshot} />
+          </div>
+          <div className="col-6">
+            <img src={Protractor} alt="protractor-icon" id="protractor-icon"/>
+          </div>
+          <div className="col-2">
           </div>
         </div>
-        <div id="bio-container" className="row">
+        <div className="row" id="my-skills-container">
           <div className="col-10">
-            <div id="bio">
-              <Bio />
-            </div>
+            <TechSkills />
           </div>
           {this.navDots()}
         </div>
@@ -64,4 +66,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Skills
