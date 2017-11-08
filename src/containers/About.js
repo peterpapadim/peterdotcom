@@ -17,14 +17,16 @@ class About extends Component {
             onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotActive} />
+            <img src={NavdotActive}
+            onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotInactive} />
+            <img src={NavdotInactive}
+            onClick={() => this.handleDotClick("projects-container")} />
           </div>
         </div>
       </div>

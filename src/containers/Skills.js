@@ -30,7 +30,8 @@ class Skills extends Component {
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotInactive} />
+            <img src={NavdotInactive}
+            onClick={() => this.handleDotClick("projects-container")} />
           </div>
         </div>
       </div>
@@ -58,7 +59,7 @@ class Skills extends Component {
         <div className="row">
           <div className="arrow-container col-12">
             <img className="arrow" src={Arrow}
-              onClick={() => this.handleDotClick("skills-container")} />
+              onClick={() => this.handleDotClick("projects-container")} />
           </div>
         </div>
       </div>

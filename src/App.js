@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Intro from './containers/Intro';
 import About from './containers/About';
 import Skills from './containers/Skills';
+import Projects from './containers/Projects';
 // var smoothScroll = require('smoothscroll');
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
         <Intro />
         <About />
         <Skills />
+        <Projects />
       </div>
     );
   }

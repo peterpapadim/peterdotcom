@@ -14,7 +14,8 @@ class Intro extends Component {
       <div className="col-2">
         <div className="navDots-intro">
           <div className="row navDot">
-            <img src={NavdotActive} />
+            <img src={NavdotActive}
+            onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
@@ -25,7 +26,8 @@ class Intro extends Component {
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
-            <img src={NavdotInactive} />
+            <img src={NavdotInactive}
+            onClick={() => this.handleDotClick("projects-container")} />
           </div>
         </div>
       </div>
