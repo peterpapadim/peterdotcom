@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="714px" height="447px" viewBox="0 0 714 447" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="75.775309%" y1="93.1545957%" x2="-21.6600906%" y2="-50.0986202%" id="linearGradient-1">
+            <stop stop-color="#FA709A" offset="0%"></stop>
+            <stop stop-color="#FEE140" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="714.122449" height="446.458634"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="peetrdotcom-alt-copy-3" transform="translate(-726.000000, -3161.000000)">
+            <g id="pageclub" transform="translate(726.000000, 3161.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

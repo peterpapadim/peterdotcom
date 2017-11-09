@@ -193,36 +193,101 @@ body {
 
 
 
-#projects-container{
+.projects-container{
   width: 100%;
   height:100vh;
+  border: 2.0px solid white;
+  border-top: 5px solid white;
+  border-left: 1.5px solid white;
 }
 
 .projects-left{
-  /*background-image: url('reelsquad_background.svg');
+  background-image: url('background_reelsquad.svg');
   background-repeat: no-repeat;
-  background-size: cover;*/
-  /*border-left: 5px solid white;*/
-  background: lightpink;
+  background-size: cover;
+  text-align: center;
   height: 100vh;
+  border-left: 5.0px solid white;
+  border-right: 5.0px solid white;
+  border-top: 5.0px solid white;
+  border-bottom: 5.0px solid white;
 }
 
-.reelsquad{
-  max-width: 100%;
+#reelsquad-project-container{
+  height: 65vh;
+}
+
+#reelsquad-project-text{
+  height: 35vh;
+}
+
+#reelsquad{
+  max-width: 90%;
+  position: relative;
+  top: 55%;
+  transform: translateY(-50%);
+  padding-top: 30vh;
+}
+
+#reelsquad-text{
+  width: 45%;
 }
 
 .projects-right{
-  /*background: black;*/
+  border-left: 5.0px solid white;
+  border-right: 5.0px solid white;
 }
 
-.slot-1{
-  /*border-bottom: 2.5px solid white;*/
+.codepeter{
+  background-image: url('background_codepeter.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 50vh;
-  background: lightblue;
+  text-align: center;
+  border-bottom: 5.0px solid white;
+  border-top: 5.0px solid white;
 }
 
-.slot-2{
-  /*border-top: 2.5px solid white;*/
+#codepeter{
+  max-width: 50%;
+  position: relative;
+  top: 50%;
+  right: 14%;
+  transform: translateY(-50%);
+}
+
+.pageclub{
+  background-image: url('background_pageclub.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 50vh;
-  background: lightgreen;
+  text-align: left;
+  border-top: 5.0px solid white;
+  border-bottom: 5.0px solid white;
+}
+
+#pageclub{
+  max-width: 60%;
+  position: relative;
+  top: 50%;
+  left: 9%;
+  transform: translateY(-50%);
+}
+
+.instalytics{
+  background-image: url('background_instalytics.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  text-align: left;
+  border-top: 5.0px solid white;
+  border-bottom: 5.0px solid white;
+}
+
+#instalytics{
+  max-width: 66%;
+  position: relative;
+  top: 60%;
+  left: 12%;
+  transform: translateY(-50%);
 }
