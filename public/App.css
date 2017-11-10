@@ -218,7 +218,7 @@ body {
 }
 
 #reelsquad-project-text{
-  height: 35vh;
+  height: 15vh;
 }
 
 #reelsquad{
@@ -291,3 +291,42 @@ body {
   left: 12%;
   transform: translateY(-50%);
 }
+
+
+
+.demo-button-container{
+  height: 20vh;
+}
+
+.demo-button{
+  max-width: 10vh;
+}
+
+#demo-button-pageclub{
+  float: right;
+  position: relative;
+  padding-right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#demo-button-instalytics{
+  float: right;
+  position: relative;
+  padding-right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.demo-button:hover{
+  max-width: 10vh;
+  background-image: url('button_viewdemo_hovered.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+/*.demo-button-hovered{
+  max-width: 20vh;
+}*/
