@@ -213,6 +213,18 @@ body {
   border-bottom: 5.0px solid white;
 }
 
+.layover{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-image: url('mockup_shadow.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #reelsquad-project-container{
   height: 65vh;
 }

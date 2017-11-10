@@ -15,18 +15,46 @@ class Projects extends Component{
   constructor(){
     super();
     this.state = {
-      // hovered: false,
+      reelsquadHovered: false,
+      pageclubHovered: false,
+      instalyticsHovered: false,
       buttonHovered: false
     }
   }
-  //
-  // setHoverOver = () => {
-  //   this.setState({ hovered: true })
-  // }
-  //
-  // setHoverOut = () => {
-  //   this.setState({ hovered: false })
-  // }
+
+  setHoverOver = (project) => {
+    switch(project){
+      case "reelsquad":
+        this.setState({ reelsquadHovered: true })
+        break
+      case "pageclub":
+        this.setState({ pageclubHovered: true })
+        break
+      case "instalytics":
+        this.setState({ instalyticsHovered: true })
+        break
+    }
+  }
+
+  setHoverOut = (project) => {
+    switch(project){
+      case "reelsquad":
+        this.setState({ reelsquadHovered: false })
+        break
+      case "pageclub":
+        this.setState({ pageclubHovered: false })
+        break
+      case "instalytics":
+        this.setState({ instalyticsHovered: false })
+        break
+    }
+  }
+
+  showLayover = (projectHovered) => {
+    if(projectHovered){
+      return <div className="layover"></div>
+    }
+  }
 
   setButtonHoverOver = () => {
     this.setState({ buttonHovered: true })
@@ -53,7 +81,7 @@ class Projects extends Component{
   render(){
     return(
         <div className="row no-gutters projects-container" id="projects-container">
-          <div className="col-12 col-md-6 projects-left" onMouseOver={this.setHoverOver} onMouseLeave={this.setHoverOut}>
+          <div className="col-12 col-md-6 projects-left" onMouseOver={() => this.setHoverOver("reelsquad")} onMouseLeave={() => this.setHoverOut("reelsquad")}>
             <div className="row no-gutters" id="reelsquad-project-container">
               <div className="col-12">
                 <img src={Reelsquad} alt="reelsquad" id="reelsquad" />
@@ -64,11 +92,7 @@ class Projects extends Component{
                 <img src={ReelsquadText} alt="reelsquad-text" id="reelsquad-text" />
               </div>
             </div>
-            <div className="row no-gutters demo-button-container">
-              <div className="col-12">
-                {this.demoButton(reelsquad)}
-              </div>
-            </div>
+                  {this.showLayover(this.state.reelsquadHovered)}
           </div>
           <div className="col-12 col-md-6 projects-right">
             <div className="row no-gutters">
@@ -77,17 +101,17 @@ class Projects extends Component{
               </div>
             </div>
             <div className="row no-gutters">
-              <div className="col-12 pageclub">
+              <div className="col-12 pageclub" onMouseOver={() => this.setHoverOver("pageclub")} onMouseLeave={() => this.setHoverOut("pageclub")}>
                 <img src={PageClub} alt="pageclub" id="pageclub" />
-                <div id="demo-button-pageclub">{this.demoButton(pageclub)}</div>
+                  {this.showLayover(this.state.pageclubHovered)}
               </div>
             </div>
           </div>
           <div className="col-12 col-md-6 projects-right">
             <div className="row no-gutters">
-              <div className="col-12 instalytics">
+              <div className="col-12 instalytics" onMouseOver={() => this.setHoverOver("instalytics")} onMouseLeave={() => this.setHoverOut("instalytics")}>
                 <img src={Instalytics} alt="instalytics" id="instalytics" />
-                <div id="demo-button-instalytics">{this.demoButton(instalytics)}</div>
+                  {this.showLayover(this.state.instalyticsHovered)}
               </div>
             </div>
           </div>
