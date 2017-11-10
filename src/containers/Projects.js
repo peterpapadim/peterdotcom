@@ -50,9 +50,13 @@ class Projects extends Component{
     }
   }
 
-  showLayover = (projectHovered) => {
+  showLayover = (projectHovered, link) => {
     if(projectHovered){
-      return <div className="layover"></div>
+      return(
+        <div className="layover">
+          {this.demoButton(link)}
+        </div>
+      )
     }
   }
 
@@ -92,7 +96,7 @@ class Projects extends Component{
                 <img src={ReelsquadText} alt="reelsquad-text" id="reelsquad-text" />
               </div>
             </div>
-                  {this.showLayover(this.state.reelsquadHovered)}
+                  {this.showLayover(this.state.reelsquadHovered, reelsquad)}
           </div>
           <div className="col-12 col-md-6 projects-right">
             <div className="row no-gutters">
@@ -103,7 +107,7 @@ class Projects extends Component{
             <div className="row no-gutters">
               <div className="col-12 pageclub" onMouseOver={() => this.setHoverOver("pageclub")} onMouseLeave={() => this.setHoverOut("pageclub")}>
                 <img src={PageClub} alt="pageclub" id="pageclub" />
-                  {this.showLayover(this.state.pageclubHovered)}
+                  {this.showLayover(this.state.pageclubHovered, pageclub)}
               </div>
             </div>
           </div>
@@ -111,7 +115,7 @@ class Projects extends Component{
             <div className="row no-gutters">
               <div className="col-12 instalytics" onMouseOver={() => this.setHoverOver("instalytics")} onMouseLeave={() => this.setHoverOut("instalytics")}>
                 <img src={Instalytics} alt="instalytics" id="instalytics" />
-                  {this.showLayover(this.state.instalyticsHovered)}
+                  {this.showLayover(this.state.instalyticsHovered, instalytics)}
               </div>
             </div>
           </div>

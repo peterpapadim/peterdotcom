@@ -223,6 +223,7 @@ body {
   background-image: url('mockup_shadow.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 #reelsquad-project-container{
@@ -306,32 +307,35 @@ body {
 
 
 
-.demo-button-container{
+/*.demo-button-container{
   height: 20vh;
-}
+}*/
 
 .demo-button{
-  max-width: 10vh;
+  max-width: 15vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-#demo-button-pageclub{
+/*#demo-button-pageclub{
   float: right;
   position: relative;
   padding-right: 3%;
   top: 50%;
   transform: translateY(-50%);
-}
+}*/
 
-#demo-button-instalytics{
+/*#demo-button-instalytics{
   float: right;
   position: relative;
   padding-right: 3%;
   top: 50%;
   transform: translateY(-50%);
-}
+}*/
 
 .demo-button:hover{
-  max-width: 10vh;
+  max-width: 15vh;
   background-image: url('button_viewdemo_hovered.svg');
   background-repeat: no-repeat;
   background-size: cover;
