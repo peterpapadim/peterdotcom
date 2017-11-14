@@ -182,7 +182,7 @@ body {
 }
 
 #skills-title{
-  font-size: 2.0vh;
+  font-size: 2.5vh;
 }
 
 #skills-list{
@@ -193,12 +193,24 @@ body {
 
 
 
-.projects-container{
-  width: 100%;
-  height:100vh;
-  border: 2.0px solid white;
-  border-top: 5px solid white;
-  border-left: 1.5px solid white;
+
+
+#all-projects{
+  height: 150vh;
+}
+
+#projects-container-1{
+  /*height:66.6%;*/
+  /*border: 2.0px solid white;*/
+  /*border-top: 5px solid white;*/
+  /*border-left: 1.5px solid white;*/
+}
+
+#projects-container-2{
+  /*height:33.3%;*/
+  /*border: 2.0px solid white;*/
+  /*border-top: 5px solid white;*/
+  /*border-left: 1.5px solid white;*/
 }
 
 .projects-left{
@@ -207,10 +219,10 @@ body {
   background-size: cover;
   text-align: center;
   height: 100vh;
-  border-left: 5.0px solid white;
-  border-right: 5.0px solid white;
-  border-top: 5.0px solid white;
-  border-bottom: 5.0px solid white;
+  /*border-left: 5.0px solid white;*/
+  /*border-right: 5.0px solid white;*/
+  /*border-top: 5.0px solid white;*/
+  /*border-bottom: 5.0px solid white;*/
 }
 
 .layover{
@@ -247,8 +259,15 @@ body {
 }
 
 .projects-right{
-  border-left: 5.0px solid white;
-  border-right: 5.0px solid white;
+  /*border-left: 0.0px solid white;*/
+  /*border-right: 5.0px solid white;*/
+  height: 100vh;
+}
+
+.projects-left-page-2{
+  /*border-left: 5.0px solid white;*/
+  /*border-right: 5.0px solid white;*/
+  height: 50vh;
 }
 
 .codepeter{
@@ -257,8 +276,8 @@ body {
   background-size: cover;
   height: 50vh;
   text-align: center;
-  border-bottom: 5.0px solid white;
-  border-top: 5.0px solid white;
+  /*border-bottom: 5.0px solid white;*/
+  /*border-top: 5.0px solid white;*/
 }
 
 #codepeter{
@@ -275,8 +294,8 @@ body {
   background-size: cover;
   height: 50vh;
   text-align: left;
-  border-top: 5.0px solid white;
-  border-bottom: 5.0px solid white;
+  /*border-top: 5.0px solid white;*/
+  /*border-bottom: 5.0px solid white;*/
 }
 
 #pageclub{
@@ -293,22 +312,32 @@ body {
   background-size: cover;
   height: 50vh;
   text-align: left;
-  border-top: 5.0px solid white;
-  border-bottom: 5.0px solid white;
+  /*border-top: 2.0px solid white;*/
+  /*border-bottom: 5.0px solid white;*/
 }
 
 #instalytics{
-  max-width: 66%;
+  max-width: 68%;
   position: relative;
   top: 60%;
   left: 12%;
   transform: translateY(-50%);
 }
 
+.blog{
+  background: black;
+  height: 50vh;
+  text-align: left;
+  /*border-top: 2.0px solid white;*/
+  /*border-bottom: 5.0px solid white;*/
+}
 
-
-/*.demo-button-container{
-  height: 20vh;
+/*#blog{
+  max-width: 68%;
+  position: relative;
+  top: 60%;
+  left: 12%;
+  transform: translateY(-50%);
 }*/
 
 .demo-button{
@@ -317,22 +346,6 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
-/*#demo-button-pageclub{
-  float: right;
-  position: relative;
-  padding-right: 3%;
-  top: 50%;
-  transform: translateY(-50%);
-}*/
-
-/*#demo-button-instalytics{
-  float: right;
-  position: relative;
-  padding-right: 3%;
-  top: 50%;
-  transform: translateY(-50%);
-}*/
 
 .demo-button:hover{
   max-width: 15vh;
@@ -343,6 +356,41 @@ body {
 }
 
 
-/*.demo-button-hovered{
-  max-width: 20vh;
+
+
+#contact-me-container{
+  height: 75vh;
+  background: blue;
+}
+
+
+/*#contact-me-and-footer{
+  height: 50vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+#contact-me-container{
+  height: 85%;
+  color: black;
+  font-size: 3.5vh;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#contact-me-empty{
+  height: 5%;
+}
+
+#contact-me-content{
+  height: 95%;
+}
+
+#footer-container{
+  height: 15%;
+  background-image: url('banner_footer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }*/

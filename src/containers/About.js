@@ -26,7 +26,7 @@ class About extends Component {
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
-            onClick={() => this.handleDotClick("projects-container")} />
+            onClick={() => this.handleDotClick("projects-container-1")} />
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ const instalytics = "https://www.dropbox.com/s/ctjdjaar4jae4b8/instalytics_demo.
 
 class Projects extends Component{
 
+
   constructor(){
     super();
     this.state = {
@@ -84,14 +85,17 @@ class Projects extends Component{
 
   render(){
     return(
-        <div className="row no-gutters projects-container" id="projects-container">
+    <div>
+
+      <div className="container-fluid" id="all-projects-page-1">
+        <div className="row" id="projects-container-1">
           <div className="col-12 col-md-6 projects-left" onMouseOver={() => this.setHoverOver("reelsquad")} onMouseLeave={() => this.setHoverOut("reelsquad")}>
-            <div className="row no-gutters" id="reelsquad-project-container">
+            <div className="row" id="reelsquad-project-container">
               <div className="col-12">
                 <img src={Reelsquad} alt="reelsquad" id="reelsquad" />
               </div>
             </div>
-            <div className="row no-gutters" id="reelsquad-project-text">
+            <div className="row" id="reelsquad-project-text">
               <div className="col-12">
                 <img src={ReelsquadText} alt="reelsquad-text" id="reelsquad-text" />
               </div>
@@ -99,27 +103,41 @@ class Projects extends Component{
                   {this.showLayover(this.state.reelsquadHovered, reelsquad)}
           </div>
           <div className="col-12 col-md-6 projects-right">
-            <div className="row no-gutters">
+            <div className="row">
               <div className="col-12 codepeter">
                 <img src={CodePeter} alt="codepeter" id="codepeter" />
               </div>
             </div>
-            <div className="row no-gutters">
+            <div className="row">
               <div className="col-12 pageclub" onMouseOver={() => this.setHoverOver("pageclub")} onMouseLeave={() => this.setHoverOut("pageclub")}>
                 <img src={PageClub} alt="pageclub" id="pageclub" />
                   {this.showLayover(this.state.pageclubHovered, pageclub)}
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-6 projects-right">
-            <div className="row no-gutters">
+        </div>
+      </div>
+      <div className="container-fluid" id="all-projects-page-2">
+        <div className="row" id="projects-container-2">
+          <div className="col-12 col-md-6 projects-right-page-2">
+            <div className="row">
               <div className="col-12 instalytics" onMouseOver={() => this.setHoverOver("instalytics")} onMouseLeave={() => this.setHoverOut("instalytics")}>
                 <img src={Instalytics} alt="instalytics" id="instalytics" />
                   {this.showLayover(this.state.instalyticsHovered, instalytics)}
               </div>
             </div>
           </div>
+          <div className="col-12 col-md-6 projects-right-page-2">
+            <div className="row">
+              <div className="col-12 blog">
+
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+    </div>
     )
   }
 

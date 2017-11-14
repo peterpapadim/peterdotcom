@@ -3,32 +3,9 @@ import Intro from './containers/Intro';
 import About from './containers/About';
 import Skills from './containers/Skills';
 import Projects from './containers/Projects';
-// var smoothScroll = require('smoothscroll');
+import ContactMe from './containers/ContactMe';
 
 class App extends Component {
-
-  // constructor(){
-  //   super();
-  //   this.state = {
-  //     currentPage: "intro-container",
-  //     currentHeight: 0
-  //   }
-  // }
-
-  // componentDidMount(){
-  //
-  // }
-
-  // handleScroll = () => {
-    // console.log(window.scrollY)
-    // let element = document.getElementById("about-container")
-    // smoothScroll(element)
-
-
-  // handleWheel = () => {
-  //   let element = document.getElementById("intro-container")
-  //   smoothScroll(element, 1000)
-  // }
 
   render() {
     return (
@@ -37,6 +14,7 @@ class App extends Component {
         <About />
         <Skills />
         <Projects />
+        <ContactMe />
       </div>
     );
   }
