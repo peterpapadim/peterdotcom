@@ -302,7 +302,7 @@ body {
 
 .instalytics{
   background-image: url('background_instalytics.svg');
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
   height: 50vh;
   text-align: left;
