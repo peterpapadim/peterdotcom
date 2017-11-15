@@ -5,6 +5,7 @@ import PageClub from '../assets/mockup_pageclub.png';
 import Instalytics from '../assets/mockup_instalytics.png';
 import ReelsquadText from '../assets/reelsquad_text.svg';
 import DemoButton from '../assets/button_viewdemo.svg';
+import Line from '../assets/line.svg';
 
 const reelsquad = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
 const pageclub = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
@@ -130,7 +131,28 @@ class Projects extends Component{
           <div className="col-12 col-md-6 projects-right-page-2">
             <div className="row">
               <div className="col-12 blog">
-
+                <div className="row" id="blog-title-container">
+                  <div id="blog-title">BLOG</div>
+                </div>
+                <div className="row" id="blog-brand-line-container">
+                  <div className="col-4">
+                    <img id="blog-brand-line" src={Line} alt="blog-brand-line" />
+                  </div>
+                </div>
+                <div className="row" id="blog-post-container">
+                  <div className="col-8">
+                    <p id="blog-post-title">
+                      Facebook Authorization in a React App
+                    </p>
+                  </div>
+                </div>
+                <div className="row" id="blog-post-content-container">
+                  <div className="col-11">
+                    <p id="blog-post-content">
+                      The Facebook API documentation is a great source of information for accomplishing most Facebook partnered related tasks.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
