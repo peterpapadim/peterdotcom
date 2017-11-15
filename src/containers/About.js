@@ -10,7 +10,7 @@ class About extends Component {
 
   navDots = () => {
     return(
-      <div className="col-2">
+      <div className="col-3">
         <div className="navDots-about">
           <div className="row navDot">
             <img src={NavdotInactive}
@@ -48,7 +48,7 @@ class About extends Component {
           </div>
         </div>
         <div id="bio-container" className="row">
-          <div className="col-10">
+          <div className="col-9">
             <div id="bio">
               <Bio />
             </div>

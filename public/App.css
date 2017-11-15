@@ -1,7 +1,3 @@
-/*body {
-  overflow: hidden;
-}*/
-
 @font-face {
     font-family: avenir;
     src: url(avenir_next_regular.otf);
@@ -11,6 +7,12 @@ body {
     font-family: avenir;
     color: white;
 }
+
+
+
+/*                                        Shared Nav Dot Styling                                          */
+
+
 
 .navDots-container{
   height: 50%;
@@ -51,13 +53,18 @@ body {
 }
 
 
+
+/*                                        Shared Arrow Styling                                          */
+
+
+
 .arrow-container{
   text-align: right;
 }
 
 .arrow{
-  /*float: right;*/
   margin-right: 10%;
+  padding-right: 1%;
 }
 
 .arrow:hover{
@@ -65,8 +72,13 @@ body {
   background-image: url('down_white_hovered.svg');
   background-repeat: no-repeat;
   padding-bottom: 12px;
-  /*padding-right: 12px;*/
 }
+
+
+
+
+/*                                        Intro Styling                                          */
+
 
 
 #intro-container{
@@ -110,7 +122,7 @@ body {
 
 
 
-
+/*                                        About Styling                                          */
 
 
 
@@ -123,7 +135,6 @@ body {
 }
 
 #headshot-container{
-  /*background: black;*/
   height: 42.5%;
 }
 
@@ -135,11 +146,10 @@ body {
 
 #bio-container{
   height: 42.5%;
-  /*background: green;*/
 }
 
 #bio{
-  margin-top: 10%;
+  margin-top: 15%;
   padding-left: 10%;
   font-size: 2.1vh;
   position: relative;
@@ -149,6 +159,7 @@ body {
 
 
 
+/*                                        Skills Styling                                          */
 
 
 
@@ -193,27 +204,13 @@ body {
 
 
 
-
+/*                                        Projects Styling                                          */
 
 
 
 #all-projects{
   height: 150vh;
   width: 100vw;
-}
-
-#projects-container-1{
-  /*height:66.6%;*/
-  /*border: 2.0px solid white;*/
-  /*border-top: 5px solid white;*/
-  /*border-left: 1.5px solid white;*/
-}
-
-#projects-container-2{
-  /*height:33.3%;*/
-  /*border: 2.0px solid white;*/
-  /*border-top: 5px solid white;*/
-  /*border-left: 1.5px solid white;*/
 }
 
 .projects-left{
@@ -223,10 +220,6 @@ body {
   text-align: center;
   height: 100vh;
   border: 5px solid white;
-  /*border-left: 5.0px solid white;*/
-  /*border-right: 5.0px solid white;*/
-  /*border-top: 5.0px solid white;*/
-  /*border-bottom: 5.0px solid white;*/
 }
 
 .layover{
@@ -264,14 +257,10 @@ body {
 }
 
 .projects-right{
-  /*border-left: 0.0px solid white;*/
-  /*border-right: 5.0px solid white;*/
   height: 100vh;
 }
 
 .projects-left-page-2{
-  /*border-left: 5.0px solid white;*/
-  /*border-right: 5.0px solid white;*/
   height: 50vh;
 }
 
@@ -282,8 +271,6 @@ body {
   height: 50vh;
   text-align: center;
   border: 5px solid white;
-  /*border-bottom: 5.0px solid white;*/
-  /*border-top: 5.0px solid white;*/
 }
 
 #codepeter{
@@ -302,8 +289,6 @@ body {
   height: 50vh;
   text-align: left;
   border: 5px solid white;
-  /*border-top: 5.0px solid white;*/
-  /*border-bottom: 5.0px solid white;*/
 }
 
 #pageclub{
@@ -322,8 +307,6 @@ body {
   height: 50vh;
   text-align: left;
   border: 5px solid white;
-  /*border-top: 2.0px solid white;*/
-  /*border-bottom: 5.0px solid white;*/
 }
 
 #instalytics{
@@ -341,8 +324,6 @@ body {
   border: 5px solid white;
   padding-left: 8%;
   padding-top: 2%;
-  /*border-top: 2.0px solid white;*/
-  /*border-bottom: 5.0px solid white;*/
 }
 
 #blog-title-container{
@@ -356,10 +337,6 @@ body {
   position: absolute;
   bottom: 0;
   font-size: 3vh;
-}
-
-#blog-brand-line{
-  /*max-width: 100%;*/
 }
 
 #blog-post-container{
@@ -412,14 +389,6 @@ body {
   text-decoration: underline;
 }
 
-/*#blog{
-  max-width: 68%;
-  position: relative;
-  top: 60%;
-  left: 12%;
-  transform: translateY(-50%);
-}*/
-
 .demo-button{
   max-width: 15vh;
   position: relative;
@@ -435,6 +404,8 @@ body {
   cursor: pointer;
 }
 
+
+/*                                        Contact Me Styling                                          */
 
 
 
@@ -483,6 +454,10 @@ body {
 }
 
 
+/*                                        Footer Styling                                          */
+
+
+
 #footer-container{
   width: 100vw;
   height: 10vh;
@@ -492,7 +467,6 @@ body {
 #footer{
   height: 100%;
   background-image: url('banner_footer.svg');
-  /*background-repeat: no-repeat;*/
   background-size: cover;
 }
 
@@ -556,34 +530,3 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/*#contact-me-and-footer{
-  height: 50vh;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-
-#contact-me-container{
-  height: 85%;
-  color: black;
-  font-size: 3.5vh;
-  text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-#contact-me-empty{
-  height: 5%;
-}
-
-#contact-me-content{
-  height: 95%;
-}
-
-#footer-container{
-  height: 15%;
-  background-image: url('banner_footer.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
