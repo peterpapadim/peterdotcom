@@ -10,6 +10,7 @@ import Line from '../assets/line.svg';
 const reelsquad = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
 const pageclub = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
 const instalytics = "https://www.dropbox.com/s/ctjdjaar4jae4b8/instalytics_demo.mov?dl=0"
+const facebookBlogPost = "https://medium.com/front-end-hacking/facebook-authorization-in-a-react-app-b7a9176aacb6"
 
 class Projects extends Component{
 
@@ -72,6 +73,10 @@ class Projects extends Component{
 
   openDemo = (link) => {
     window.open(link)
+  }
+
+  handleReadMoreClick = () => {
+    window.open(facebookBlogPost)
   }
 
   demoButton = (link) => {
@@ -147,9 +152,18 @@ class Projects extends Component{
                   </div>
                 </div>
                 <div className="row" id="blog-post-content-container">
-                  <div className="col-11">
+                  <div className="col-9">
                     <p id="blog-post-content">
                       The Facebook API documentation is a great source of information for accomplishing most Facebook partnered related tasks.
+                    </p>
+                  </div>
+                </div>
+                <div className="row" id="read-more-container">
+                  <div className="col-7">
+                  </div>
+                  <div className="col-5">
+                    <p id="read-more" onClick={this.handleReadMoreClick}>
+                      Read More →
                     </p>
                   </div>
                 </div>

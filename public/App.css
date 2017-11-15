@@ -333,6 +333,8 @@ body {
   height: 50vh;
   text-align: left;
   border: 5px solid white;
+  padding-left: 8%;
+  padding-top: 2%;
   /*border-top: 2.0px solid white;*/
   /*border-bottom: 5.0px solid white;*/
 }
@@ -365,20 +367,43 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  padding-top: 15%;
 }
 
 
 #blog-post-content-container{
-  height: 25%;
+  height: 30%;
+  padding-top: 5%;
 }
 
 
 #blog-post-content{
   color: black;
-  font-size: 2vh;
+  font-size: 1.7vh;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  padding-top: 8%;
+}
+
+#read-more-container{
+  height: 25%;
+  text-align: right;
+}
+
+#read-more{
+  color: black;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2vh;
+  font-weight: 600;
+  padding-right: 15%;
+}
+
+#read-more:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /*#blog{
@@ -425,12 +450,47 @@ body {
   max-width: 100%;
 }
 
+#contact-me-content-container{
+  height: 60%;
+  text-align: left;
+}
+
+
+#contact-me-content{
+  color: black;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4vh;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+#contact-me-button{
+  border-bottom: 2px solid black;
+}
+
+#contact-me-button:hover{
+  cursor: pointer;
+  font-weight: 500;
+}
+
 
 #footer-container{
   width: 100vw;
   height: 10vh;
-  background: red;
+  padding-left: 0px;
 }
+
+#footer{
+  height: 100%;
+  background-image: url('banner_footer.svg');
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+}
+
+
 
 
 /*#contact-me-and-footer{
