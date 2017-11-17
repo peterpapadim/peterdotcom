@@ -19,18 +19,22 @@ class Skills extends Component {
         <div className="navDots-skills">
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotActive}
+            alt="navdot"
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("projects-container-1")} />
           </div>
         </div>
@@ -59,6 +63,7 @@ class Skills extends Component {
         <div className="row">
           <div className="arrow-container col-12">
             <img className="arrow" src={Arrow}
+              alt="arrow-icon"
               onClick={() => this.handleDotClick("projects-container-1")} />
           </div>
         </div>

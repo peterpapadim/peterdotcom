@@ -389,16 +389,36 @@ body {
   text-decoration: underline;
 }
 
-.demo-button{
-  max-width: 15vh;
+#button-container{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.demo-button:hover{
+.project-button{
+  max-width: 15vh;
+  margin-top: 30px;
+}
+
+#demo-button:hover{
   max-width: 15vh;
   background-image: url('button_viewdemo_hovered.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#frontend-button:hover{
+  max-width: 15vh;
+  background-image: url('button_frontend_hovered.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#backend-button:hover{
+  max-width: 15vh;
+  background-image: url('button_backend_hovered.svg');
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;

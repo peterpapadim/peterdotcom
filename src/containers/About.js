@@ -14,18 +14,22 @@ class About extends Component {
         <div className="navDots-about">
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotActive}
+            alt="navdot"
             onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("projects-container-1")} />
           </div>
         </div>
@@ -44,7 +48,7 @@ class About extends Component {
       <div id="about-container" className="container-fluid">
         <div className="row" id="headshot-container">
           <div className="col-4">
-              <img id="headshot"src={Headshot} />
+              <img id="headshot"src={Headshot} alt="headshot"/>
           </div>
         </div>
         <div id="bio-container" className="row">
@@ -58,7 +62,7 @@ class About extends Component {
         <div className="row">
           <div className="arrow-container col-12">
             <img className="arrow" src={Arrow}
-              onClick={() => this.handleDotClick("skills-container")} />
+              alt="arrow-icon" onClick={() => this.handleDotClick("skills-container")} />
           </div>
         </div>
       </div>

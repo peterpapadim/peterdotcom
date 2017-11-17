@@ -5,11 +5,24 @@ import PageClub from '../assets/mockup_pageclub.png';
 import Instalytics from '../assets/mockup_instalytics.png';
 import ReelsquadText from '../assets/reelsquad_text.svg';
 import DemoButton from '../assets/button_viewdemo.svg';
+import FrontendButton from '../assets/button_frontend.svg';
+import BackendButton from '../assets/button_backend.svg';
 import Line from '../assets/line.svg';
 
-const reelsquad = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
-const pageclub = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
-const instalytics = "https://www.dropbox.com/s/ctjdjaar4jae4b8/instalytics_demo.mov?dl=0"
+const reelsquadDemo = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
+const reelsquadFrontend = "https://github.com/peterpapadim/reelsquad"
+const reelsquadBackend = "https://github.com/peterpapadim/reelsquad-api"
+
+const codepeterFrontend = "https://github.com/peterpapadim/peterdotcom"
+
+const pageclubDemo = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
+const pageclubFrontend = "https://github.com/peterpapadim/pageclub"
+const pageclubBackend = "https://github.com/peterpapadim/pageclub-api"
+
+const instalyticsDemo = "https://www.dropbox.com/s/ctjdjaar4jae4b8/instalytics_demo.mov?dl=0"
+const instalyticsFrontend = "https://github.com/peterpapadim/instalytics-fe"
+const instalyticsBackend = "https://github.com/cwooley/Instalytics-Api"
+
 const facebookBlogPost = "https://medium.com/front-end-hacking/facebook-authorization-in-a-react-app-b7a9176aacb6"
 
 class Projects extends Component{
@@ -21,6 +34,7 @@ class Projects extends Component{
       reelsquadHovered: false,
       pageclubHovered: false,
       instalyticsHovered: false,
+      codepeterHovered: false,
       buttonHovered: false
     }
   }
@@ -36,6 +50,11 @@ class Projects extends Component{
       case "instalytics":
         this.setState({ instalyticsHovered: true })
         break
+      case "codepeter":
+        this.setState({ codepeterHovered: true })
+        break
+      default:
+        break
     }
   }
 
@@ -50,14 +69,19 @@ class Projects extends Component{
       case "instalytics":
         this.setState({ instalyticsHovered: false })
         break
+      case "codepeter":
+        this.setState({ codepeterHovered: false })
+        break
+      default:
+        break
     }
   }
 
-  showLayover = (projectHovered, link) => {
+  showLayover = (projectHovered, demoLink, frontendLink, backendLink) => {
     if(projectHovered){
       return(
         <div className="layover">
-          {this.demoButton(link)}
+          {this.demoButton(demoLink, frontendLink, backendLink)}
         </div>
       )
     }
@@ -79,14 +103,45 @@ class Projects extends Component{
     window.open(facebookBlogPost)
   }
 
-  demoButton = (link) => {
-    return <img src={DemoButton}
-                alt="DemoButton"
-                className="demo-button"
-                onMouseOver={this.setButtonHoverOver}
-                onMouseLeave={this.setButtonHoverOut}
-                onClick={() => this.openDemo(link)}
-            />
+  demoButton = (demoLink, frontendLink, backendLink) => {
+    return <div id="button-container">
+              <div>
+                { demoLink ?
+                <img src={DemoButton}
+                    alt="demo-button"
+                    id="demo-button"
+                    className="project-button"
+                    onMouseOver={this.setButtonHoverOver}
+                    onMouseLeave={this.setButtonHoverOut}
+                    onClick={() => this.openDemo(demoLink)}
+                />
+                : null }
+              </div>
+              <div>
+                { frontendLink ?
+                <img src={FrontendButton}
+                    alt="frontend-button"
+                    id="frontend-button"
+                    className="project-button"
+                    onMouseOver={this.setButtonHoverOver}
+                    onMouseLeave={this.setButtonHoverOut}
+                    onClick={() => this.openDemo(frontendLink)}
+                />
+                : null }
+              </div>
+              <div>
+                { backendLink ?
+                <img src={BackendButton}
+                    alt="backend-button"
+                    id="backend-button"
+                    className="project-button"
+                    onMouseOver={this.setButtonHoverOver}
+                    onMouseLeave={this.setButtonHoverOut}
+                    onClick={() => this.openDemo(backendLink)}
+                />
+                : null }
+            </div>
+          </div>
   }
 
   render(){
@@ -106,18 +161,19 @@ class Projects extends Component{
                 <img src={ReelsquadText} alt="reelsquad-text" id="reelsquad-text" />
               </div>
             </div>
-                  {this.showLayover(this.state.reelsquadHovered, reelsquad)}
+                  {this.showLayover(this.state.reelsquadHovered, reelsquadDemo, reelsquadFrontend, reelsquadBackend)}
           </div>
           <div className="col-12 col-md-6 projects-right">
             <div className="row">
-              <div className="col-12 codepeter">
+              <div className="col-12 codepeter" onMouseOver={() => this.setHoverOver("codepeter")} onMouseLeave={() => this.setHoverOut("codepeter")}>
                 <img src={CodePeter} alt="codepeter" id="codepeter" />
+                  {this.showLayover(this.state.codepeterHovered, null, codepeterFrontend, null)}
               </div>
             </div>
             <div className="row">
               <div className="col-12 pageclub" onMouseOver={() => this.setHoverOver("pageclub")} onMouseLeave={() => this.setHoverOut("pageclub")}>
                 <img src={PageClub} alt="pageclub" id="pageclub" />
-                  {this.showLayover(this.state.pageclubHovered, pageclub)}
+                  {this.showLayover(this.state.pageclubHovered, pageclubDemo, pageclubFrontend, pageclubBackend)}
               </div>
             </div>
           </div>
@@ -129,7 +185,7 @@ class Projects extends Component{
             <div className="row">
               <div className="col-12 instalytics" onMouseOver={() => this.setHoverOver("instalytics")} onMouseLeave={() => this.setHoverOut("instalytics")}>
                 <img src={Instalytics} alt="instalytics" id="instalytics" />
-                  {this.showLayover(this.state.instalyticsHovered, instalytics)}
+                  {this.showLayover(this.state.instalyticsHovered, instalyticsDemo, instalyticsFrontend, instalyticsBackend)}
               </div>
             </div>
           </div>

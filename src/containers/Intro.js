@@ -15,18 +15,22 @@ class Intro extends Component {
         <div className="navDots-intro">
           <div className="row navDot">
             <img src={NavdotActive}
+            alt="navdot"
             onClick={() => this.handleDotClick("intro-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("about-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("skills-container")} />
           </div>
           <div className="row navDot">
             <img src={NavdotInactive}
+            alt="navdot"
             onClick={() => this.handleDotClick("projects-container-1")} />
           </div>
         </div>
@@ -54,13 +58,14 @@ class Intro extends Component {
             <IntroBlurb />
           </div>
           <div className="col-5">
-            <img src={Rocket} id="rocket-icon"/>
+            <img src={Rocket} id="rocket-icon" alt="rocket-icon"/>
           </div>
           {this.navDots()}
         </div>
         <div className="row">
           <div className="arrow-container col-12">
             <img className="arrow" src={Arrow}
+              alt="arrow-icon"
               onClick={() => this.handleDotClick("about-container")} />
           </div>
         </div>
