@@ -203,7 +203,7 @@ class Projects extends Component{
                 <div className="row" id="blog-post-container">
                   <div className="col-8">
                     <p id="blog-post-title">
-                      Facebook Authorization in a React App
+                      Facebook Authentication in a React App
                     </p>
                   </div>
                 </div>
