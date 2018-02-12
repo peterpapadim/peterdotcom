@@ -8,41 +8,6 @@ var smoothScroll = require('smoothscroll');
 
 class About extends Component {
 
-  navDots = () => {
-    return(
-      <div className="col-3">
-        <div className="navDots-about">
-          <div className="row navDot">
-            <img src={NavdotInactive}
-            alt="navdot"
-            onClick={() => this.handleDotClick("intro-container")} />
-          </div>
-          <div className="row navDot">
-            <img src={NavdotActive}
-            alt="navdot"
-            onClick={() => this.handleDotClick("about-container")} />
-          </div>
-          <div className="row navDot">
-            <img src={NavdotInactive}
-            alt="navdot"
-            onClick={() => this.handleDotClick("skills-container")} />
-          </div>
-          <div className="row navDot">
-            <img src={NavdotInactive}
-            alt="navdot"
-            onClick={() => this.handleDotClick("projects-container-1")} />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  handleDotClick = (id) => {
-    let element = document.getElementById(id)
-    smoothScroll(element, 1000)
-  }
-
-
   render(){
     return(
       <div id="about-container" className="container-fluid">
@@ -61,7 +26,7 @@ class About extends Component {
         <div className="row">
           <div className="arrow-container col-12">
             <img className="arrow" src={Arrow}
-              alt="arrow-icon" onClick={() => this.handleDotClick("skills-container")} />
+              alt="arrow-icon" onClick={() => this.props.handleArrowClick("skills-container")} />
           </div>
         </div>
       </div>

@@ -38,7 +38,7 @@ class App extends Component {
     if(this.state.inViewDiv === "intro" && $(window).scrollTop() > this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("about-container")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -46,7 +46,7 @@ class App extends Component {
     if(this.state.inViewDiv === "about" && $(window).scrollTop() < this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("intro-container")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -54,7 +54,7 @@ class App extends Component {
     if(this.state.inViewDiv === "about" && $(window).scrollTop() > this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("skills-container")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -62,7 +62,7 @@ class App extends Component {
     if(this.state.inViewDiv === "skills" && $(window).scrollTop() < this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("about-container")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -70,7 +70,7 @@ class App extends Component {
     if(this.state.inViewDiv === "skills" && $(window).scrollTop() > this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("projects-container-1")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -78,7 +78,7 @@ class App extends Component {
     if(this.state.inViewDiv === "projects" && $(window).scrollTop() < this.state.scrollTop){
       window.removeEventListener('scroll', this.autoScroll)
       let element = document.getElementById("skills-container")
-      smoothScroll(element, 1000, () => {
+      smoothScroll(element, 1300, () => {
         this.setState({scrollTop: $(window).scrollTop()})
         window.addEventListener('scroll', this.autoScroll);
       })
@@ -88,10 +88,15 @@ class App extends Component {
   handleDotClick = (id) => {
     window.removeEventListener('scroll', this.autoScroll)
     let element = document.getElementById(id)
-    smoothScroll(element, 1000, () => {
+    smoothScroll(element, 1300, () => {
       this.setState({scrollTop: $(window).scrollTop()})
       window.addEventListener('scroll', this.autoScroll);
     })
+  }
+
+  handleArrowClick = (id) => {
+    let element = document.getElementById(id)
+    smoothScroll(element, 1300)
   }
 
   componentDidMount() {
@@ -114,9 +119,9 @@ class App extends Component {
     return (
       <div id="App" className="App">
         <DotNavigator inViewDiv={this.state.inViewDiv} handleDotClick={this.handleDotClick}/>
-        <Intro />
-        <About />
-        <Skills />
+        <Intro handleArrowClick={this.handleArrowClick}/>
+        <About handleArrowClick={this.handleArrowClick}/>
+        <Skills handleArrowClick={this.handleArrowClick}/>
         <Projects />
         <ContactMe />
         <Footer />
