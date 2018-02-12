@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
    window.addEventListener('scroll', (event) => {
-     if(this.isScrolledIntoView("#intro-container") && this.state.inViewDiv !== "intro"){
+     if(this.isScrolledIntoView("#intro-blurb") && this.state.inViewDiv !== "intro"){
        this.setState({inViewDiv: "intro"})
      }
      if(this.isScrolledIntoView("#bio-container") && this.state.inViewDiv !== "about"){
