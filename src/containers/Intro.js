@@ -60,7 +60,6 @@ class Intro extends Component {
           <div className="col-5">
             <img src={Rocket} id="rocket-icon" alt="rocket-icon"/>
           </div>
-          {this.navDots()}
         </div>
         <div className="row">
           <div className="arrow-container col-12">

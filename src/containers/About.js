@@ -57,7 +57,6 @@ class About extends Component {
               <Bio />
             </div>
           </div>
-          {this.navDots()}
         </div>
         <div className="row">
           <div className="arrow-container col-12">

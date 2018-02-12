@@ -58,7 +58,6 @@ class Skills extends Component {
           <div className="col-10">
             <TechSkills />
           </div>
-          {this.navDots()}
         </div>
         <div className="row">
           <div className="arrow-container col-12">
