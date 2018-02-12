@@ -13,39 +13,34 @@ class DotNavigator extends Component {
           <img
           src={this.props.inViewDiv === "intro" ? NavdotActive : NavdotInactive}
           alt="navdot"
-          onClick={() => this.handleDotClick("intro-container")} />
+          onClick={() => this.props.handleDotClick("intro-container")} />
         </div>
         <div className="row navDot">
           <img
           src={this.props.inViewDiv === "about" ? NavdotActive : NavdotInactive}
           alt="navdot"
-          onClick={() => this.handleDotClick("about-container")} />
+          onClick={() => this.props.handleDotClick("about-container")} />
         </div>
         <div className="row navDot">
           <img
           src={this.props.inViewDiv === "skills" ? NavdotActive : NavdotInactive}
           alt="navdot"
-          onClick={() => this.handleDotClick("skills-container")} />
+          onClick={() => this.props.handleDotClick("skills-container")} />
         </div>
         <div className="row navDot">
           <img
           src={this.props.inViewDiv === "projects" ? NavdotActive : NavdotInactive}
           alt="navdot"
-          onClick={() => this.handleDotClick("projects-container-1")} />
+          onClick={() => this.props.handleDotClick("projects-container-1")} />
         </div>
       </div>
     )
   }
 
-  handleDotClick = (id) => {
-    let element = document.getElementById(id)
-    smoothScroll(element, 1000)
-  }
-
 
   render(){
     return(
-      <div id="fixed-navdot-container" className="container-fluid" onWheel={() => console.log("test")}>
+      <div id="fixed-navdot-container" className="container-fluid">
         {this.navDots()}
       </div>
     )
