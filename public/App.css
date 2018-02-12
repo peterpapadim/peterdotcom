@@ -14,32 +14,18 @@ body {
 
 
 
+.fixed-navdot-container{
+  width: 100vw;
+  height: 100vh;
+}
+
 .navDots-container{
-  height: 50%;
-}
-
-.navDots-intro{
-  float: right;
-  position: relative;
+  position: fixed;
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
-  margin-right: 15px;
-}
-
-.navDots-about{
-  float: right;
-  position: relative;
-  top: 15%;
-  transform: translateY(-50%);
-  margin-right: 15px;
-}
-
-.navDots-skills{
-  float: right;
-  position: relative;
-  top: 15%;
-  transform: translateY(-50%);
-  margin-right: 15px;
+  margin-right: 25px;
+  z-index: 1000;
 }
 
 .navDot{
