@@ -6,8 +6,8 @@
 body {
     font-family: avenir;
     color: white;
+    overflow: hidden;
 }
-
 
 
 /*                                        Shared Nav Dot Styling                                          */

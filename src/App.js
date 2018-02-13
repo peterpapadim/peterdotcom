@@ -15,7 +15,8 @@ class App extends Component {
     super();
     this.state = {
       inViewDiv: "intro",
-      scrollTop: 0
+      onWheel: 0,
+      fromBottom: false
     }
   }
 
@@ -23,10 +24,10 @@ class App extends Component {
       if(this.isScrolledIntoView("#intro-blurb") && this.state.inViewDiv !== "intro"){
         this.setState({inViewDiv: "intro"})
       }
-      if(this.isScrolledIntoView("#bio-container") && this.state.inViewDiv !== "about"){
+      if(this.isScrolledIntoView("#headshot") && this.state.inViewDiv !== "about"){
         this.setState({inViewDiv: "about"})
       }
-      if(this.isScrolledIntoView("#tech-skills-container") && this.state.inViewDiv !== "skills"){
+      if(this.isScrolledIntoView("#protractor-icon") && this.state.inViewDiv !== "skills"){
         this.setState({inViewDiv: "skills"})
       }
       if(this.isScrolledIntoView("#reelsquad-text") && this.state.inViewDiv !== "projects"){
@@ -34,75 +35,109 @@ class App extends Component {
       }
   }
 
-  autoScroll = () => {
-    if(this.state.inViewDiv === "intro" && $(window).scrollTop() > this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
+  autoScroll = (event) => {
+    this.setState({onWheel: event.deltaY})
+    window.removeEventListener('DOMMouseScroll', (event) => this.autoScroll(event))
+    window.onmousewheel = document.onmousewheel = null;
+    if(this.state.inViewDiv === "intro" && this.state.onWheel > 0){
+      $("body").css("overflow", "hidden");
       let element = document.getElementById("about-container")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
       })
     }
-    if(this.state.inViewDiv === "about" && $(window).scrollTop() < this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
+    else if(this.state.inViewDiv === "about" && this.state.onWheel < 0){
+      $("body").css("overflow", "hidden");
       let element = document.getElementById("intro-container")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
       })
     }
-    if(this.state.inViewDiv === "about" && $(window).scrollTop() > this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
+    else if(this.state.inViewDiv === "about" && this.state.onWheel > 0){
+      $("body").css("overflow", "hidden");
       let element = document.getElementById("skills-container")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
       })
     }
-    if(this.state.inViewDiv === "skills" && $(window).scrollTop() < this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
+    else if(this.state.inViewDiv === "skills" && this.state.onWheel < 0){
+      $("body").css("overflow", "hidden");
       let element = document.getElementById("about-container")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
       })
     }
-    if(this.state.inViewDiv === "skills" && $(window).scrollTop() > this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
+    else if(this.state.inViewDiv === "skills" && this.state.onWheel > 0){
+      $("body").css("overflow", "hidden");
       let element = document.getElementById("projects-container-1")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
       })
     }
-    if(this.state.inViewDiv === "projects" && $(window).scrollTop() < this.state.scrollTop){
-      window.removeEventListener('scroll', this.autoScroll)
-      let element = document.getElementById("skills-container")
-      smoothScroll(element, 1300, () => {
-        this.setState({scrollTop: $(window).scrollTop()})
-        window.addEventListener('scroll', this.autoScroll);
+    else if(this.state.inViewDiv === "projects" && this.state.onWheel < 0 && this.state.fromBottom){
+      $("body").css("overflow", "hidden");
+      let element = document.getElementById("projects-container-1")
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0, fromBottom: false})
       })
+    }
+    else if(this.state.inViewDiv === "projects" && this.state.onWheel < 0){
+      $("body").css("overflow", "hidden");
+      let element = document.getElementById("skills-container")
+      smoothScroll(element, 1000, () => {
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        this.setState({onWheel: 0})
+      })
+    }
+    else if(this.state.onWheel > 0){
+        $("body").css("overflow", "visible");
+        this.setState({inViewDiv: ""})
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+    }
+    else if(this.state.onWheel <= 0){
+        $("body").css("overflow", "visible");
+        window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+        window.onmousewheel = document.onmousewheel = this.autoScroll;
+        if(!this.state.fromBottom){
+          this.setState({fromBottom: true})
+        }
     }
   }
 
   handleDotClick = (id) => {
-    window.removeEventListener('scroll', this.autoScroll)
+    window.removeEventListener('DOMMouseScroll', this.autoScroll)
     let element = document.getElementById(id)
-    smoothScroll(element, 1300, () => {
+    smoothScroll(element, 1000, () => {
       this.setState({scrollTop: $(window).scrollTop()})
-      window.addEventListener('scroll', this.autoScroll);
+      window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
     })
   }
 
   handleArrowClick = (id) => {
     let element = document.getElementById(id)
-    smoothScroll(element, 1300)
+    smoothScroll(element, 1000)
   }
 
+
   componentDidMount() {
-   this.setState({scrollTop: $(window).scrollTop()})
-   window.addEventListener('scroll', this.checkInView);
-   window.addEventListener('scroll', this.autoScroll);
+     this.setState({scrollTop: $(window).scrollTop()})
+     window.addEventListener('scroll', this.checkInView);
+     window.addEventListener('DOMMouseScroll', (event) => this.autoScroll(event));
+     window.onmousewheel = document.onmousewheel = this.autoScroll;
   }
 
   isScrolledIntoView = (elem) => {
