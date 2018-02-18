@@ -146,7 +146,7 @@ class Projects extends Component{
 
   render(){
     return(
-    <div>
+    <div className="section">
 
       <div className="container-fluid" id="all-projects-page-1">
         <div className="row" id="projects-container-1">

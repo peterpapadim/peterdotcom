@@ -45,7 +45,7 @@ class About extends Component {
 
   render(){
     return(
-      <div id="about-container" className="container-fluid">
+      <div id="about-container" className="container-fluid section">
         <div className="row" id="headshot-container">
           <div className="col-4">
               <img id="headshot"src={Headshot} alt="headshot"/>

@@ -7,6 +7,7 @@ import ContactMe from './containers/ContactMe';
 import Footer from './containers/Footer';
 import DotNavigator from './containers/DotNavigator';
 import $ from 'jquery';
+var pagepiling = require('pagepiling.js');
 
 class App extends Component {
 
@@ -18,20 +19,49 @@ class App extends Component {
   }
 
   componentDidMount() {
-   window.addEventListener('scroll', (event) => {
-     if(this.isScrolledIntoView("#intro-blurb") && this.state.inViewDiv !== "intro"){
-       this.setState({inViewDiv: "intro"})
-     }
-     if(this.isScrolledIntoView("#bio-container") && this.state.inViewDiv !== "about"){
-       this.setState({inViewDiv: "about"})
-     }
-     if(this.isScrolledIntoView("#tech-skills-container") && this.state.inViewDiv !== "skills"){
-       this.setState({inViewDiv: "skills"})
-     }
-     if(this.isScrolledIntoView("#reelsquad-text") && this.state.inViewDiv !== "projects"){
-       this.setState({inViewDiv: "projects"})
-     }
-   });
+   window.$('#App').pagepiling({
+	    menu: null,
+        direction: 'vertical',
+        verticalCentered: true,
+        sectionsColor: [],
+        anchors: [],
+        scrollingSpeed: 700,
+        easing: 'swing',
+        loopBottom: false,
+        loopTop: false,
+        css3: true,
+        navigation: {
+            'textColor': '#000',
+            'bulletsColor': '#000',
+            'position': 'right',
+            'tooltips': ['Intro', 'Bio', 'Skills', 'Projects']
+        },
+       	normalScrollElements: null,
+        normalScrollElementTouchThreshold: 5,
+        touchSensitivity: 5,
+        keyboardScrolling: true,
+        sectionSelector: '.section',
+        animateAnchor: false,
+
+		//events
+		onLeave: function(index, nextIndex, direction){},
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){},
+	});
+   // window.addEventListener('scroll', (event) => {
+   //   if(this.isScrolledIntoView("#intro-blurb") && this.state.inViewDiv !== "intro"){
+   //     this.setState({inViewDiv: "intro"})
+   //   }
+   //   if(this.isScrolledIntoView("#bio-container") && this.state.inViewDiv !== "about"){
+   //     this.setState({inViewDiv: "about"})
+   //   }
+   //   if(this.isScrolledIntoView("#tech-skills-container") && this.state.inViewDiv !== "skills"){
+   //     this.setState({inViewDiv: "skills"})
+   //   }
+   //   if(this.isScrolledIntoView("#reelsquad-text") && this.state.inViewDiv !== "projects"){
+   //     this.setState({inViewDiv: "projects"})
+   //   }
+   // });
   }
 
   isScrolledIntoView = (elem) => {
@@ -47,7 +77,6 @@ class App extends Component {
   render() {
     return (
       <div id="App" className="App">
-        <DotNavigator inViewDiv={this.state.inViewDiv}/>
         <Intro />
         <About />
         <Skills />

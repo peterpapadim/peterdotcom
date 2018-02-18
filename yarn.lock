@@ -4460,6 +4460,10 @@ package-json@^2.0.0:
     registry-url "^3.0.3"
     semver "^5.1.0"
 
+pagepiling.js@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/pagepiling.js/-/pagepiling.js-1.5.4.tgz#dc16fde18c01f0b58b937b10ec40cd26f95bfe85"
+
 pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"

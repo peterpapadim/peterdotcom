@@ -44,7 +44,7 @@ class Skills extends Component {
 
   render(){
     return(
-      <div className="container-fluid" id="skills-container">
+      <div className="container-fluid section" id="skills-container">
         <div className="row" id="protractor-icon-container">
           <div className="col-4">
           </div>

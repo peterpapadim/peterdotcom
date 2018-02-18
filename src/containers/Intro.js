@@ -47,7 +47,7 @@ class Intro extends Component {
 
   render(){
     return(
-      <div id="intro-container" className="container-fluid">
+      <div id="intro-container" className="container-fluid section">
         <div id="header-container"className="row">
           <div className="col-2">
             <Header />
