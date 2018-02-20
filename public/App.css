@@ -1,66 +1,12 @@
 @font-face {
     font-family: avenir;
-    src: url(avenir_next_regular.otf);
+    src: url('assets/font/avenir_next_regular.otf');
 }
 
 body {
     font-family: avenir;
     color: white;
 }
-
-
-
-/*                                        Shared Nav Dot Styling                                          */
-
-
-
-.fixed-navdot-container{
-  width: 100vw;
-  height: 100vh;
-}
-
-.navDots-container{
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  margin-right: 25px;
-  z-index: 1000;
-}
-
-.navDot{
-  margin-bottom: 7px;
-}
-
-.navDot:hover{
-  cursor: pointer;
-  background-image: url('navdot_inactive_white_hovered.svg');
-  background-repeat: no-repeat;
-}
-
-
-
-/*                                        Shared Arrow Styling                                          */
-
-
-
-.arrow-container{
-  text-align: right;
-}
-
-.arrow{
-  margin-right: 10%;
-  padding-right: 1%;
-}
-
-.arrow:hover{
-  cursor: pointer;
-  background-image: url('down_white_hovered.svg');
-  background-repeat: no-repeat;
-  padding-bottom: 12px;
-}
-
-
 
 
 /*                                        Intro Styling                                          */
@@ -70,345 +16,55 @@ body {
 #intro-container{
   width: 100vw;
   height: 100vh;
-  background-image: url('header_gradient.svg');
+  background-image: url('assets/intro/wallpaper_codepeter.svg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#header-container{
-  height: 10%;
-}
-
-#intro-name{
-  color: white;
-  padding-top: 25px;
-  padding-left: 15px;
-  font-size: 4.5vh;
-}
-
-#rocket-icon{
-  max-width: 80%;
-  max-height: 80%;
-  float: right;
-  padding-right: 10%;
-  padding-top: 10%;
-}
-
-#intro-blurb-container{
-  height: 75%;
-}
-
-#intro-blurb{
-  color: white;
-  position: absolute;
-  margin-left: 25px;
-  bottom: 0;
-  font-size: 4.2vh;
+  background-position: center;
 }
 
 
-
-/*                                        About Styling                                          */
-
+/*                                        YourFoundry Styling                                          */
 
 
-#about-container{
+
+#yourfoundry-container{
   width: 100vw;
   height:100vh;
-  background-image: url('header2_gradient.svg');
+  background-image: url('assets/yourfoundry/wallpaper_yourfoundry.svg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#headshot-container{
-  height: 42.5%;
-}
-
-#headshot{
-  max-width: 40vh;
-  padding-top: 20%;
-  padding-left: 15%;
-}
-
-#bio-container{
-  height: 42.5%;
-}
-
-#bio{
-  margin-top: 15%;
-  padding-left: 10%;
-  font-size: 2.1vh;
-  position: relative;
-  top: 20%;
-  transform: translateY(-25%);
+  background-position: center;
 }
 
 
-
-/*                                        Skills Styling                                          */
-
+/*                                        Reelsquad Styling                                          */
 
 
-#skills-container{
+
+#reelsquad-container{
   width: 100vw;
   height:100vh;
-  background-image: url('header_gradient.svg');
+  background-image: url('assets/reelsquad/wallpaper_reelsquad.png');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#protractor-icon-container{
-  height: 45%;
-}
-
-#protractor-icon{
-  max-width: 75%;
-  max-height: 150%;
-  float: right;
-  padding-right: 5%;
-  padding-top: 20%;
-}
-
-#my-skills-container{
-  height: 40%;
-}
-
-#tech-skills-container{
-  margin-left: 25px;
-  margin-right: 50px;
-  position: absolute;
-  bottom: 0;
-}
-
-#skills-title{
-  font-size: 2.5vh;
-}
-
-#skills-list{
-  font-size: 4.2vh;
+  background-position: center;
 }
 
 
 
-/*                                        Projects Styling                                          */
+/*                                        Instalytics Styling                                          */
 
 
 
-#all-projects{
-  height: 150vh;
+#instalytics-container{
   width: 100vw;
-}
-
-.projects-left{
-  background-image: url('background_reelsquad.svg');
+  height:100vh;
+  background-image: url('assets/instalytics/wallpaper_instalytics.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
-  height: 100vh;
-  border: 5px solid white;
+  background-position: center;
 }
 
-.layover{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  background-image: url('mockup_shadow.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-}
-
-#reelsquad-project-container{
-  height: 65vh;
-}
-
-#reelsquad-project-text{
-  height: 15vh;
-}
-
-#reelsquad{
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
-  top: 55%;
-  transform: translateY(-50%);
-  padding-top: 30vh;
-}
-
-#reelsquad-text{
-  width: 45%;
-}
-
-.projects-right{
-  height: 100vh;
-}
-
-.projects-left-page-2{
-  height: 50vh;
-}
-
-.codepeter{
-  background-image: url('background_codepeter.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-  text-align: center;
-  border: 5px solid white;
-}
-
-#codepeter{
-  max-width: 50%;
-  max-height: 85%;
-  position: relative;
-  top: 50%;
-  right: 14%;
-  transform: translateY(-50%);
-}
-
-.pageclub{
-  background-image: url('background_pageclub.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-  text-align: left;
-  border: 5px solid white;
-}
-
-#pageclub{
-  max-width: 60%;
-  max-height: 85%;
-  position: relative;
-  top: 50%;
-  left: 9%;
-  transform: translateY(-50%);
-}
-
-.instalytics{
-  background-image: url('background_instalytics.svg');
-  /*background-repeat: no-repeat;*/
-  background-size: cover;
-  height: 50vh;
-  text-align: left;
-  border: 5px solid white;
-}
-
-#instalytics{
-  max-width: 68%;
-  max-height: 85%;
-  position: relative;
-  top: 60%;
-  left: 12%;
-  transform: translateY(-50%);
-}
-
-.blog{
-  height: 50vh;
-  text-align: left;
-  border: 5px solid white;
-  padding-left: 8%;
-  padding-top: 2%;
-}
-
-#blog-title-container{
-  height: 20%;
-  position: relative;
-  padding-left: 15px;
-}
-
-#blog-title{
-  color: black;
-  position: absolute;
-  bottom: 0;
-  font-size: 3vh;
-}
-
-#blog-post-container{
-  height: 25%;
-}
-
-#blog-post-title{
-  color: black;
-  font-size: 3vh;
-  font-weight: bold;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-top: 15%;
-}
-
-
-#blog-post-content-container{
-  height: 30%;
-  padding-top: 5%;
-}
-
-
-#blog-post-content{
-  color: black;
-  font-size: 1.7vh;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-top: 8%;
-}
-
-#read-more-container{
-  height: 25%;
-  text-align: right;
-}
-
-#read-more{
-  color: black;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2vh;
-  font-weight: 600;
-  padding-right: 15%;
-}
-
-#read-more:hover{
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-#button-container{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.project-button{
-  max-width: 15vh;
-  margin-top: 30px;
-}
-
-#demo-button:hover{
-  max-width: 15vh;
-  background-image: url('button_viewdemo_hovered.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
-
-#frontend-button:hover{
-  max-width: 15vh;
-  background-image: url('button_frontend_hovered.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
-
-#backend-button:hover{
-  max-width: 15vh;
-  background-image: url('button_backend_hovered.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
 
 
 /*                                        Contact Me Styling                                          */

@@ -1,88 +1,75 @@
 import React, { Component } from 'react';
-import Intro from './containers/Intro';
-import About from './containers/About';
-import Skills from './containers/Skills';
-import Projects from './containers/Projects';
-import ContactMe from './containers/ContactMe';
-import Footer from './containers/Footer';
-import DotNavigator from './containers/DotNavigator';
+import Page from './containers/Page';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
 class App extends Component {
 
-  constructor(){
-    super();
-    this.state = {
-      inViewDiv: "intro"
-    }
-  }
-
   componentDidMount() {
+   let bindedThis = this
    window.$('#App').pagepiling({
 	    menu: null,
-        direction: 'vertical',
-        verticalCentered: true,
-        sectionsColor: [],
-        anchors: [],
-        scrollingSpeed: 700,
-        easing: 'swing',
-        loopBottom: false,
-        loopTop: false,
-        css3: true,
-        navigation: {
-            'textColor': '#000',
-            'bulletsColor': '#000',
-            'position': 'right',
-            'tooltips': ['Intro', 'Bio', 'Skills', 'Projects']
-        },
-       	normalScrollElements: null,
-        normalScrollElementTouchThreshold: 5,
-        touchSensitivity: 5,
-        keyboardScrolling: true,
-        sectionSelector: '.section',
-        animateAnchor: false,
+      direction: 'vertical',
+      verticalCentered: true,
+      sectionsColor: [],
+      anchors: ['home', 'yourfoundry', 'reelsquad', 'instalytics'],
+      scrollingSpeed: 700,
+      easing: 'swing',
+      loopBottom: false,
+      loopTop: false,
+      css3: true,
+      navigation: {
+          'textColor': '#000',
+          'bulletsColor': '#000',
+          'position': 'right',
+          'tooltips': ['Home', 'YourFoundry', 'Reelsquad', 'Instalytics']
+      },
+     	normalScrollElements: null,
+      normalScrollElementTouchThreshold: 5,
+      touchSensitivity: 5,
+      keyboardScrolling: true,
+      sectionSelector: '.section',
+      animateAnchor: false,
 
 		//events
-		onLeave: function(index, nextIndex, direction){},
-		afterLoad: function(anchorLink, index){},
+		onLeave: function(index, nextIndex, direction){
+      if([1, 3, 4].includes(nextIndex)){
+        bindedThis.setNavColor("black")
+        bindedThis.setNavActive("")
+      }
+      if([2].includes(nextIndex)){
+        bindedThis.setNavColor("white")
+      }
+    },
+		afterLoad: function(anchorLink, index){
+      if(anchorLink === "yourfoundry"){
+        bindedThis.setNavActive("white")
+      }
+    },
 		afterRender: function(){},
 	});
-   // window.addEventListener('scroll', (event) => {
-   //   if(this.isScrolledIntoView("#intro-blurb") && this.state.inViewDiv !== "intro"){
-   //     this.setState({inViewDiv: "intro"})
-   //   }
-   //   if(this.isScrolledIntoView("#bio-container") && this.state.inViewDiv !== "about"){
-   //     this.setState({inViewDiv: "about"})
-   //   }
-   //   if(this.isScrolledIntoView("#tech-skills-container") && this.state.inViewDiv !== "skills"){
-   //     this.setState({inViewDiv: "skills"})
-   //   }
-   //   if(this.isScrolledIntoView("#reelsquad-text") && this.state.inViewDiv !== "projects"){
-   //     this.setState({inViewDiv: "projects"})
-   //   }
-   // });
-  }
 
-  isScrolledIntoView = (elem) => {
-    let docViewTop = $(window).scrollTop();
-    let docViewBottom = docViewTop + $(window).height();
+ }
 
-    let elemTop = $(elem).offset().top;
-    let elemBottom = elemTop + $(elem).height();
+ setNavColor = (color) => {
+   let nodes = document.querySelectorAll("#pp-nav span", ".pp-slidesNav span")
+   for(let i = 0; i < nodes.length; i++){
+     nodes[i].style.borderColor = color
+   }
+ }
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+ setNavActive = (color) => {
+   document.querySelector("#pp-nav li .active span", ".pp-slidesNav .active span").style.background = color
+ }
+
 
   render() {
     return (
       <div id="App" className="App">
-        <Intro />
-        <About />
-        <Skills />
-        <Projects />
-        <ContactMe />
-        <Footer />
+        <Page id="intro-container"/>
+        <Page id="yourfoundry-container"/>
+        <Page id="reelsquad-container"/>
+        <Page id="instalytics-container"/>
       </div>
     );
   }
