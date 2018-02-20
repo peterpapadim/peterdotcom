@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="900px" viewBox="0 0 1440 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>wallpaper_instalytics</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M576.142857,281.5 L503,239.7 L503,177 L631,250.15 L631,312.85 L503,386 L503,323.3 L576.142857,281.5 Z M0,250.301449 L0,250.06845 L128,177 L128,239.6301 L54.6530612,281.5 L128,323.3699 L128,386 L0,312.93155 L0,250.301449 Z M363.813664,7.58066275e-15 L458,-5.23536507e-14 L267.186336,537 L173,537 L363.813664,7.58066275e-15 Z" id="path-1"></path>
+        <filter x="-0.3%" y="-0.4%" width="100.6%" height="100.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="46.8084958%" y1="11.0234632%" x2="98.3430837%" y2="111.45127%" id="linearGradient-4">
+            <stop stop-color="#4E60D3" offset="0%"></stop>
+            <stop stop-color="#913BAF" offset="17.0575118%"></stop>
+            <stop stop-color="#D52D88" offset="47.4384837%"></stop>
+            <stop stop-color="#F26D4F" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="30.2743283%" cy="100%" fx="30.2743283%" fy="100%" r="93.3946263%" gradientTransform="translate(0.302743,1.000000),scale(0.633846,1.000000),rotate(21.729158),scale(1.000000,0.719668),translate(-0.302743,-1.000000)" id="radialGradient-5">
+            <stop stop-color="#FED276" offset="0%"></stop>
+            <stop stop-color="#FDBD61" stop-opacity="0.975005661" offset="17.0240041%"></stop>
+            <stop stop-color="#F6804D" offset="45.4081253%"></stop>
+            <stop stop-color="#E83D5C" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <path d="M576.142857,281.5 L503,239.7 L503,177 L631,250.15 L631,312.85 L503,386 L503,323.3 L576.142857,281.5 Z M0,250.301449 L0,250.06845 L128,177 L128,239.6301 L54.6530612,281.5 L128,323.3699 L128,386 L0,312.93155 L0,250.301449 Z M363.813664,7.58066275e-15 L458,-5.23536507e-14 L267.186336,537 L173,537 L363.813664,7.58066275e-15 Z" id="path-6"></path>
+        <filter x="-0.6%" y="-0.7%" width="101.1%" height="101.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="3" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Code-Peter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -2700.000000)">
+        <g id="wallpaper_instalytics" transform="translate(0.000000, 2700.000000)">
+            <rect id="bg-copy" fill="#FFFFFF" x="0" y="0" width="1440" height="900"></rect>
+            <g id="Code-Instalytics" transform="translate(405.000000, 182.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+                <g id="bg" mask="url(#mask-2)">
+                    <g transform="translate(-90.000000, -14.000000)">
+                        <path d="M588.164062,1.02102807e-14 C682.6875,1.02102807e-14 744,56.15625 744,142.730469 L744,456.269531 C744,542.84375 682.6875,599 588.164062,599 L245.835938,599 C151.3125,599 90,542.84375 90,456.269531 L90,142.730469 C90,56.15625 151.3125,1.02102807e-14 245.835938,1.02102807e-14 L588.164062,1.02102807e-14 Z" id="Background" fill="url(#linearGradient-4)"></path>
+                        <path d="M650,466.82095 C633.606363,529.970339 577.810637,569 498.908697,569 L156.068874,569 C61.4041473,569 0,512.818182 0,426.204545 L0,178.713298 C52.0826085,164.663721 108.30489,157 166.942525,157 C412.720404,157 616.064329,291.639466 650,466.82095 L650,466.82095 Z" id="Yellow-Flare" fill="url(#radialGradient-5)"></path>
+                    </g>
+                </g>
+                <mask id="mask-7" fill="white">
+                    <use xlink:href="#path-6"></use>
+                </mask>
+                <g id="Mask" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-8)" xlink:href="#path-6"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
