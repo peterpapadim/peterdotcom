@@ -5,6 +5,13 @@ var pagepiling = require('pagepiling.js');
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      currentPage: 1
+    }
+  }
+
   componentDidMount() {
    let bindedThis = this
    window.$('#App').pagepiling({
@@ -22,7 +29,7 @@ class App extends Component {
           'textColor': '#000',
           'bulletsColor': '#000',
           'position': 'right',
-          'tooltips': ['Home', 'YourFoundry', 'Reelsquad', 'Instalytics']
+          'tooltips': []
       },
      	normalScrollElements: null,
       normalScrollElementTouchThreshold: 5,
@@ -33,16 +40,17 @@ class App extends Component {
 
 		//events
 		onLeave: function(index, nextIndex, direction){
-      if([1, 3, 4].includes(nextIndex)){
+      bindedThis.setNavActive("")
+      bindedThis.updateCurrentPage(nextIndex)
+      if([1, 4].includes(nextIndex)){
         bindedThis.setNavColor("black")
-        bindedThis.setNavActive("")
       }
-      if([2].includes(nextIndex)){
+      if([2, 3].includes(nextIndex)){
         bindedThis.setNavColor("white")
       }
     },
 		afterLoad: function(anchorLink, index){
-      if(anchorLink === "yourfoundry"){
+      if(["yourfoundry", "reelsquad"].includes(anchorLink)){
         bindedThis.setNavActive("white")
       }
     },
@@ -62,14 +70,18 @@ class App extends Component {
    document.querySelector("#pp-nav li .active span", ".pp-slidesNav .active span").style.background = color
  }
 
+ updateCurrentPage = (page) => {
+   this.setState({currentPage: page})
+ }
+
 
   render() {
     return (
       <div id="App" className="App">
-        <Page id="intro-container"/>
-        <Page id="yourfoundry-container"/>
-        <Page id="reelsquad-container"/>
-        <Page id="instalytics-container"/>
+        <Page id="intro-container" currentPage={this.state.currentPage}/>
+        <Page id="yourfoundry-container" currentPage={this.state.currentPage}/>
+        <Page id="reelsquad-container" currentPage={this.state.currentPage}/>
+        <Page id="instalytics-container" currentPage={this.state.currentPage}/>
       </div>
     );
   }
