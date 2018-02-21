@@ -4,6 +4,14 @@ import MenuButtons from './containers/MenuButtons';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
+var blurbs = {
+  "codepeter": {"title": "Code Peter", "blurb": "My name is Peter Papadimitropoulos and I am a Full Stack Developer based out of New York City."},
+  "yourfoundry": {"title": "YourFoundry", "blurb": "A manufacturing management service for hardware startups."},
+  "reelsquad": {"title": "Reelsquad", "blurb": "Create A queue of movies to watch and share with your group of friends."},
+  "pageclub": {"title": "Pageclub", "blurb": "Arrange a book trade by showing your friends what books you have available at home."},
+  "instalytics": {"title": "Instalytics", "blurb": "Find your most liked photo, most used hashtag, and most interactive follower."}
+}
+
 class App extends Component {
 
   constructor(){
@@ -43,7 +51,6 @@ class App extends Component {
 		//events
 		onLeave: function(index, nextIndex, direction){
       bindedThis.setNavActive("")
-      bindedThis.updateCurrentPage(nextIndex)
       bindedThis.updatePreviousPage(index)
       if([1, 5].includes(nextIndex)){
         bindedThis.setNavColor("black")
@@ -54,6 +61,7 @@ class App extends Component {
     },
 		afterLoad: function(anchorLink, index){
       console.log(anchorLink, index, bindedThis.state.previousPage)
+      bindedThis.updateCurrentPage(index)
       if(["yourfoundry", "reelsquad", "pageclub"].includes(anchorLink)){
         bindedThis.setNavActive("white")
       }
@@ -87,11 +95,11 @@ class App extends Component {
     return (
       <div id="App" className="App">
         <MenuButtons currentPage={this.state.currentPage}/>
-        <Page id="intro-container"/>
-        <Page id="yourfoundry-container"/>
-        <Page id="reelsquad-container"/>
-        <Page id="pageclub-container"/>
-        <Page id="instalytics-container"/>
+        <Page id="intro-container" currentPage={this.state.currentPage} info={blurbs["codepeter"]}/>
+        <Page id="yourfoundry-container" currentPage={this.state.currentPage} info={blurbs["yourfoundry"]}/>
+        <Page id="reelsquad-container" currentPage={this.state.currentPage} info={blurbs["reelsquad"]}/>
+        <Page id="pageclub-container" currentPage={this.state.currentPage} info={blurbs["pageclub"]}/>
+        <Page id="instalytics-container" currentPage={this.state.currentPage} info={blurbs["instalytics"]}/>
       </div>
     );
   }

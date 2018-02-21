@@ -3,6 +3,11 @@ import LogoWhite from '../assets/logo/logo_white.svg';
 import LogoBlack from '../assets/logo/logo_black.svg';
 import MenuWhite from '../assets/menu/menu_white.svg';
 import MenuBlack from '../assets/menu/menu_black.svg';
+import ArrowDownWhite from '../assets/arrow/arrow_down_white.svg';
+import ArrowDownBlack from '../assets/arrow/arrow_down_black.svg';
+import ArrowUpWhite from '../assets/arrow/arrow_up_white.svg';
+import ArrowUpBlack from '../assets/arrow/arrow_up_black.svg';
+
 
 class MenuButtons extends Component {
 
@@ -24,6 +29,18 @@ class MenuButtons extends Component {
     }
   }
 
+  displayArrow = () => {
+    if(this.props.currentPage === 1){
+      return <img id="arrow" src={ArrowDownBlack}/>
+    }
+    else if(this.props.currentPage === 5){
+      return <img id="arrow" src={ArrowUpBlack}/>
+    }
+    else {
+      return <img id="arrow" src={ArrowDownWhite}/>
+    }
+  }
+
   render(){
     return(
       <div id="menu-buttons" className="container-fluid">
@@ -34,6 +51,15 @@ class MenuButtons extends Component {
             <div className="col-8"></div>
             <div className="col-1" id="menu-container">{this.displayMenu()}</div>
             <div className="col-1"></div>
+          </div>
+          <div className="row" id="bottom-menu-container">
+            <div className="col-12" id="bottom-menu-column">
+              <div className="row" id="bottom-menu-buffer"></div>
+              <div className="row" id="bottom-menu-content">
+                <div className="col-1"></div>
+                <div className="col-1">{this.displayArrow()}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

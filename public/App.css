@@ -1,6 +1,8 @@
 @font-face {
     font-family: avenir;
     src: url('assets/font/avenir_next_regular.otf');
+    font-family: avenir-bold;
+    src: url('assets/font/avenir_next.ttc');
 }
 
 body {
@@ -12,20 +14,13 @@ body {
 
 /*                                        Intro Styling                                          */
 
-#menu-buttons-container {
-  height: 100%;
-  padding: 0;
-}
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
   padding: 0;
 }
 
-#menu-buttons {
-  padding: 0;
-  z-index: 1000;
-  position: fixed;
-}
+
+
 
 #intro-container{
   width: 100vw;
@@ -100,21 +95,138 @@ body {
 
 
 
+/*                                        Menu/Nav Styling                                          */
+
+#menu-buttons-container {
+  height: 100%;
+  padding: 0;
+}
+
+#menu-buttons {
+  padding: 0;
+  z-index: 1000;
+  position: fixed;
+  height: 100%;
+}
+
+
 #logo-menu-container{
-  height: 150px;
+  height: 20%;
 }
 
 #logo{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  padding-top: 50px;
 }
 
 #menu-container {
   text-align: right;
 }
 #menu{
-  position: relative;
+  /* position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+  padding-top: 50px;
+}
+
+#bottom-menu-container {
+  height: 80%;
+}
+
+#bottom-menu-column {
+  height: 100%;
+}
+
+#bottom-menu-buffer {
+  height: 50%;
+}
+
+#bottom-menu-content {
+  height: 50%;
+}
+
+#arrow {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+  padding-bottom: 100px;
+}
+
+#blurb-container {
+  height: 100%;
+}
+
+/*                                        Page Styling                                          */
+
+#page-container {
+  height: 100%;
+  padding: 0;
+}
+
+#page-buffer-top {
+  height: 18%;
+}
+
+#page-links-row {
+  height: 18%;
+}
+
+#coming-soon {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+#project-links {
+  list-style: none;
+  padding-left: 0;
+  font-size: 15px;
+}
+
+.project-link-white {
+  padding-bottom: 8px;
+}
+
+.project-link-black {
+  padding-bottom: 8px;
+  color: black;
+}
+
+#page-buffer-bottom {
+  height: 14%;
+}
+
+#page-content {
+  height: 50%;
+  padding-bottom: 110px;
+}
+
+#project-info-container {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.title-white{
+  padding-bottom: 10px;
+  font-size: 63px;
+  font-family: avenir-bold;
+}
+
+.blurb-white{
+  padding-bottom: 0;
+  font-size: 18px;
+  padding-right: 30%;
+}
+
+.title-black{
+  padding-bottom: 10px;
+  font-size: 63px;
+  font-family: avenir-bold;
+  color: black;
+}
+
+.blurb-black{
+  padding-bottom: 0;
+  font-size: 18px;
+  padding-right: 30%;
+  color: black;
 }
