@@ -12,13 +12,19 @@ body {
 
 /*                                        Intro Styling                                          */
 
-#page-container {
+#menu-buttons-container {
   height: 100%;
   padding: 0;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
   padding: 0;
+}
+
+#menu-buttons {
+  padding: 0;
+  z-index: 1000;
+  position: fixed;
 }
 
 #intro-container{
@@ -71,6 +77,21 @@ body {
   width: 100vw;
   height:100vh;
   background-image: url('assets/instalytics/wallpaper_instalytics.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+
+/*                                        Pageclub Styling                                          */
+
+
+
+#pageclub-container{
+  width: 100vw;
+  height:100vh;
+  background-image: url('assets/pageclub/wallpaper_pageclub.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

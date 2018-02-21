@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Page from './containers/Page';
+import MenuButtons from './containers/MenuButtons';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
@@ -8,7 +9,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      currentPage: 1
+      currentPage: 1,
+      previousPage: 1
     }
   }
 
@@ -19,7 +21,7 @@ class App extends Component {
       direction: 'vertical',
       verticalCentered: true,
       sectionsColor: [],
-      anchors: ['home', 'yourfoundry', 'reelsquad', 'instalytics'],
+      anchors: ['home', 'yourfoundry', 'reelsquad', "pageclub", 'instalytics'],
       scrollingSpeed: 700,
       easing: 'swing',
       loopBottom: false,
@@ -42,15 +44,17 @@ class App extends Component {
 		onLeave: function(index, nextIndex, direction){
       bindedThis.setNavActive("")
       bindedThis.updateCurrentPage(nextIndex)
-      if([1, 4].includes(nextIndex)){
+      bindedThis.updatePreviousPage(index)
+      if([1, 5].includes(nextIndex)){
         bindedThis.setNavColor("black")
       }
-      if([2, 3].includes(nextIndex)){
+      if([2, 3, 4].includes(nextIndex)){
         bindedThis.setNavColor("white")
       }
     },
 		afterLoad: function(anchorLink, index){
-      if(["yourfoundry", "reelsquad"].includes(anchorLink)){
+      console.log(anchorLink, index, bindedThis.state.previousPage)
+      if(["yourfoundry", "reelsquad", "pageclub"].includes(anchorLink)){
         bindedThis.setNavActive("white")
       }
     },
@@ -74,14 +78,20 @@ class App extends Component {
    this.setState({currentPage: page})
  }
 
+ updatePreviousPage = (page) => {
+   this.setState({previousPage: page})
+ }
+
 
   render() {
     return (
       <div id="App" className="App">
-        <Page id="intro-container" currentPage={this.state.currentPage}/>
-        <Page id="yourfoundry-container" currentPage={this.state.currentPage}/>
-        <Page id="reelsquad-container" currentPage={this.state.currentPage}/>
-        <Page id="instalytics-container" currentPage={this.state.currentPage}/>
+        <MenuButtons currentPage={this.state.currentPage}/>
+        <Page id="intro-container"/>
+        <Page id="yourfoundry-container"/>
+        <Page id="reelsquad-container"/>
+        <Page id="pageclub-container"/>
+        <Page id="instalytics-container"/>
       </div>
     );
   }

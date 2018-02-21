@@ -62,6 +62,13 @@
         * Defines the scrolling speed
         */
         PP.setScrollingSpeed = function(value){
+           options.direction = value;
+        };
+
+        /**
+        * Change the direction
+        */
+        PP.setDirection = function(value){
            options.scrollingSpeed = value;
         };
 
