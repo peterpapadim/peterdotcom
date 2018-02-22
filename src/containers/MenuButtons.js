@@ -3,6 +3,7 @@ import LogoWhite from '../assets/logo/logo_white.svg';
 import LogoBlack from '../assets/logo/logo_black.svg';
 import MenuWhite from '../assets/menu/menu_white.svg';
 import MenuBlack from '../assets/menu/menu_black.svg';
+import Exit from '../assets/menu/close_white.svg';
 import ArrowDownWhite from '../assets/arrow/arrow_down_white.svg';
 import ArrowDownBlack from '../assets/arrow/arrow_down_black.svg';
 import ArrowUpWhite from '../assets/arrow/arrow_up_white.svg';
@@ -13,31 +14,58 @@ class MenuButtons extends Component {
 
   displayLogo = () => {
     if([1, 5].includes(this.props.currentPage)){
-      return <img id="logo" src={LogoBlack}/>
+      return <img id="logo" src={LogoBlack} onClick={this.handleLogoClick}/>
     }
     else {
-      return <img id="logo" src={LogoWhite}/>
+      return <img id="logo" src={LogoWhite} onClick={this.handleLogoClick}/>
     }
   }
 
   displayMenu = () => {
-    if([1, 5].includes(this.props.currentPage)){
-      return <img id="menu" src={MenuBlack}/>
+    if(this.props.menuClicked){
+      return <img id="menu" src={Exit} onClick={this.props.handleMenuClick}/>
+    }
+    else if([1, 5].includes(this.props.currentPage)){
+      return <img id="menu" src={MenuBlack} onClick={this.props.handleMenuClick}/>
     }
     else {
-      return <img id="menu" src={MenuWhite}/>
+      return <img id="menu" src={MenuWhite} onClick={this.props.handleMenuClick}/>
+    }
+  }
+
+  handleLogoClick = () => {
+    window.$.fn.pagepiling.moveTo(1);
+  }
+
+  handleArrowClick = () => {
+    switch(this.props.currentPage){
+      case 1:
+        window.$.fn.pagepiling.moveTo(2);
+        break;
+      case 2:
+        window.$.fn.pagepiling.moveTo(3);
+        break;
+      case 3:
+        window.$.fn.pagepiling.moveTo(4);
+        break;
+      case 4:
+        window.$.fn.pagepiling.moveTo(5);
+        break;
+      case 5:
+        window.$.fn.pagepiling.moveTo(1);
+        break;
     }
   }
 
   displayArrow = () => {
     if(this.props.currentPage === 1){
-      return <img id="arrow" src={ArrowDownBlack}/>
+      return <img id="arrow" src={ArrowDownBlack} onClick={this.handleArrowClick}/>
     }
     else if(this.props.currentPage === 5){
-      return <img id="arrow" src={ArrowUpBlack}/>
+      return <img id="arrow" src={ArrowUpBlack} onClick={this.handleArrowClick}/>
     }
     else {
-      return <img id="arrow" src={ArrowDownWhite}/>
+      return <img id="arrow" src={ArrowDownWhite} onClick={this.handleArrowClick}/>
     }
   }
 

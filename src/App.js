@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Page from './containers/Page';
 import MenuButtons from './containers/MenuButtons';
+import Menu from './containers/Menu';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
@@ -18,7 +19,8 @@ class App extends Component {
     super();
     this.state = {
       currentPage: 1,
-      previousPage: 1
+      previousPage: 1,
+      menuClicked: false
     }
   }
 
@@ -90,16 +92,27 @@ class App extends Component {
    this.setState({previousPage: page})
  }
 
+ handleMenuClick = () => {
+   if(this.state.menuClicked){
+     this.setState({menuClicked: false})
+   }
+   else{
+     this.setState({menuClicked: true})
+   }
+
+ }
+
 
   render() {
     return (
       <div id="App" className="App">
-        <MenuButtons currentPage={this.state.currentPage}/>
         <Page id="intro-container" currentPage={this.state.currentPage} info={blurbs["codepeter"]}/>
         <Page id="yourfoundry-container" currentPage={this.state.currentPage} info={blurbs["yourfoundry"]}/>
         <Page id="reelsquad-container" currentPage={this.state.currentPage} info={blurbs["reelsquad"]}/>
         <Page id="pageclub-container" currentPage={this.state.currentPage} info={blurbs["pageclub"]}/>
         <Page id="instalytics-container" currentPage={this.state.currentPage} info={blurbs["instalytics"]}/>
+        <MenuButtons currentPage={this.state.currentPage} handleMenuClick={this.handleMenuClick} menuClicked={this.state.menuClicked}/>
+        {this.state.menuClicked ? <Menu /> : null}
       </div>
     );
   }

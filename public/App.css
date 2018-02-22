@@ -104,8 +104,6 @@ body {
 
 #menu-buttons {
   padding: 0;
-  z-index: 1000;
-  position: fixed;
   height: 100%;
 }
 
@@ -116,16 +114,28 @@ body {
 
 #logo{
   padding-top: 50px;
+  position: fixed;
+  z-index: 100;
+}
+
+#logo:hover{
+  cursor: pointer;
 }
 
 #menu-container {
   text-align: right;
 }
-#menu{
+#menu, #exit{
   /* position: relative;
   top: 50%;
   transform: translateY(-50%); */
   padding-top: 50px;
+  position: fixed;
+  z-index: 1500;
+}
+
+#menu:hover, #exit {
+  cursor: pointer;
 }
 
 #bottom-menu-container {
@@ -145,10 +155,15 @@ body {
 }
 
 #arrow {
-  position: relative;
+  position: fixed;
   top: 100%;
   transform: translateY(-100%);
   padding-bottom: 100px;
+  z-index: 100;
+}
+
+#arrow:hover {
+  cursor: pointer;
 }
 
 #blurb-container {
@@ -185,9 +200,17 @@ body {
   padding-bottom: 8px;
 }
 
+.project-link-white:hover {
+  cursor: pointer;
+}
+
 .project-link-black {
   padding-bottom: 8px;
   color: black;
+}
+
+.project-link-black:hover {
+  cursor: pointer;
 }
 
 #page-buffer-bottom {
@@ -196,37 +219,49 @@ body {
 
 #page-content {
   height: 50%;
-  padding-bottom: 110px;
+  padding-bottom: 100px;
 }
 
 #project-info-container {
-  position: relative;
-  top: 100%;
-  transform: translateY(-100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 10px;
 }
 
 .title-white{
-  padding-bottom: 10px;
+  margin-bottom: 22px;
   font-size: 63px;
   font-family: avenir-bold;
 }
 
 .blurb-white{
-  padding-bottom: 0;
+  margin: 0;
   font-size: 18px;
   padding-right: 30%;
 }
 
 .title-black{
-  padding-bottom: 10px;
+  margin-bottom: 22px;
   font-size: 63px;
   font-family: avenir-bold;
   color: black;
 }
 
 .blurb-black{
-  padding-bottom: 0;
+  margin: 0;
   font-size: 18px;
   padding-right: 30%;
   color: black;
+}
+
+
+/*                                        Menu Page Styling                                          */
+
+#menu-page{
+  height: 100vh;
+  background: black;
+  position: relative;
+  z-index: 1000;
+  opacity: 0.8;
 }
