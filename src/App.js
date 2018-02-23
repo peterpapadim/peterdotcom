@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Page from './containers/Page';
+import Codepeter from './containers/Codepeter';
+import Yourfoundry from './containers/Yourfoundry';
+import Reelsquad from './containers/Reelsquad';
+import Pageclub from './containers/Pageclub';
+import Instalytics from './containers/Instalytics';
 import MenuButtons from './containers/MenuButtons';
 import Menu from './containers/Menu';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
-var blurbs = {
-  "codepeter": {"title": "Code Peter", "blurb": "My name is Peter Papadimitropoulos and I am a Full Stack Developer based out of New York City."},
-  "yourfoundry": {"title": "YourFoundry", "blurb": "A manufacturing management service for hardware startups."},
-  "reelsquad": {"title": "Reelsquad", "blurb": "Create A queue of movies to watch and share with your group of friends."},
-  "pageclub": {"title": "Pageclub", "blurb": "Arrange a book trade by showing your friends what books you have available at home."},
-  "instalytics": {"title": "Instalytics", "blurb": "Find your most liked photo, most used hashtag, and most interactive follower."}
-}
+var blurbs = [
+  ["Code Peter", "My name is Peter Papadimitropoulos and I am a Full Stack Developer based out of New York City."],
+  ["YourFoundry", "A manufacturing management service for hardware startups."],
+  ["Reelsquad", "Create A queue of movies to watch and share with your group of friends."],
+  ["Pageclub", "Arrange a book trade by showing your friends what books you have available at home."],
+  ["Instalytics", "Find your most liked photo, most used hashtag, and most interactive follower."]
+]
 
 class App extends Component {
 
@@ -19,7 +23,7 @@ class App extends Component {
     super();
     this.state = {
       currentPage: 1,
-      previousPage: 1,
+      nextPage: 1,
       menuClicked: false
     }
   }
@@ -52,45 +56,26 @@ class App extends Component {
 
 		//events
 		onLeave: function(index, nextIndex, direction){
-      bindedThis.setNavActive("")
-      bindedThis.updatePreviousPage(index)
-      if([1, 5].includes(nextIndex)){
-        bindedThis.setNavColor("black")
-      }
-      if([2, 3, 4].includes(nextIndex)){
-        bindedThis.setNavColor("white")
-      }
+      bindedThis.updateNextPage(nextIndex)
     },
 		afterLoad: function(anchorLink, index){
-      console.log(anchorLink, index, bindedThis.state.previousPage)
       bindedThis.updateCurrentPage(index)
-      if(["yourfoundry", "reelsquad", "pageclub"].includes(anchorLink)){
-        bindedThis.setNavActive("white")
-      }
     },
 		afterRender: function(){},
 	});
 
  }
 
- setNavColor = (color) => {
-   let nodes = document.querySelectorAll("#pp-nav span", ".pp-slidesNav span")
-   for(let i = 0; i < nodes.length; i++){
-     nodes[i].style.borderColor = color
-   }
- }
-
- setNavActive = (color) => {
-   document.querySelector("#pp-nav li .active span", ".pp-slidesNav .active span").style.background = color
- }
 
  updateCurrentPage = (page) => {
    this.setState({currentPage: page})
  }
 
- updatePreviousPage = (page) => {
-   this.setState({previousPage: page})
+ updateNextPage = (page) => {
+   this.setState({nextPage: page})
  }
+
+
 
  handleMenuClick = () => {
    if(this.state.menuClicked){
@@ -106,13 +91,18 @@ class App extends Component {
   render() {
     return (
       <div id="App" className="App">
-        <Page id="intro-container" currentPage={this.state.currentPage} info={blurbs["codepeter"]}/>
-        <Page id="yourfoundry-container" currentPage={this.state.currentPage} info={blurbs["yourfoundry"]}/>
-        <Page id="reelsquad-container" currentPage={this.state.currentPage} info={blurbs["reelsquad"]}/>
-        <Page id="pageclub-container" currentPage={this.state.currentPage} info={blurbs["pageclub"]}/>
-        <Page id="instalytics-container" currentPage={this.state.currentPage} info={blurbs["instalytics"]}/>
-        <MenuButtons currentPage={this.state.currentPage} handleMenuClick={this.handleMenuClick} menuClicked={this.state.menuClicked}/>
-        {this.state.menuClicked ? <Menu /> : null}
+        <Codepeter currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
+        <Yourfoundry currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
+        <Reelsquad currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
+        <Pageclub currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
+        <Instalytics currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
+        <MenuButtons currentPage={this.state.currentPage}
+                     handleMenuClick={this.handleMenuClick}
+                     menuClicked={this.state.menuClicked}
+                     currentPage={this.state.currentPage}
+                     info={blurbs}
+                     />
+        {this.state.menuClicked ? <Menu handleMenuClick={this.handleMenuClick}/> : null}
       </div>
     );
   }

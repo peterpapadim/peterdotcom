@@ -7,8 +7,12 @@
 
 body {
     font-family: avenir;
-    color: white;
+    color: black;
     overflow: hidden;
+}
+
+#App {
+  height: 100vh;
 }
 
 
@@ -21,101 +25,28 @@ body {
 
 
 
-
-#intro-container{
-  width: 100vw;
-  height: 100vh;
-  background-image: url('assets/intro/wallpaper_codepeter.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-}
-
-
-/*                                        YourFoundry Styling                                          */
-
-
-
-#yourfoundry-container{
-  width: 100vw;
-  height:100vh;
-  background-image: url('assets/yourfoundry/wallpaper_yourfoundry.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-}
-
-
-/*                                        Reelsquad Styling                                          */
-
-
-
-#reelsquad-container{
-  width: 100vw;
-  height:100vh;
-  background-image: url('assets/reelsquad/wallpaper_reelsquad.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-}
-
-
-
-/*                                        Instalytics Styling                                          */
-
-
-
-#instalytics-container{
-  width: 100vw;
-  height:100vh;
-  background-image: url('assets/instalytics/wallpaper_instalytics.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-}
-
-
-/*                                        Pageclub Styling                                          */
-
-
-
-#pageclub-container{
-  width: 100vw;
-  height:100vh;
-  background-image: url('assets/pageclub/wallpaper_pageclub.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-}
-
-
-
 /*                                        Menu/Nav Styling                                          */
+
+#menu-buttons {
+  padding: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 300;
+}
+
 
 #menu-buttons-container {
   height: 100%;
   padding: 0;
 }
 
-#menu-buttons {
-  padding: 0;
-  height: 100%;
-}
-
-
 #logo-menu-container{
-  height: 20%;
+  height: 10%;
 }
 
 #logo{
   padding-top: 50px;
   position: fixed;
-  z-index: 100;
 }
 
 #logo:hover{
@@ -125,33 +56,25 @@ body {
 #menu-container {
   text-align: right;
 }
+
+#exit-container {
+  height: 18%;
+}
+
 #menu, #exit{
-  /* position: relative;
-  top: 50%;
-  transform: translateY(-50%); */
   padding-top: 50px;
-  position: fixed;
-  z-index: 1500;
 }
 
 #menu:hover, #exit {
   cursor: pointer;
 }
 
+#links-row {
+  height: 26%;
+}
+
 #bottom-menu-container {
-  height: 80%;
-}
-
-#bottom-menu-column {
-  height: 100%;
-}
-
-#bottom-menu-buffer {
-  height: 50%;
-}
-
-#bottom-menu-content {
-  height: 50%;
+  height: 64%;
 }
 
 #arrow {
@@ -159,109 +82,77 @@ body {
   top: 100%;
   transform: translateY(-100%);
   padding-bottom: 100px;
-  z-index: 100;
 }
 
 #arrow:hover {
   cursor: pointer;
 }
 
-#blurb-container {
-  height: 100%;
+#project-info-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 120px;
 }
 
-/*                                        Page Styling                                          */
-
-#page-container {
-  height: 100%;
-  padding: 0;
+.title{
+  margin-bottom: 22px;
+  font-size: 63px;
+  font-family: avenir-bold;
 }
 
-#page-buffer-top {
-  height: 18%;
-}
-
-#page-links-row {
-  height: 18%;
+.blurb{
+  margin: 0;
+  font-size: 18px;
+  padding-right: 30%;
 }
 
 #coming-soon {
   margin-bottom: 0;
   font-size: 15px;
+  margin-top: 40px;
 }
 
 #project-links {
   list-style: none;
   padding-left: 0;
   font-size: 15px;
+  margin-top: 40px;
 }
 
-.project-link-white {
-  padding-bottom: 8px;
-}
-
-.project-link-white:hover {
-  cursor: pointer;
-}
-
-.project-link-black {
+.project-link {
   padding-bottom: 8px;
   color: black;
 }
 
-.project-link-black:hover {
+.project-link:hover {
   cursor: pointer;
 }
 
-#page-buffer-bottom {
-  height: 14%;
+
+/*                                        Page Styling                                          */
+
+.page-container {
+  height: 100%;
+  padding: 0;
+  text-align: center;
 }
 
-#page-content {
-  height: 50%;
-  padding-bottom: 100px;
+img {
+  max-width: 80%;
 }
 
-#project-info-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 10px;
-}
 
-.title-white{
-  margin-bottom: 22px;
-  font-size: 63px;
-  font-family: avenir-bold;
-}
 
-.blurb-white{
-  margin: 0;
-  font-size: 18px;
-  padding-right: 30%;
-}
-
-.title-black{
-  margin-bottom: 22px;
-  font-size: 63px;
-  font-family: avenir-bold;
-  color: black;
-}
-
-.blurb-black{
-  margin: 0;
-  font-size: 18px;
-  padding-right: 30%;
-  color: black;
-}
 
 
 /*                                        Menu Page Styling                                          */
 
 #menu-page{
-  height: 100vh;
+  height: 100%;
   background: black;
   position: relative;
-  z-index: 1000;
+  z-index: 400;
   opacity: 0.8;
+  padding: 0;
 }
