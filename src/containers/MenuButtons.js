@@ -108,7 +108,7 @@ class MenuButtons extends Component {
           </div>
           <div className="row" id="bottom-menu-container">
               <div className="col-1"></div>
-              <div className="col-1 animated infinite bounce">{this.displayArrow()}</div>
+              <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
               <div className="col-6"></div>
               <div className="col-4">{this.projectInfo()}</div>
           </div>

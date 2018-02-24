@@ -29,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+   this.timerId = setInterval(this.arrowBounceEvery5Seconds, 5000)
    let bindedThis = this
    window.$('#App').pagepiling({
 	    menu: null,
@@ -57,9 +58,11 @@ class App extends Component {
 		//events
 		onLeave: function(index, nextIndex, direction){
       bindedThis.updateNextPage(nextIndex)
+      clearInterval(bindedThis.timerId);
     },
 		afterLoad: function(anchorLink, index){
       bindedThis.updateCurrentPage(index)
+      bindedThis.timerId = setInterval(bindedThis.arrowBounceEvery5Seconds, 5000)
     },
 		afterRender: function(){},
 	});
@@ -85,6 +88,25 @@ class App extends Component {
      this.setState({menuClicked: true})
    }
 
+ }
+
+ // startArrowTimer = () => {
+ //   window.setInterval(() => {
+ //     $("#arrow-container").addClass("arrow-container-start-animation")
+ //     window.setTimeout(() => {$("#arrow-container").removeClass("arrow-container-start-animation")}, 1000)
+ //   }, 5000)
+ // }
+
+
+ arrowBounceEvery5Seconds = () => {
+   $("#arrow-container").addClass("animated")
+   $("#arrow-container").addClass("infinite")
+   $("#arrow-container").addClass("bounce")
+   setTimeout(() => {
+     $("#arrow-container").removeClass("animated")
+     $("#arrow-container").removeClass("infinite")
+     $("#arrow-container").removeClass("bounce")
+   }, 1000)
  }
 
 

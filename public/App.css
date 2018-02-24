@@ -57,10 +57,6 @@ body {
   text-align: right;
 }
 
-#exit-container {
-  height: 18%;
-}
-
 #menu, #exit{
   padding-top: 50px;
 }
@@ -93,6 +89,17 @@ svg:hover #Line-3 {
   height: 64%;
 }
 
+/* #arrow-container {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+} */
+
+/* .arrow-container-start-animation {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-play-state: running!important;
+  animation-play-state: running!important;
+} */
 
 #arrow {
   position: fixed;
@@ -176,4 +183,54 @@ img {
   position: relative;
   z-index: 400;
   padding: 0;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+#exit-container {
+  height: 18%;
+}
+
+#menu-links-container {
+  height: 64%;
+}
+
+#menu-links {
+  font-size: 63px;
+  font-family: avenir-bold;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10%;
+}
+
+#social-container {
+  height: 18%;
+}
+
+#social-icons-row {
+  height: 50%;
+}
+
+#social-icons-column {
+  text-align: center;
+  position: relative;
+}
+
+#social-icons-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.social-icon {
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+#social-buffer-row {
+  height: 50%;
 }
