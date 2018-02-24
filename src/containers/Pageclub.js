@@ -5,7 +5,7 @@ class Pageclub extends Component {
 
   displayImage = () => {
     if(this.props.nextPage === 4 || this.props.currentPage === 4){
-      return <img src={ PageclubBackground } />
+      return <img id="pageclub-background" src={ PageclubBackground } />
     }
     else{
       return <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />

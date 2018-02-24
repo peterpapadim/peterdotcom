@@ -69,6 +69,22 @@ body {
   cursor: pointer;
 }
 
+svg path {
+  transition: d 0.25s ease-in-out;
+  -webkit-transition: d 0.25s ease-in-out;
+  -moz-transition: d 0.25s ease-in-out;
+}
+
+svg:hover #Line-1 {
+  d: path("M34.7569444,1.5 L0.243055556,1.5");
+}
+
+svg:hover #Line-3 {
+  d: path("M34.7569444,27.5 L0.243055556,27.5");
+}
+
+
+
 #links-row {
   height: 26%;
 }
@@ -76,6 +92,7 @@ body {
 #bottom-menu-container {
   height: 64%;
 }
+
 
 #arrow {
   position: fixed;
@@ -134,12 +151,17 @@ body {
 
 .page-container {
   height: 100%;
+  width: 100%;
   padding: 0;
   text-align: center;
 }
 
 img {
   max-width: 80%;
+}
+
+#pageclub-background, #reelsquad-background{
+  max-width: 631px;
 }
 
 
@@ -153,6 +175,5 @@ img {
   background: black;
   position: relative;
   z-index: 400;
-  opacity: 0.8;
   padding: 0;
 }

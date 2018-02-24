@@ -12,7 +12,22 @@ class MenuButtons extends Component {
   }
 
   displayMenu = () => {
-    return <img id="menu" src={MenuBlack} onClick={this.props.handleMenuClick}/>
+    return(
+    <div id="menu">
+      <svg width="39px" height="29px" viewBox="0 0 39 29" version="1.1" xmlns="http://www.w3.org/2000/svg" onClick={this.props.handleMenuClick}>
+          <title>menu_black</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Code-Peter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1303.000000, -50.000000)" stroke-linecap="square">
+              <g id="menu_black" transform="translate(1305.000000, 50.000000)" stroke="#000000" stroke-width="3">
+                  <path d="M34.7542373,1.5 L6.20765259,1.5" id="Line-1"></path>
+                  <path d="M34.75,27.5 L19.2419376,27.5" id="Line-3"></path>
+                  <path d="M34.7569444,14.5 L0.243055556,14.5" id="Line-2"></path>
+              </g>
+          </g>
+      </svg>
+    </div>
+    )
   }
 
   handleLogoClick = () => {
@@ -93,7 +108,7 @@ class MenuButtons extends Component {
           </div>
           <div className="row" id="bottom-menu-container">
               <div className="col-1"></div>
-              <div className="col-1">{this.displayArrow()}</div>
+              <div className="col-1 animated infinite bounce">{this.displayArrow()}</div>
               <div className="col-6"></div>
               <div className="col-4">{this.projectInfo()}</div>
           </div>
