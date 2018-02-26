@@ -45,15 +45,15 @@ class MenuButtons extends Component {
 
   displayArrow = () => {
     if(this.props.currentPage === 5){
-      return <img id="arrow" src={ArrowUpBlack} onClick={this.handleArrowClick}/>
+      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowUpBlack} onClick={this.handleArrowClick}/>
     }
     else {
-      return <img id="arrow" src={ArrowDownBlack} onClick={this.handleArrowClick}/>
+      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowDownBlack} onClick={this.handleArrowClick}/>
     }
   }
 
   comingSoon = () => {
-    return <div><p id="coming-soon">December 2017 - Present</p><p>(Coming Soon...)</p></div>
+    return <div id="coming-soon-container"><p className="coming-soon">December 2017 - Present</p><p className="coming-soon">(Coming Soon...)</p></div>
   }
 
   displayProjectLinks = () => {
@@ -81,9 +81,9 @@ class MenuButtons extends Component {
   projectInfo = () => {
     let page = this.props.currentPage
     return (
-      <div id="project-info-container">
+      <div id={this.props.mobile ? "project-info-container-mobile" : "project-info-container" }>
         <p className="title">{this.props.info[page - 1][0]}</p>
-        <p className="blurb">{this.props.info[page - 1][1]}</p>
+        <p className={this.props.mobile ? "blurb-mobile" : "blurb" }>{this.props.info[page - 1][1]}</p>
       </div>
     )
   }
@@ -102,16 +102,26 @@ class MenuButtons extends Component {
           </div>
           <div className="row" id="links-row">
             <div className="col-1"></div>
-            <div className="col-2">
+            <div className={this.props.mobile ? "col-5" : "col-2"}>
               {this.displayProjectLinks()}
             </div>
           </div>
-          <div className="row" id="bottom-menu-container">
-              <div className="col-1"></div>
-              <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
-              <div className="col-6"></div>
-              <div className="col-4">{this.projectInfo()}</div>
-          </div>
+          {
+            this.props.mobile ?
+            <div className="row" id="bottom-menu-container">
+                <div className="col-1"></div>
+                <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
+                <div className="col-1"></div>
+                <div className="col-7">{this.projectInfo()}</div>
+                <div className="col-2"></div>
+            </div> :
+            <div className="row" id="bottom-menu-container">
+                <div className="col-1"></div>
+                <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
+                <div className="col-6"></div>
+                <div className="col-4">{this.projectInfo()}</div>
+            </div>
+          }
         </div>
       </div>
     )

@@ -10,7 +10,7 @@ import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
 var blurbs = [
-  ["Code Peter", "My name is Peter Papadimitropoulos and I am a Full Stack Developer based out of New York City."],
+  ["Code Peter", "Peter Papadimitropoulos. Full Stack Developer based out of New York City."],
   ["YourFoundry", "A manufacturing management service for hardware startups."],
   ["Reelsquad", "Create A queue of movies to watch and share with your group of friends."],
   ["Pageclub", "Arrange a book trade by showing your friends what books you have available at home."],
@@ -24,11 +24,20 @@ class App extends Component {
     this.state = {
       currentPage: 1,
       nextPage: 1,
-      menuClicked: false
+      menuClicked: false,
+      mobile: false
     }
   }
 
   componentDidMount() {
+   if(window.innerWidth < 576){this.setState({mobile: true})}
+   else{this.setState({mobile: false})}
+   $(window).on('resize', () => {
+     if(window.innerWidth < 576){
+       this.setState({mobile: true})
+     }
+     else{this.setState({mobile: false})}
+   })
    this.timerId = setInterval(this.arrowBounceEvery5Seconds, 5000)
    let bindedThis = this
    window.$('#App').pagepiling({
@@ -90,14 +99,6 @@ class App extends Component {
 
  }
 
- // startArrowTimer = () => {
- //   window.setInterval(() => {
- //     $("#arrow-container").addClass("arrow-container-start-animation")
- //     window.setTimeout(() => {$("#arrow-container").removeClass("arrow-container-start-animation")}, 1000)
- //   }, 5000)
- // }
-
-
  arrowBounceEvery5Seconds = () => {
    $("#arrow-container").addClass("animated")
    $("#arrow-container").addClass("infinite")
@@ -123,6 +124,7 @@ class App extends Component {
                      menuClicked={this.state.menuClicked}
                      currentPage={this.state.currentPage}
                      info={blurbs}
+                     mobile={this.state.mobile}
                      />
         {this.state.menuClicked ? <Menu handleMenuClick={this.handleMenuClick}/> : null}
       </div>

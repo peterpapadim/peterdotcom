@@ -39,7 +39,7 @@ html, body {
     opacity: 1;
 }
 #pp-nav.right {
-    right: 17px;
+    right: 0;
     z-index: 500;
 }
 #pp-nav.left {

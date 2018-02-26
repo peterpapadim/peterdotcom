@@ -1,3 +1,155 @@
+/* Small devices (landscape phones, 250px and up) */
+@media (min-width: 0px) {
+  p.title {
+    font-size: 30px;
+  }
+  p.blurb-mobile, li.project-link, .coming-soon {
+    font-size: 12px!important;
+  }
+  #project-links {
+    margin-top: 70px!important;
+  }
+  p#menu-links {
+    font-size: 30px;
+  }
+  #social-icons {
+    padding-left: 4%!important;
+  }
+}
+
+/* Small devices (landscape phones, 350px and up) */
+@media (min-width: 350px) {
+  p.title {
+    font-size: 30px;
+  }
+  p#menu-links {
+    font-size: 30px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  p.title {
+    font-size: 25px;
+  }
+  .background-png, .background-svg {
+    max-width: 60%!important;
+  }
+  p.blurb {
+    font-size: 12px;
+  }
+  p#menu-links {
+    font-size: 25px;
+  }
+  #social-icons {
+    padding-right: 3%;
+  }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  p.title {
+    font-size: 35px;
+  }
+  p.blurb {
+    font-size: 15px;
+  }
+  p.blurb-mobile, li.project-link, .coming-soon {
+    font-size: 15px!important;
+  }
+  .background-png, .background-svg {
+    max-width: 60%!important;
+  }
+  p#menu-links {
+    font-size: 35px;
+  }
+}
+
+@media (max-height: 576px) {
+  #links-row {
+    height: 50%!important;
+  }
+  #bottom-menu-container {
+    height: 40%!important;
+  }
+  p.title {
+    font-size: 25px!important;
+  }
+  p.blurb {
+    font-size: 12px!important;
+  }
+  p.blurb-mobile, li.project-link, .coming-soon {
+    font-size: 12px!important;
+  }
+  #project-info-container {
+    margin-bottom: 20px!important;
+  }
+  #arrow {
+    padding-bottom: 20px!important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  p.title {
+    font-size: 44px;
+  }
+  p.blurb {
+    font-size: 15px;
+  }
+  .background-png, .background-svg {
+    max-width: 60%!important;
+  }
+  p#menu-links {
+    font-size: 44px;
+  }
+  #social-icons {
+    padding-right: 3%;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  p.title {
+    font-size: 53px;
+  }
+  p.blurb {
+    font-size: 18px;
+  }
+  .background-png, .background-svg {
+    max-width: 50%!important;
+  }
+  p#menu-links {
+    font-size: 53px;
+  }
+  #social-icons {
+    padding-right: 5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  p.title {
+    font-size: 63px;
+  }
+  p.blurb {
+    font-size: 18px;
+  }
+  .background-png, .background-svg {
+    max-width: 50%!important;
+  }
+  p#menu-links {
+    font-size: 63px;
+  }
+  #social-icons {
+    padding-right: 10%!important;
+  }
+}
+
+@media (min-width: 1700px) {
+  #social-icons {
+    padding-right: 20%;
+  }
+}
+
 @font-face {
     font-family: avenir;
     src: url('assets/font/avenir_next_regular.otf');
@@ -89,23 +241,18 @@ svg:hover #Line-3 {
   height: 64%;
 }
 
-/* #arrow-container {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-} */
-
-/* .arrow-container-start-animation {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-play-state: running!important;
-  animation-play-state: running!important;
-} */
-
 #arrow {
   position: fixed;
   top: 100%;
   transform: translateY(-100%);
   padding-bottom: 100px;
+}
+
+#arrow-mobile {
+  position: fixed;
+  top: 100%;
+  transform: translateY(-100%);
+  padding-bottom: 50px;
 }
 
 #arrow:hover {
@@ -117,6 +264,14 @@ svg:hover #Line-3 {
   bottom: 0;
   left: 0;
   margin-bottom: 120px;
+}
+
+#project-info-container-mobile{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 50px;
+  margin-left: 20px;
 }
 
 .title{
@@ -131,10 +286,18 @@ svg:hover #Line-3 {
   padding-right: 30%;
 }
 
-#coming-soon {
+.blurb-mobile {
+  margin: 0;
+  padding-right: 15%;
+}
+
+#coming-soon-container {
+  margin-top: 70px;
+}
+
+.coming-soon {
   margin-bottom: 0;
   font-size: 15px;
-  margin-top: 40px;
 }
 
 #project-links {
@@ -151,6 +314,7 @@ svg:hover #Line-3 {
 
 .project-link:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 
@@ -159,16 +323,27 @@ svg:hover #Line-3 {
 .page-container {
   height: 100%;
   width: 100%;
-  padding: 0;
   text-align: center;
 }
 
-img {
-  max-width: 80%;
+.background-container {
+  height: 100%;
 }
 
-#pageclub-background, #reelsquad-background{
-  max-width: 631px;
+.background-svg {
+  max-width: 100%;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.background-png {
+  max-width: 100%;
+  max-height: 80%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
@@ -191,22 +366,33 @@ img {
   height: 18%;
 }
 
-#menu-links-container {
-  height: 64%;
+#menu-links-row {
+  height: 54%;
 }
 
-#menu-links {
-  font-size: 63px;
-  font-family: avenir-bold;
-  color: white;
+#menu-links-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  padding-left: 10%;
+  text-align: center;
+}
+
+#menu-links {
+  display: inline-block;
+  font-size: 63px;
+  font-family: avenir-bold;
+  color: white;
+  width: 75%;
+  text-align: left;
+}
+
+#menu-links > span:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #social-container {
-  height: 18%;
+  height: 28%;
 }
 
 #social-icons-row {
@@ -225,9 +411,16 @@ img {
   text-align: center;
 }
 
+#social-icons {
+  display: inline-block;
+  width: 95%;
+  text-align: center;
+  padding-left: 7%;
+}
+
 .social-icon {
-  padding-left: 25px;
-  padding-right: 25px;
+  /* padding-left: 20px; */
+  padding: 2%;
   cursor: pointer;
 }
 

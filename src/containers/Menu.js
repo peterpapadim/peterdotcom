@@ -42,18 +42,20 @@ class Menu extends Component {
             </div>
             <div className="col-1"></div>
           </div>
-          <div className="row" id="menu-links-container">
+          <div className="row" id="menu-links-row">
             <div className="col-4"></div>
-            <div className="col-4">
-              <p id="menu-links">
-                <span>Home </span>
-                <span>About </span>
-                <span>Contact </span>
-                <span>Blog </span>
-                <span>Resume </span>
-              </p>
+            <div className="col-5">
+              <div id="menu-links-container">
+                <p id="menu-links">
+                  <span>Home </span>
+                  <span>About </span>
+                  <span>Contact </span>
+                  <span>Blog </span>
+                  <span>Resume </span>
+                </p>
+             </div>
             </div>
-            <div className="col-4"></div>
+            <div className="col-3"></div>
           </div>
           <div className="row" id="social-container">
             <div className="col-4"></div>
@@ -61,10 +63,12 @@ class Menu extends Component {
               <div className="row" id="social-icons-row">
                 <div className="col-12" id="social-icons-column">
                   <div id="social-icons-container">
-                    <img className="social-icon"src={this.state.linkedinHovered ? LinkedInIconHovered : LinkedInIcon} onMouseEnter={() => this.handleHover({linkedinHovered:true})} onMouseLeave={() => this.handleHover({linkedinHovered:false})}/>
-                    <img className="social-icon"src={this.state.instagramHovered ? InstagramIconHovered : InstagramIcon} onMouseEnter={() => this.handleHover({instagramHovered:true})} onMouseLeave={() => this.handleHover({instagramHovered:false})}/>
-                    <img className="social-icon"src={this.state.githubHovered ? GithubIconHovered : GithubIcon} onMouseEnter={() => this.handleHover({githubHovered:true})} onMouseLeave={() => this.handleHover({githubHovered:false})}/>
-                    <img className="social-icon"src={this.state.mediumHovered ? MediumIconHovered : MediumIcon} onMouseEnter={() => this.handleHover({mediumHovered:true})} onMouseLeave={() => this.handleHover({mediumHovered:false})}/>
+                    <div id="social-icons">
+                      <img className="social-icon"src={this.state.linkedinHovered ? LinkedInIconHovered : LinkedInIcon} onMouseEnter={() => this.handleHover({linkedinHovered:true})} onMouseLeave={() => this.handleHover({linkedinHovered:false})}/>
+                      <img className="social-icon"src={this.state.instagramHovered ? InstagramIconHovered : InstagramIcon} onMouseEnter={() => this.handleHover({instagramHovered:true})} onMouseLeave={() => this.handleHover({instagramHovered:false})}/>
+                      <img className="social-icon"src={this.state.githubHovered ? GithubIconHovered : GithubIcon} onMouseEnter={() => this.handleHover({githubHovered:true})} onMouseLeave={() => this.handleHover({githubHovered:false})}/>
+                      <img className="social-icon"src={this.state.mediumHovered ? MediumIconHovered : MediumIcon} onMouseEnter={() => this.handleHover({mediumHovered:true})} onMouseLeave={() => this.handleHover({mediumHovered:false})}/>
+                    </div>
                   </div>
                 </div>
               </div>
