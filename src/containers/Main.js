@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Codepeter from './containers/Codepeter';
-import Yourfoundry from './containers/Yourfoundry';
-import Reelsquad from './containers/Reelsquad';
-import Pageclub from './containers/Pageclub';
-import Instalytics from './containers/Instalytics';
-import MenuButtons from './containers/MenuButtons';
-import Menu from './containers/Menu';
+import Codepeter from './Codepeter';
+import Yourfoundry from './Yourfoundry';
+import Reelsquad from './Reelsquad';
+import Pageclub from './Pageclub';
+import Instalytics from './Instalytics';
+import MenuButtons from './MenuButtons';
+import Menu from './Menu';
+import Contact from './Contact';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
@@ -24,20 +25,20 @@ class App extends Component {
     this.state = {
       currentPage: 1,
       nextPage: 1,
-      menuClicked: false,
-      mobile: false
+      // menuClicked: false,
+      // mobile: false
     }
   }
 
   componentDidMount() {
-   if(window.innerWidth < 576){this.setState({mobile: true})}
-   else{this.setState({mobile: false})}
-   $(window).on('resize', () => {
-     if(window.innerWidth < 576){
-       this.setState({mobile: true})
-     }
-     else{this.setState({mobile: false})}
-   })
+   // if(window.innerWidth < 576){this.setState({mobile: true})}
+   // else{this.setState({mobile: false})}
+   // $(window).on('resize', () => {
+   //   if(window.innerWidth < 576){
+   //     this.setState({mobile: true})
+   //   }
+   //   else{this.setState({mobile: false})}
+   // })
    this.timerId = setInterval(this.arrowBounceEvery5Seconds, 5000)
    let bindedThis = this
    window.$('#App').pagepiling({
@@ -45,7 +46,7 @@ class App extends Component {
       direction: 'vertical',
       verticalCentered: true,
       sectionsColor: [],
-      anchors: ['home', 'yourfoundry', 'reelsquad', "pageclub", 'instalytics'],
+      anchors: ['home', 'yourfoundry', 'reelsquad', 'pageclub', 'instalytics'],
       scrollingSpeed: 700,
       easing: 'swing',
       loopBottom: false,
@@ -88,16 +89,14 @@ class App extends Component {
  }
 
 
-
- handleMenuClick = () => {
-   if(this.state.menuClicked){
-     this.setState({menuClicked: false})
-   }
-   else{
-     this.setState({menuClicked: true})
-   }
-
- }
+ // handleMenuClick = () => {
+ //   if(this.state.menuClicked){
+ //     this.setState({menuClicked: false})
+ //   }
+ //   else{
+ //     this.setState({menuClicked: true})
+ //   }
+ // }
 
  arrowBounceEvery5Seconds = () => {
    $("#arrow-container").addClass("animated")
@@ -120,13 +119,16 @@ class App extends Component {
         <Pageclub currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
         <Instalytics currentPage={this.state.currentPage} nextPage={this.state.nextPage}/>
         <MenuButtons currentPage={this.state.currentPage}
-                     handleMenuClick={this.handleMenuClick}
-                     menuClicked={this.state.menuClicked}
+                     handleMenuClick={this.props.handleMenuClick}
+                     menuClicked={this.props.menuClicked}
                      currentPage={this.state.currentPage}
                      info={blurbs}
-                     mobile={this.state.mobile}
+                     mobile={this.props.mobile}
+                     contactMenu={false}
+                     history={this.props.history}
+                     handleLogoClick={this.props.handleLogoClick}
                      />
-        {this.state.menuClicked ? <Menu handleMenuClick={this.handleMenuClick}/> : null}
+        {this.props.menuClicked ? <Menu handleMenuClick={this.props.handleMenuClick} handleLogoClick={this.props.handleLogoClick}/> : null}
       </div>
     );
   }

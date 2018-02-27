@@ -9,6 +9,15 @@ import LinkedInIconHovered from '../assets/social/icon_linkedin_hovered.svg';
 import InstagramIconHovered from '../assets/social/icon_instagram_hovered.svg';
 import GithubIconHovered from '../assets/social/icon_github_hovered.svg';
 import MediumIconHovered from '../assets/social/icon_medium_hovered.svg';
+var pagepiling = require('pagepiling.js');
+
+const links = {
+  home: "/",
+  about: "",
+  contact: "/contact",
+  blog: "",
+  resume: ""
+}
 
 class Menu extends Component {
 
@@ -23,11 +32,21 @@ class Menu extends Component {
   }
 
   displayLogo = () => {
-    return <img id="logo" src={LogoWhite} onClick={this.props.handleMenuClick}/>
+    return <img id="logo" src={LogoWhite} onClick={this.props.handleLogoClick}/>
   }
 
   handleHover = (social) => {
     this.setState(social)
+  }
+
+  handleMenuLinkClick = (link) => {
+    if(link === "home"){
+      this.props.handleLogoClick()
+    }
+    else if(link === "contact"){
+      window.location.href = links[link]
+      this.props.handleMenuClick(false)
+    }
   }
 
   render(){
@@ -47,9 +66,9 @@ class Menu extends Component {
             <div className="col-5">
               <div id="menu-links-container">
                 <p id="menu-links">
-                  <span>Home </span>
+                  <span onClick={() => this.handleMenuLinkClick("home")}>Home </span>
                   <span>About </span>
-                  <span>Contact </span>
+                  <span onClick={() => this.handleMenuLinkClick("contact")}>Contact </span>
                   <span>Blog </span>
                   <span>Resume </span>
                 </p>

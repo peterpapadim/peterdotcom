@@ -3,12 +3,13 @@ import LogoBlack from '../assets/logo/logo_black.svg';
 import MenuBlack from '../assets/menu/menu_black.svg';
 import ArrowDownBlack from '../assets/arrow/arrow_down_black.svg';
 import ArrowUpBlack from '../assets/arrow/arrow_up_black.svg';
+var pagepiling = require('pagepiling.js');
 
 
 class MenuButtons extends Component {
 
   displayLogo = () => {
-    return <img id="logo" src={LogoBlack} onClick={this.handleLogoClick}/>
+    return <img id="logo" src={LogoBlack} onClick={this.props.handleLogoClick}/>
   }
 
   displayMenu = () => {
@@ -30,9 +31,6 @@ class MenuButtons extends Component {
     )
   }
 
-  handleLogoClick = () => {
-    window.$.fn.pagepiling.moveTo(1);
-  }
 
   handleArrowClick = () => {
     if(this.props.currentPage === 5){
@@ -80,12 +78,22 @@ class MenuButtons extends Component {
 
   projectInfo = () => {
     let page = this.props.currentPage
-    return (
-      <div id={this.props.mobile ? "project-info-container-mobile" : "project-info-container" }>
-        <p className="title">{this.props.info[page - 1][0]}</p>
-        <p className={this.props.mobile ? "blurb-mobile" : "blurb" }>{this.props.info[page - 1][1]}</p>
-      </div>
-    )
+    if(this.props.contactMenu){
+      return(
+        <div id="project-info-container">
+          <p className="title">Contact</p>
+          <p className={this.props.mobile ? "blurb-mobile" : "blurb"}>If you'd like to work on a project or just chat about working together, contact me:</p>
+        </div>
+      )
+    }
+    else {
+      return (
+        <div id={this.props.mobile ? "project-info-container-mobile" : "project-info-container" }>
+          <p className="title">{this.props.info[page - 1][0]}</p>
+          <p className={this.props.mobile ? "blurb-mobile" : "blurb" }>{this.props.info[page - 1][1]}</p>
+        </div>
+      )
+    }
   }
 
 
@@ -103,21 +111,27 @@ class MenuButtons extends Component {
           <div className="row" id="links-row">
             <div className="col-1"></div>
             <div className={this.props.mobile ? "col-5" : "col-2"}>
-              {this.displayProjectLinks()}
+              {!this.props.contactMenu ? this.displayProjectLinks() : null}
             </div>
           </div>
           {
-            this.props.mobile ?
+            this.props.mobile && !this.props.contactMenu ?
             <div className="row" id="bottom-menu-container">
                 <div className="col-1"></div>
                 <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
                 <div className="col-1"></div>
                 <div className="col-7">{this.projectInfo()}</div>
                 <div className="col-2"></div>
+            </div> : this.props.mobile && this.props.contactMenu ?
+            <div className="row" id="bottom-menu-container">
+                <div className="col-2"></div>
+                <div className="col-4">{this.projectInfo()}</div>
+                <div className="col-4"></div>
+                <div className="col-2"></div>
             </div> :
             <div className="row" id="bottom-menu-container">
                 <div className="col-1"></div>
-                <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
+                <div id="arrow-container" className="col-1">{!this.props.contactMenu ? this.displayArrow() : null}</div>
                 <div className="col-6"></div>
                 <div className="col-4">{this.projectInfo()}</div>
             </div>
