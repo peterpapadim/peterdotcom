@@ -5,6 +5,20 @@ import ArrowDownBlack from '../assets/arrow/arrow_down_black.svg';
 import ArrowUpBlack from '../assets/arrow/arrow_up_black.svg';
 var pagepiling = require('pagepiling.js');
 
+const reelsquadDemo = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
+const reelsquadFrontend = "https://github.com/peterpapadim/reelsquad"
+const reelsquadBackend = "https://github.com/peterpapadim/reelsquad-api"
+
+const codepeterFrontend = "https://github.com/peterpapadim/peterdotcom"
+
+const pageclubDemo = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
+const pageclubFrontend = "https://github.com/peterpapadim/pageclub"
+const pageclubBackend = "https://github.com/peterpapadim/pageclub-api"
+
+const instalyticsDemo = "https://www.dropbox.com/s/ctjdjaar4jae4b8/instalytics_demo.mov?dl=0"
+const instalyticsFrontend = "https://github.com/peterpapadim/instalytics-fe"
+const instalyticsBackend = "https://github.com/cwooley/Instalytics-Api"
+
 
 class MenuButtons extends Component {
 
@@ -42,7 +56,10 @@ class MenuButtons extends Component {
   }
 
   displayArrow = () => {
-    if(this.props.currentPage === 5){
+    if(this.props.contactMenu){
+      return null
+    }
+    else if(this.props.currentPage === 5){
       return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowUpBlack} onClick={this.handleArrowClick}/>
     }
     else {
@@ -55,8 +72,11 @@ class MenuButtons extends Component {
   }
 
   displayProjectLinks = () => {
-    if(this.props.currentPage === 1){
-      return
+    if(this.props.contactMenu){
+      return null
+    }
+    else if(this.props.currentPage === 1){
+      return null
     }
     else if(this.props.currentPage === 2){
       return this.comingSoon()
@@ -66,25 +86,56 @@ class MenuButtons extends Component {
     }
   }
 
+  handleLinkClick = (link) => {
+    if(link === "demo"){
+      if(this.props.currentPage === 3){
+        window.open(reelsquadDemo)
+      }
+      else if(this.props.currentPage === 4){
+        window.open(pageclubDemo)
+      }
+      else{
+        window.open(instalyticsDemo)
+      }
+    }
+    else if(link === "front"){
+      if(this.props.currentPage === 3){
+        window.open(reelsquadFrontend)
+      }
+      else if(this.props.currentPage === 4){
+        window.open(pageclubFrontend)
+      }
+      else{
+        window.open(instalyticsFrontend)
+      }
+    }
+    else{
+      if(this.props.currentPage === 3){
+        window.open(reelsquadBackend)
+      }
+      else if(this.props.currentPage === 4){
+        window.open(pageclubBackend)
+      }
+      else{
+        window.open(instalyticsBackend)
+      }
+    }
+  }
+
   projectLinks = () => {
-    return (
-      <ul id="project-links">
-        <li className="project-link">View Demo ⟶</li>
-        <li className="project-link">View Front-End ⟶</li>
-        <li className="project-link">View Back-End ⟶</li>
-      </ul>
-    )
+      return (
+        <ul id="project-links">
+          <li className="project-link" onClick={() => this.handleLinkClick("demo")}>View Demo ⟶</li>
+          <li className="project-link" onClick={() => this.handleLinkClick("front")}>View Front-End ⟶</li>
+          <li className="project-link" onClick={() => this.handleLinkClick("back")}>View Back-End ⟶</li>
+        </ul>
+      )
   }
 
   projectInfo = () => {
     let page = this.props.currentPage
     if(this.props.contactMenu){
-      return(
-        <div id="project-info-container">
-          <p className="title">Contact</p>
-          <p className={this.props.mobile ? "blurb-mobile" : "blurb"}>If you'd like to work on a project or just chat about working together, contact me:</p>
-        </div>
-      )
+      return null
     }
     else {
       return (
@@ -110,8 +161,7 @@ class MenuButtons extends Component {
           </div>
           <div className="row" id="links-row">
             <div className="col-1"></div>
-            <div className={this.props.mobile ? "col-5" : "col-2"}>
-              {!this.props.contactMenu ? this.displayProjectLinks() : null}
+            <div className="col-5">{this.displayProjectLinks()}
             </div>
           </div>
           {
@@ -131,7 +181,7 @@ class MenuButtons extends Component {
             </div> :
             <div className="row" id="bottom-menu-container">
                 <div className="col-1"></div>
-                <div id="arrow-container" className="col-1">{!this.props.contactMenu ? this.displayArrow() : null}</div>
+                <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
                 <div className="col-6"></div>
                 <div className="col-4">{this.projectInfo()}</div>
             </div>

@@ -39,13 +39,19 @@ class Contact extends Component {
               <div className="col-1"></div>
             </div> :
             <div className="row" id="contact-form-row">
-              <div className="col-1"></div>
-              <div className="col-5">
+              <div className="col-6">
                 <div id="contact-form">
                   {this.contactForm()}
                 </div>
               </div>
-              <div className="col-6"></div>
+              <div className="col-2">
+              </div>
+              <div className="col-4">
+                <div id="project-info-container">
+                  <p className="title">Contact</p>
+                  <p className="blurb">Interested in partnering on a cool project or just want to chat? Email me. </p>
+                </div>
+              </div>
             </div>
           }
        </div>

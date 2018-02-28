@@ -14,7 +14,7 @@ var blurbs = [
   ["Code Peter", "Peter Papadimitropoulos. Full Stack Developer based out of New York City."],
   ["YourFoundry", "A manufacturing management service for hardware startups."],
   ["Reelsquad", "Create A queue of movies to watch and share with your group of friends."],
-  ["Pageclub", "Arrange a book trade by showing your friends what books you have available at home."],
+  ["Pageclub", "Show your friends what books you have available at home."],
   ["Instalytics", "Find your most liked photo, most used hashtag, and most interactive follower."]
 ]
 
