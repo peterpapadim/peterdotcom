@@ -13,9 +13,9 @@ var pagepiling = require('pagepiling.js');
 var blurbs = [
   ["Code Peter", "Peter Papadimitropoulos. Full Stack Developer based out of New York City."],
   ["YourFoundry", "A manufacturing management service for hardware startups."],
-  ["Reelsquad", "Create A queue of movies to watch and share with your group of friends."],
-  ["Pageclub", "Show your friends what books you have available at home."],
-  ["Instalytics", "Find your most liked photo, most used hashtag, and most interactive follower."]
+  ["Reelsquad", "Create lists for movies and tv shows that you can share with a group of friends."],
+  ["Pageclub", "Create a library for the books you own and show your friends what you have available for lending."],
+  ["Instalytics", "Visualize your instagram pictures sorted by most liked or most commented post."]
 ]
 
 class App extends Component {

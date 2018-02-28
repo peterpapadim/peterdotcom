@@ -1,23 +1,80 @@
 import React, {Component} from 'react';
 import MenuButtons from './MenuButtons';
+import SendingLoader from '../assets/loaders/ripple_130.svg';
 import Menu from './Menu';
+import { Icon } from 'semantic-ui-react';
 
 class Contact extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      loading: false,
+      sent: false,
+      error: false
+    }
+  }
+
   contactForm = () => {
     return(
-      <form>
+      <form onSubmit={this.handleFormSubmit}>
         <label>Name</label><br/>
-        <input type="text"/><br/>
+        <input type="text" required value={this.state.name} onChange={(event) => this.setState({name: event.target.value})}/><br/>
         <label>Email</label><br/>
-        <input type="email"/><br/>
+        <input type="email" required value={this.state.email} onChange={(event) => this.setState({email: event.target.value})}/><br/>
         <label>Subject</label><br/>
-        <input type="text"/><br/>
+        <input type="text" required value={this.state.subject} onChange={(event) => this.setState({subject: event.target.value})}/><br/>
         <label>Message</label><br/>
-        <textarea></textarea><br/>
-        <input id="contact-submit" type="submit" value="send"/>
+        <textarea required value={this.state.message} onChange={(event) => this.setState({message: event.target.value})}></textarea><br/>
+        { this.formSubmit() }
       </form>
     )
+  }
+
+  handleFormSubmit = (event) => {
+    event.preventDefault()
+    this.setState({loading: true, name: "", email: "", subject: "", message: ""})
+    window.emailjs.send("gmail", "codepeter", {
+      "name": this.state.name,
+      "email": this.state.email,
+      "subject": this.state.subject,
+      "message": this.state.message
+    }).then((response) => {
+      this.setState({loading: false, sent: true})
+    }, (err) => {
+      this.setState({loading: false, error: true})
+    });
+  }
+
+  formSubmit = () => {
+    if(this.state.loading){
+      return this.displaySendingLoader()
+    }
+    else if(this.state.sent){
+      return this.displaySentIcon()
+    }
+    else if(this.state.error){
+      return this.displayErrorIcon()
+    }
+    else{
+      return <input id="contact-submit" type="submit" value="send"/>
+    }
+  }
+
+  displaySendingLoader = () => {
+    return(<img id="loading-submit" src={SendingLoader} />)
+  }
+
+  displaySentIcon = () => {
+    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="checkmark" color="green"/>)
+  }
+
+  displayErrorIcon = () => {
+    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="exclamation triangle" color="red"/>)
   }
 
   render(){

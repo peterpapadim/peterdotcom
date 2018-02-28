@@ -29,6 +29,7 @@
   }
   #contact-form > form > textarea {
     height: 75px!important;
+    font-size: 12px!important;
   }
 }
 
@@ -117,7 +118,7 @@
   }
   #contact-form > form > textarea {
     height: 50px!important;
-    font-size: 8px;
+    font-size: 12px;
   }
   #contact-submit {
     margin-top: 5px!important;
@@ -151,6 +152,7 @@
   }
   #contact-form > form > textarea {
     height: 125px!important;
+    font-size: 15px!important;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
@@ -186,7 +188,9 @@
     font-size: 63px;
   }
   #social-icons {
-    padding-right: 10%!important;
+    position: relative;
+    width: 90%;
+    float: right;
   }
 }
 
@@ -545,6 +549,20 @@ svg:hover #Line-3 {
   color: white;
 }
 
+#loading-submit {
+  float: right;
+  height: 100px;
+  width: 100px;
+}
+
+#submit-complete {
+  float: right;
+}
+
 #contact-submit:hover {
   cursor: pointer;
+}
+
+[data-tooltip]:after, [data-tooltip]:before {
+  content: none!important;
 }
