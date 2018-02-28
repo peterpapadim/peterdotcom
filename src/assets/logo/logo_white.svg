@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Code-Peter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-133.000000, -950.000000)">
+        <g id="logo_white" transform="translate(133.000000, 950.000000)">
+            <rect id="Rectangle-11" fill="#FFFFFF" x="0" y="0" width="50" height="50"></rect>
+            <path d="M10,23.15 L16,20 L16,22.7 L12.5714286,24.5 L16,26.3 L16,29 L10,25.85 L10,23.15 Z" id="Combined-Shape" fill="#000000"></path>
+            <path d="M34,23.15 L40,20 L40,22.7 L36.5714286,24.5 L40,26.3 L40,29 L34,25.85 L34,23.15 Z" id="Combined-Shape" fill="#000000" transform="translate(37.000000, 24.500000) scale(-1, 1) translate(-37.000000, -24.500000) "></path>
+            <path d="M21.6475096,20 C22.5951516,20 23.3908014,20.2957113 24.0344828,20.8871429 C24.6781641,21.4785744 25,22.2328526 25,23.15 C25,24.0671474 24.6781641,24.8214256 24.0344828,25.4128571 C23.3908014,26.0042887 22.5951516,26.3 21.6475096,26.3 L20.4003831,26.3 L20.4003831,29 L18,29 L18,20 L21.6475096,20 Z M21.6475096,24.1142857 C21.9157102,24.1142857 22.1414423,24.0242866 22.3247126,23.8442857 C22.507983,23.6642848 22.5996169,23.4328586 22.5996169,23.15 C22.5996169,22.8671414 22.507983,22.637858 22.3247126,22.4621429 C22.1414423,22.2864277 21.9157102,22.1985714 21.6475096,22.1985714 L20.4003831,22.1985714 L20.4003831,24.1142857 L21.6475096,24.1142857 Z" id="P" fill="#000000"></path>
+            <polygon id="Rectangle-9-Copy-3" fill="#000000" transform="translate(29.500000, 25.000000) scale(-1, 1) rotate(-270.000000) translate(-29.500000, -25.000000) " points="25 25.4484397 34 22 34 24.5515603 25 28"></polygon>
+        </g>
+    </g>
+</svg>
