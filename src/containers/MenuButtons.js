@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import LogoBlack from '../assets/logo/logo_black.svg';
-import MenuBlack from '../assets/menu/menu_black.svg';
 import ArrowDownBlack from '../assets/arrow/arrow_down_black.svg';
 import ArrowUpBlack from '../assets/arrow/arrow_up_black.svg';
-var pagepiling = require('pagepiling.js');
 
 const reelsquadDemo = "https://www.dropbox.com/s/0gpy2439bv221md/reelsquad_demo.mov?dl=0"
 const reelsquadFrontend = "https://github.com/peterpapadim/reelsquad"
 const reelsquadBackend = "https://github.com/peterpapadim/reelsquad-api"
-
-const codepeterFrontend = "https://github.com/peterpapadim/peterdotcom"
 
 const pageclubDemo = "https://www.dropbox.com/s/euqy0w3inmrhhke/pageclub_2.0.mov?dl=0"
 const pageclubFrontend = "https://github.com/peterpapadim/pageclub"
@@ -23,18 +19,18 @@ const instalyticsBackend = "https://github.com/cwooley/Instalytics-Api"
 class MenuButtons extends Component {
 
   displayLogo = () => {
-    return <img id="logo" src={LogoBlack} onClick={this.props.handleLogoClick}/>
+    return <img id={this.props.mobile ? "logo-mobile" : "logo"} src={LogoBlack} alt="logo-black" onClick={this.props.handleLogoClick}/>
   }
 
   displayMenu = () => {
     return(
-    <div id="menu">
-      <svg width="39px" height="29px" viewBox="0 0 39 29" version="1.1" xmlns="http://www.w3.org/2000/svg" onClick={this.props.handleMenuClick}>
+    <div id="menu-button-container">
+      <svg id={this.props.mobile ? "menu-button-mobile" : "menu-button"} width="39px" height="29px" viewBox="0 0 39 29" version="1.1" xmlns="http://www.w3.org/2000/svg" onClick={this.props.handleMenuClick}>
           <title>menu_black</title>
           <desc>Created with Sketch.</desc>
           <defs></defs>
-          <g id="Code-Peter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1303.000000, -50.000000)" stroke-linecap="square">
-              <g id="menu_black" transform="translate(1305.000000, 50.000000)" stroke="#000000" stroke-width="3">
+          <g id="Code-Peter" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(-1303.000000, -50.000000)" strokeLinecap="square">
+              <g id="menu_black" transform="translate(1305.000000, 50.000000)" stroke="#000000" strokeWidth="3">
                   <path d="M34.7542373,1.5 L6.20765259,1.5" id="Line-1"></path>
                   <path d="M34.75,27.5 L19.2419376,27.5" id="Line-3"></path>
                   <path d="M34.7569444,14.5 L0.243055556,14.5" id="Line-2"></path>
@@ -56,14 +52,14 @@ class MenuButtons extends Component {
   }
 
   displayArrow = () => {
-    if(this.props.contactMenu){
+    if(this.props.contactMenu || this.props.about){
       return null
     }
     else if(this.props.currentPage === 5){
-      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowUpBlack} onClick={this.handleArrowClick}/>
+      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowUpBlack} alt="arrow-icon" onClick={this.handleArrowClick}/>
     }
     else {
-      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowDownBlack} onClick={this.handleArrowClick}/>
+      return <img id={this.props.mobile ? "arrow-mobile" : "arrow"} src={ArrowDownBlack} alt="arrow-icon" onClick={this.handleArrowClick}/>
     }
   }
 
@@ -72,7 +68,7 @@ class MenuButtons extends Component {
   }
 
   displayProjectLinks = () => {
-    if(this.props.contactMenu){
+    if(this.props.contactMenu || this.props.about){
       return null
     }
     else if(this.props.currentPage === 1){
@@ -134,7 +130,7 @@ class MenuButtons extends Component {
 
   projectInfo = () => {
     let page = this.props.currentPage
-    if(this.props.contactMenu){
+    if(this.props.contactMenu || this.props.about){
       return null
     }
     else {
@@ -165,7 +161,7 @@ class MenuButtons extends Component {
             </div>
           </div>
           {
-            this.props.mobile && !this.props.contactMenu ?
+            this.props.mobile && !this.props.contactMenu && !this.props.about ?
             <div className="row" id="bottom-menu-container">
                 <div className="col-1"></div>
                 <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
@@ -178,13 +174,13 @@ class MenuButtons extends Component {
                 <div className="col-4">{this.projectInfo()}</div>
                 <div className="col-4"></div>
                 <div className="col-2"></div>
-            </div> :
+            </div> : !this.props.contactMenu && !this.props.about ?
             <div className="row" id="bottom-menu-container">
                 <div className="col-1"></div>
                 <div id="arrow-container" className="col-1">{this.displayArrow()}</div>
                 <div className="col-6"></div>
                 <div className="col-4">{this.projectInfo()}</div>
-            </div>
+            </div> : null
           }
         </div>
       </div>

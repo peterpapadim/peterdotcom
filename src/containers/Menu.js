@@ -9,8 +9,7 @@ import LinkedInIconHovered from '../assets/social/icon_linkedin_hovered.svg';
 import InstagramIconHovered from '../assets/social/icon_instagram_hovered.svg';
 import GithubIconHovered from '../assets/social/icon_github_hovered.svg';
 import MediumIconHovered from '../assets/social/icon_medium_hovered.svg';
-import Resume from '../assets/resume/resume_peter_papadimitropoulos.pdf';
-var pagepiling = require('pagepiling.js');
+import Resume from '../assets/resume/panagiotis_papadimitropoulos_resume.pdf';
 
 const linkedin = "https://www.linkedin.com/in/peterpapadimitropoulos/"
 const instagram = "https://www.instagram.com/peter_papadim/"
@@ -19,10 +18,8 @@ const medium = "https://medium.com/@peterpapadimitropoulos"
 
 const links = {
   home: "/",
-  about: "",
-  contact: "/contact",
-  blog: "",
-  resume: ""
+  about: "/about",
+  contact: "/contact"
 }
 
 class Menu extends Component {
@@ -38,7 +35,7 @@ class Menu extends Component {
   }
 
   displayLogo = () => {
-    return <img id="logo" src={LogoWhite} onClick={this.props.handleLogoClick}/>
+    return <img id={this.props.mobile ? "logo-mobile" : "logo"} src={LogoWhite} onClick={this.props.handleLogoClick} alt="logo-white"/>
   }
 
   handleHover = (social) => {
@@ -51,7 +48,9 @@ class Menu extends Component {
     }
     else if(link === "contact"){
       window.location.href = links[link]
-      this.props.handleMenuClick(false)
+    }
+    else if(link === "about"){
+      window.location.href = links[link]
     }
   }
 
@@ -67,7 +66,7 @@ class Menu extends Component {
             <div className="col-1">{this.displayLogo()}</div>
             <div className="col-8"></div>
             <div className="col-1" id="menu-container">
-              <img id="menu" src={Exit} onClick={this.props.handleMenuClick}/>
+              <img id={this.props.mobile ? "exit-mobile" : "exit"} src={Exit} onClick={this.props.handleMenuClick} alt="exit-icon"/>
             </div>
             <div className="col-1"></div>
           </div>
@@ -77,7 +76,7 @@ class Menu extends Component {
               <div id="menu-links-container">
                 <p id="menu-links">
                   <span onClick={() => this.handleMenuLinkClick("home")}>Home </span>
-                  <span>About </span>
+                  <span onClick={() => this.handleMenuLinkClick("about")}>About </span>
                   <span onClick={() => this.handleMenuLinkClick("contact")}>Contact </span>
                   <span onClick={() => this.handleSocialClick(medium)}>Blog </span>
                   <span onClick={() => this.handleSocialClick(Resume)}>Resume </span>
@@ -93,10 +92,10 @@ class Menu extends Component {
                 <div className="col-12" id="social-icons-column">
                   <div id="social-icons-container">
                     <div id="social-icons">
-                      <img className="social-icon"src={this.state.linkedinHovered ? LinkedInIconHovered : LinkedInIcon} onMouseEnter={() => this.handleHover({linkedinHovered:true})} onMouseLeave={() => this.handleHover({linkedinHovered:false})} onClick={() => this.handleSocialClick(linkedin)}/>
-                      <img className="social-icon"src={this.state.instagramHovered ? InstagramIconHovered : InstagramIcon} onMouseEnter={() => this.handleHover({instagramHovered:true})} onMouseLeave={() => this.handleHover({instagramHovered:false})} onClick={() => this.handleSocialClick(instagram)}/>
-                      <img className="social-icon"src={this.state.githubHovered ? GithubIconHovered : GithubIcon} onMouseEnter={() => this.handleHover({githubHovered:true})} onMouseLeave={() => this.handleHover({githubHovered:false})} onClick={() => this.handleSocialClick(github)}/>
-                      <img className="social-icon"src={this.state.mediumHovered ? MediumIconHovered : MediumIcon} onMouseEnter={() => this.handleHover({mediumHovered:true})} onMouseLeave={() => this.handleHover({mediumHovered:false})} onClick={() => this.handleSocialClick(medium)}/>
+                      <img alt="linkedin-icon" className="social-icon"src={this.state.linkedinHovered ? LinkedInIconHovered : LinkedInIcon} onMouseEnter={() => this.handleHover({linkedinHovered:true})} onMouseLeave={() => this.handleHover({linkedinHovered:false})} onClick={() => this.handleSocialClick(linkedin)}/>
+                      <img alt="instagram-icon" className="social-icon"src={this.state.instagramHovered ? InstagramIconHovered : InstagramIcon} onMouseEnter={() => this.handleHover({instagramHovered:true})} onMouseLeave={() => this.handleHover({instagramHovered:false})} onClick={() => this.handleSocialClick(instagram)}/>
+                      <img alt="github-icon" className="social-icon"src={this.state.githubHovered ? GithubIconHovered : GithubIcon} onMouseEnter={() => this.handleHover({githubHovered:true})} onMouseLeave={() => this.handleHover({githubHovered:false})} onClick={() => this.handleSocialClick(github)}/>
+                      <img alt="medium-icon" className="social-icon"src={this.state.mediumHovered ? MediumIconHovered : MediumIcon} onMouseEnter={() => this.handleHover({mediumHovered:true})} onMouseLeave={() => this.handleHover({mediumHovered:false})} onClick={() => this.handleSocialClick(medium)}/>
                     </div>
                   </div>
                 </div>

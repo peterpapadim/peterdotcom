@@ -66,15 +66,15 @@ class Contact extends Component {
   }
 
   displaySendingLoader = () => {
-    return(<img id="loading-submit" src={SendingLoader} />)
+    return(<img id="loading-submit" src={SendingLoader} alt="sending-loader" />)
   }
 
   displaySentIcon = () => {
-    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="checkmark" color="green"/>)
+    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="checkmark" color="black"/>)
   }
 
   displayErrorIcon = () => {
-    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="exclamation triangle" color="red"/>)
+    return(<Icon id="submit-complete" className="animated rubberBand" size="huge" name="exclamation triangle" color="black"/>)
   }
 
   render(){
@@ -112,7 +112,7 @@ class Contact extends Component {
             </div>
           }
        </div>
-       {this.props.menuClicked ? <Menu handleMenuClick={this.props.handleMenuClick} handleLogoClick={this.props.handleLogoClick}/> : null}
+       {this.props.menuClicked ? <Menu handleMenuClick={this.props.handleMenuClick} handleLogoClick={this.props.handleLogoClick} mobile={this.props.mobile}/> : null}
     </div>
     )
   }

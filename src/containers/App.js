@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from './Main.js';
 import Contact from './Contact.js';
+import About from './About.js';
 import $ from 'jquery';
 
 class App extends Component {
@@ -50,6 +51,7 @@ class App extends Component {
     return(
       <BrowserRouter>
         <Switch>
+          <Route path="/about" render={() => (<About handleMenuClick={this.handleMenuClick} menuClicked={this.state.menuClicked} handleLogoClick={this.handleLogoClick} mobile={this.state.mobile}/>)}/>
           <Route path="/contact" render={() => (<Contact handleMenuClick={this.handleMenuClick} menuClicked={this.state.menuClicked} handleLogoClick={this.handleLogoClick} mobile={this.state.mobile}/>)}/>
           <Route path="/" render={() => (<Main handleMenuClick={this.handleMenuClick} menuClicked={this.state.menuClicked} handleLogoClick={this.handleLogoClick} mobile={this.state.mobile}/>)}/>
         </Switch>

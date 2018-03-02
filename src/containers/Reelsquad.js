@@ -5,10 +5,10 @@ class Reelsquad extends Component {
 
   displayImage = () => {
     if(this.props.nextPage === 3 || this.props.currentPage === 3){
-      return <img className="background-png" src={ ReelsquadBackground } />
+      return <img className="background-png" alt="reelsquad" src={ ReelsquadBackground } />
     }
     else{
-      return <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+      return <img alt="empty" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
     }
   }
 

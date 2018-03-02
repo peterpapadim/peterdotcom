@@ -5,10 +5,10 @@ class Codepeter extends Component {
 
   displayImage = () => {
     if(this.props.nextPage === 1 || this.props.currentPage === 1){
-      return <img className="background-svg" src={ CodePeterBackground } />
+      return <img className="background-svg" alt="codepeter" src={ CodePeterBackground } />
     }
     else{
-      return <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+      return <img alt="empty" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
     }
   }
 
