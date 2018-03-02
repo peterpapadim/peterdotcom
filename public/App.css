@@ -249,18 +249,20 @@ body {
 
 #logo-menu-container{
   height: 10%;
+  position: relative;
+  z-index: 300;
 }
 
 #logo{
   padding-top: 50px;
   position: fixed;
-  z-index: 500;
+  z-index: 300;
 }
 
 #logo-mobile{
   padding-top: 50px;
   position: fixed;
-  z-index: 500;
+  z-index: 300;
   width: 25px;
 }
 
@@ -272,12 +274,22 @@ body {
   text-align: right;
 }
 
+#menu-button-container {
+  text-align: center;
+}
+
 #menu-button-container, #exit{
   padding-top: 50px;
 }
 
 #menu-button-mobile {
   width: 25px;
+  position: fixed;
+  z-index: 300;
+}
+
+#exit {
+  float: right;
 }
 
 #exit-mobile{
@@ -285,6 +297,11 @@ body {
   padding-top: 50px;
 }
 
+#menu-button {
+  position: fixed;
+  z-index: 300;
+  /* float: right; */
+}
 
 #menu-button:hover, #exit {
   cursor: pointer;
@@ -595,9 +612,15 @@ svg:hover #Line-3 {
 #about-page {
   height: 100%;
   width: 100%;
+  padding: 0;
   position: absolute;
   overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+}
+
+#about-bio-container {
+  margin-top: 10%;
 }
 
 #about-menu-row{
