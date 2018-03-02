@@ -1,8 +1,13 @@
 /* Small devices (landscape phones, 250px and up) */
 @media (min-width: 0px) {
   p.title {
-    font-size: 30px;
+    font-size: 30px!important;
   }
+
+  #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 25px;
+  }
+
   p.blurb-mobile, li.project-link, .coming-soon {
     font-size: 12px!important;
   }
@@ -35,8 +40,8 @@
 
 /* Small devices (landscape phones, 350px and up) */
 @media (min-width: 350px) {
-  p.title {
-    font-size: 30px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 20px!important;
   }
   p#menu-links {
     font-size: 30px;
@@ -44,13 +49,13 @@
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  p.title {
-    font-size: 25px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 25px!important;
   }
   .background-png, .background-svg {
     max-width: 60%!important;
   }
-  p.blurb {
+  p.blurb, .skill {
     font-size: 12px;
   }
   p#menu-links {
@@ -68,10 +73,10 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  p.title {
-    font-size: 35px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 35px!important;
   }
-  p.blurb {
+  p.blurb, .skill {
     font-size: 15px;
   }
   p.blurb-mobile, li.project-link, .coming-soon {
@@ -92,10 +97,10 @@
   #bottom-menu-container {
     height: 40%!important;
   }
-  p.title {
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
     font-size: 25px!important;
   }
-  p.blurb {
+  p.blurb, .skill {
     font-size: 12px!important;
   }
   p.blurb-mobile, li.project-link, .coming-soon {
@@ -127,11 +132,11 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  p.title {
-    font-size: 44px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 44px!important;
   }
-  p.blurb {
-    font-size: 15px;
+  p.blurb, .skill {
+    font-size: 15px!important;
   }
   .background-png, .background-svg {
     max-width: 60%!important;
@@ -157,11 +162,11 @@
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  p.title {
-    font-size: 53px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 53px!important;
   }
-  p.blurb {
-    font-size: 18px;
+  p.blurb, .skill {
+    font-size: 18px!important;
   }
   .background-png, .background-svg {
     max-width: 50%!important;
@@ -175,11 +180,11 @@
 }
 
 @media (min-width: 1440px) {
-  p.title {
-    font-size: 63px;
+  p.title, #about-bio-title, #about-bio-blurb, #tech-skills-title {
+    font-size: 63px!important;
   }
-  p.blurb {
-    font-size: 18px;
+  p.blurb, .skill {
+    font-size: 18px!important;
   }
   .background-png, .background-svg {
     max-width: 50%!important;
@@ -252,6 +257,13 @@ body {
   z-index: 500;
 }
 
+#logo-mobile{
+  padding-top: 50px;
+  position: fixed;
+  z-index: 500;
+  width: 25px;
+}
+
 #logo:hover{
   cursor: pointer;
 }
@@ -260,11 +272,21 @@ body {
   text-align: right;
 }
 
-#menu, #exit{
+#menu-button-container, #exit{
   padding-top: 50px;
 }
 
-#menu:hover, #exit {
+#menu-button-mobile {
+  width: 25px;
+}
+
+#exit-mobile{
+  width: 25px;
+  padding-top: 50px;
+}
+
+
+#menu-button:hover, #exit {
   cursor: pointer;
 }
 
@@ -491,7 +513,6 @@ svg:hover #Line-3 {
   height: 100%;
   width: 100%;
   position: fixed;
-  overflow-y: scroll;
 }
 
 #contact-menu-row{
@@ -504,8 +525,6 @@ svg:hover #Line-3 {
 
 #contact-form{
   position: relative;
-  /*top: 50%;
-  transform: translateY(-50%);*/
   z-index: 400;
   width: 100%;
 }
@@ -562,6 +581,76 @@ svg:hover #Line-3 {
 #contact-submit:hover {
   cursor: pointer;
 }
+
+
+
+/*                                        About Page Styling                                          */
+
+
+#about-page-container {
+  height: 100vh;
+  padding: 0;
+}
+
+#about-page {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#about-menu-row{
+  height: 20%;
+}
+
+#about-bio-title {
+  font-family: avenir-bold;
+  font-size: 63px;
+  margin: 0 0 .5em;
+}
+
+#about-bio-blurb {
+  font-family: avenir;
+  font-size: 63px;
+}
+
+#tech-skills-title {
+  font-family: avenir-bold;
+  font-size: 63px;
+  margin: 0 0 .5em;
+}
+
+#tech-skills-title-row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#tech-skills-title {
+  margin-top: 50px;
+}
+
+.tech-skills-row-margin {
+  margin-top: 45px;
+}
+
+.tech-skills-row-margin-mobile {
+  margin-top: 20px;
+}
+
+#about-picture-row {
+  margin-top: 90px;
+}
+
+#about-picture-row > div > img {
+  max-width: 100%;
+}
+
+#about-bottom-row {
+  height: 150px;
+}
+
+/* Semantic UI was adding weird hovers on pagepiling nav dots. This removes them. */
 
 [data-tooltip]:after, [data-tooltip]:before {
   content: none!important;

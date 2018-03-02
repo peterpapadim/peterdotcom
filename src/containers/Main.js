@@ -6,7 +6,6 @@ import Pageclub from './Pageclub';
 import Instalytics from './Instalytics';
 import MenuButtons from './MenuButtons';
 import Menu from './Menu';
-import Contact from './Contact';
 import $ from 'jquery';
 var pagepiling = require('pagepiling.js');
 
@@ -24,21 +23,11 @@ class App extends Component {
     super();
     this.state = {
       currentPage: 1,
-      nextPage: 1,
-      // menuClicked: false,
-      // mobile: false
+      nextPage: 1
     }
   }
 
   componentDidMount() {
-   // if(window.innerWidth < 576){this.setState({mobile: true})}
-   // else{this.setState({mobile: false})}
-   // $(window).on('resize', () => {
-   //   if(window.innerWidth < 576){
-   //     this.setState({mobile: true})
-   //   }
-   //   else{this.setState({mobile: false})}
-   // })
    this.timerId = setInterval(this.arrowBounceEvery5Seconds, 5000)
    let bindedThis = this
    window.$('#App').pagepiling({
@@ -89,15 +78,6 @@ class App extends Component {
  }
 
 
- // handleMenuClick = () => {
- //   if(this.state.menuClicked){
- //     this.setState({menuClicked: false})
- //   }
- //   else{
- //     this.setState({menuClicked: true})
- //   }
- // }
-
  arrowBounceEvery5Seconds = () => {
    $("#arrow-container").addClass("animated")
    $("#arrow-container").addClass("infinite")
@@ -121,14 +101,13 @@ class App extends Component {
         <MenuButtons currentPage={this.state.currentPage}
                      handleMenuClick={this.props.handleMenuClick}
                      menuClicked={this.props.menuClicked}
-                     currentPage={this.state.currentPage}
                      info={blurbs}
                      mobile={this.props.mobile}
                      contactMenu={false}
                      history={this.props.history}
                      handleLogoClick={this.props.handleLogoClick}
                      />
-        {this.props.menuClicked ? <Menu handleMenuClick={this.props.handleMenuClick} handleLogoClick={this.props.handleLogoClick}/> : null}
+        {this.props.menuClicked ? <Menu handleMenuClick={this.props.handleMenuClick} handleLogoClick={this.props.handleLogoClick} mobile={this.props.mobile}/> : null}
       </div>
     );
   }

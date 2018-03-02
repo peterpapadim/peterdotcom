@@ -5,10 +5,10 @@ class Instalytics extends Component {
 
   displayImage = () => {
     if(this.props.nextPage === 5 || this.props.currentPage === 5){
-      return <img className="background-svg" src={ InstalyticsBackground } />
+      return <img className="background-svg" alt="instalytics" src={ InstalyticsBackground } />
     }
     else{
-      return <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+      return <img alt="empty" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
     }
   }
 
