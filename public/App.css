@@ -595,8 +595,8 @@ svg:hover #Line-3 {
 #about-page {
   height: 100%;
   width: 100%;
-  position: fixed;
-  overflow-y: auto;
+  position: absolute;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 

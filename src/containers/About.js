@@ -2,8 +2,13 @@ import React, {Component} from 'react';
 import MenuButtons from './MenuButtons';
 import Menu from './Menu';
 import ProfilePicture from '../assets/about/about_profile_picture.jpg';
+import $ from 'jquery';
 
 class About extends Component {
+
+  componentDidMount(){
+    $("#menu-buttons").css("z-index", "0")
+  }
 
   render(){
     return(
