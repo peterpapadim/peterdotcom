@@ -75,11 +75,11 @@ class Menu extends Component {
             <div className="col-5">
               <div id="menu-links-container">
                 <p id="menu-links">
-                  <span onClick={() => this.handleMenuLinkClick("home")}>Home </span>
-                  <span onClick={() => this.handleMenuLinkClick("about")}>About </span>
-                  <span onClick={() => this.handleMenuLinkClick("contact")}>Contact </span>
-                  <span onClick={() => this.handleSocialClick(medium)}>Blog </span>
-                  <span onClick={() => this.handleSocialClick(Resume)}>Resume </span>
+                  <span onClick={() => this.handleMenuLinkClick("home")}>Home</span><span> </span>
+                  <span onClick={() => this.handleMenuLinkClick("about")}>About</span><span> </span>
+                  <span onClick={() => this.handleMenuLinkClick("contact")}>Contact</span><span> </span>
+                  <span onClick={() => this.handleSocialClick(medium)}>Blog</span><span> </span>
+                  <span onClick={() => this.handleSocialClick(Resume)}>Resume</span><span> </span>
                 </p>
              </div>
             </div>
