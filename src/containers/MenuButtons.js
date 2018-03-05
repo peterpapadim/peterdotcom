@@ -98,9 +98,9 @@ class MenuButtons extends Component {
   projectLinks = () => {
       return (
         <ul id="project-links">
-          <li className="project-link" onClick={() => this.handleLinkClick("demo")}>View Demo ⟶</li>
-          <li className="project-link" onClick={() => this.handleLinkClick("front")}>View Front-End ⟶</li>
-          <li className="project-link" onClick={() => this.handleLinkClick("back")}>View Back-End ⟶</li>
+          <li className="project-link-container"><span className="project-link" onClick={() => this.handleLinkClick("demo")}>View Demo ⟶</span></li>
+          <li className="project-link-container"><span className="project-link" onClick={() => this.handleLinkClick("front")}>View Front-End ⟶</span></li>
+          <li className="project-link-container"><span className="project-link" onClick={() => this.handleLinkClick("back")}>View Back-End ⟶</span></li>
         </ul>
       )
   }
