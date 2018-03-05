@@ -398,7 +398,7 @@ svg:hover #Line-3 {
 }
 
 .project-link-container {
-  padding-bottom: 8px;
+  padding-bottom: 8px!important;
 }
 
 .project-link {
