@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="2268px" viewBox="0 0 1440 2268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_wave</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="2268"></rect>
+        <filter x="-10.4%" y="-6.8%" width="120.8%" height="113.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Code-Peter-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg_wave">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <path d="M1440,909.159172 C1406.814,833.425907 1313.704,796.006634 1226.799,776.724677 C1139.894,757.44172 1046.161,746.946009 975.788,696.610784 C911.553,650.666183 877.624,579.090614 840.785,512.658434 C803.947,446.226253 756.549,377.885671 680.682,350.390288 C622.547,329.321891 555.029,335.383991 498.97,310.063926 C441.265,283.999095 406.583,230.065997 363.917,186.082781 C273.734,93.1169162 135.946,40.2654796 0,46.4955272 L0,2268.08513 L1440,2268.08513 L1440,909.159172 Z" id="wave-fake-shadow-copy" fill-opacity="0.56" fill="#E8EEF5" filter="url(#filter-3)" mask="url(#mask-2)"></path>
+            <path d="M1440,909.159172 C1406.814,833.425907 1313.704,796.006634 1226.799,776.724677 C1139.894,757.44172 1046.161,746.946009 975.788,696.610784 C911.553,650.666183 877.624,579.090614 840.785,512.658434 C803.947,446.226253 756.549,377.885671 680.682,350.390288 C622.547,329.321891 555.029,335.383991 498.97,310.063926 C441.265,283.999095 406.583,230.065997 363.917,186.082781 C273.734,93.1169162 135.946,40.2654796 0,46.4955272 L0,2268.08513 L1440,2268.08513 L1440,909.159172 Z" id="wave-top-copy" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

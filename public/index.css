@@ -1,0 +1,23 @@
+@font-face {
+    font-family: avenirNext;
+    src: url('assets/font/avenir_next.ttc');
+}
+
+@font-face {
+    font-family: tiempos;
+    src: url('assets/font/tiempos_headline-black.ttf');
+}
+
+.header {
+  font-family: tiempos;
+  color: #17202A
+}
+
+.blurb {
+  font-family: avenirNext-Medium;
+  color: #8392A6;
+}
+
+body {
+  margin: 0px;
+}
