@@ -1,8 +1,6 @@
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: avenirNext-Medium;
-  color: #8392A6;
 }
 
 .navbar > .items {
@@ -16,6 +14,13 @@
   display: inline;
   margin: 0px 30px;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.navbar > .items > li > a {
+  font-family: avenirNext-Medium;
+  color: #8392A6;
+  text-decoration: none;
 }
 
 .navbar > .items.left {
@@ -37,4 +42,13 @@
   border-radius: 7px;
   font-family: avenirNext-Bold;
   color: #22c995;
+}
+
+.navbar > .items.right > li:nth-of-type(3) > a {
+  color: #22c995;
+}
+
+.selected {
+  font-family: avenirNext-Bold!important;
+  color: #17202A!important;
 }

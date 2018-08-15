@@ -1,0 +1,12 @@
+@media(max-width: 1200px){
+  .worktimeline-container {
+    padding-left: 16%!important;
+  }
+}
+
+.worktimeline-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-top: 100px;
+  padding-left: calc(51% - 425px);
+}
