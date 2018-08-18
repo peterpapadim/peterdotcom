@@ -22,7 +22,6 @@
 .shrink {
   animation: shrink .5s forwards;
   -webkit-animation: shrink .5s forwards;
-  /* background: lightgray!important; */
 }
 
 
