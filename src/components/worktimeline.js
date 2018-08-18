@@ -8,7 +8,8 @@ class WorkTimeline extends Component {
     this.state = {
       styles: {
         paddingRight: 0,
-        paddingLeft: 0
+        paddingLeft: 0,
+        blurbLeft: 0
       }
     }
   }
@@ -27,6 +28,7 @@ class WorkTimeline extends Component {
     let elementWidth = document.getElementsByClassName('blurb')[0].clientWidth
     let elementLeft = document.getElementsByClassName('blurb')[0].offsetLeft
     let paddingRight = (windowWidth) - (elementWidth + elementLeft) + (elementWidth - 290)
+    let blurbLeft = Math.ceil((document.getElementsByClassName('blurb')[0].getBoundingClientRect().left + 30))
 
     // Adding 30 because offsetLeft does not include element padding (just margin).
     // Subract 40 to offset the width of a timeline square.
@@ -39,21 +41,21 @@ class WorkTimeline extends Component {
           this.state.styles,
           {
             paddingRight: paddingRight,
-            paddingLeft: paddingLeft
+            paddingLeft: paddingLeft,
+            blurbLeft: blurbLeft
           }
         )
     })
   }
 
-
   render(){
     return(
         <div className='worktimeline-container' style={this.state.styles}>
-          <WorkTimelineItem />
-          <WorkTimelineItem />
-          <WorkTimelineItem />
-          <WorkTimelineItem />
-          <WorkTimelineItem />
+          <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
+          <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
+          <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
+          <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
+          <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
         </div>
     )
   }
