@@ -45,7 +45,7 @@ class WorkTimelineItem extends Component {
   render(){
     return(
       <div style={{height: '250px', width: '250px', display: 'inline-block', margin: '0 25px'}}>
-        <div className={this.state.growAnimation} ref="workTimelineItem" style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', background: 'white', margin: '0 auto'}}></div>
+        <div className={this.state.growAnimation} ref="workTimelineItem" style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5', background: 'white', margin: '0 auto'}}></div>
       </div>
     )
   }
