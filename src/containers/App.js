@@ -31,7 +31,7 @@ class App extends Component {
   render(){
     return(
       <div style={{background: '#F8F9FC'}}>
-        <div style={{height: '100%', background: "url('assets/background/bg_wave.svg')", backgroundSize: 'cover'}}>
+        <div>
           <BrowserRouter>
             <div>
               <Navbar loadedComponent={this.state.loadedComponent}/>
@@ -48,3 +48,6 @@ class App extends Component {
 }
 
 export default App;
+
+// style={{height: '100%', background: "url('assets/background/bg_wave.svg')", backgroundSize: 'cover'}}
+// This styling was originally on line 34. (div that wraps browserrouter)

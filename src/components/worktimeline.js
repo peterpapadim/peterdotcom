@@ -16,9 +16,9 @@ class WorkTimeline extends Component {
   }
 
   componentDidMount(){
-    this.setPaddingLeftAndRight()
     this.setState({containerWidth: document.getElementsByClassName('worktimeline-container')[0].scrollWidth})
-    // window.addEventListener('resize', this.setPaddingLeftAndRight)
+    window.addEventListener('resize', this.setPaddingLeftAndRight)
+    this.setPaddingLeftAndRight()
   }
 
   componentWillUnmount(){
@@ -38,18 +38,18 @@ class WorkTimeline extends Component {
 
     let paddingLeft = document.getElementsByClassName('blurb')[0].offsetLeft + 30 - 40
 
-    this.setState({
-        styles: Object.assign(
-          {},
-          this.state.styles,
-          {
-            paddingRight: paddingRight,
-            paddingLeft: paddingLeft,
-            blurbLeft: blurbLeft,
-            containerWidth: containerWidth
-          }
-        )
-    })
+    // this.setState({
+    //     styles: Object.assign(
+    //       {},
+    //       this.state.styles,
+    //       {
+    //         paddingRight: paddingRight,
+    //         paddingLeft: paddingLeft,
+    //         blurbLeft: blurbLeft,
+    //         containerWidth: containerWidth
+    //       }
+    //     )
+    // })
 
     this.setState({
       styles: {
@@ -63,14 +63,19 @@ class WorkTimeline extends Component {
 
   render(){
     return(
+      <div>
         <div className='worktimeline-container' style={this.state.styles}>
           <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft} expand={true}/>
           <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
           <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
           <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
           <WorkTimelineItem blurbLeft={this.state.styles.blurbLeft}/>
-          <div style={{marginLeft: '25px', height: '8px', width: this.state.containerWidth, background: 'lightblue', position: 'absolute', top: '50%', transform: 'translateY(-50%)', zIndex: '-1'}}></div>
+            <div style={{width: '1500px', paddingLeft: '50px', position: 'absolute', top: '50%', transform: 'translateY(-50%)',  zIndex: '-1'}}>
+              <div style={{display: 'inline-block', verticalAlign: 'middle', height: '8px', width: '100%', background: 'lightblue', position: 'relative',}}></div>
+              <div style={{display: 'inline-block', verticalAlign: 'middle', height: '40px', width: '40px', background: 'lightblue', position: 'relative', borderRadius: '20px', right: '2px'}}></div>
+            </div>
         </div>
+      </div>
     )
   }
 }
