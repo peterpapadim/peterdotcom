@@ -7,10 +7,7 @@ class Home extends Component {
   constructor(){
     super();
     this.state = {
-      // styles: {
-      //   color: 'red',
-      //   fontSize: '20px'
-      // }
+      lineColor: '#17202A'
     }
   }
 
@@ -22,6 +19,10 @@ class Home extends Component {
     //     {color: "blue"}
     //   )
     // })
+  }
+
+  setLineColor = (colorHex) => {
+    this.setState({lineColor: colorHex})
   }
 
   componentDidMount(){
@@ -41,7 +42,7 @@ class Home extends Component {
       <div className="home fade-in">
         <div className="home item"><p className="header">Hi, I'm Peter!</p></div>
         <div className="home item"><p className="blurb">A Brooklyn hipster who doubles as a Full Stack Developer with a focus in Frontend Engineering.</p></div>
-        <WorkTimeline />
+        <WorkTimeline setLineColor={this.setLineColor} lineColor={this.state.lineColor}/>
       </div>
     )
   }

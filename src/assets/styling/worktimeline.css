@@ -21,8 +21,8 @@
 }
 
 .shrink {
-  animation: shrink .5s forwards;
-  -webkit-animation: shrink .5s forwards;
+  animation: shrink .4s forwards;
+  -webkit-animation: shrink .4s forwards;
 }
 
 
@@ -38,6 +38,147 @@
 
 .grow {
   /* background: red!important; */
-  animation: grow .5s forwards;
-  -webkit-animation: grow .5s forwards;
+  animation: grow .4s forwards;
+  -webkit-animation: grow .4s forwards;
+}
+
+
+
+
+
+/* @keyframes fadeInColor {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@-webkit-keyframes fadeInColor {
+  0% { opacity: 0}
+  100% { opacity: 1 }
+}
+
+.fade-in-color {
+  animation: fadeInColor .5s forwards;
+  -webkit-animation: fadeInColor .5s forwards;
+} */
+
+
+
+@keyframes blackToGray {
+  0% { background-color: #17202A }
+  100% { background-color: #8392A6 }
+}
+
+@-webkit-keyframes blackToGray {
+  0% { background-color: #17202A }
+  100% { background-color: #8392A6 }
+}
+
+.black-to-gray {
+  animation: blackToGray .4s forwards;
+  -webkit-animation: blackToGray .4s forwards;
+}
+
+.black-to-gray-reverse {
+  animation: blackToGray .4s reverse;
+  -webkit-animation: blackToGray .4s reverse;
+}
+
+
+
+@keyframes grayToBlue {
+  0% { background-color: #8392A6 }
+  100% { background-color: #0509FF }
+}
+
+@-webkit-keyframes grayToBlue {
+  0% { background-color: #8392A6 }
+  100% { background-color: #0509FF }
+}
+
+@keyframes blueToGray {
+  0% { background-color: #0509FF }
+  100% { background-color: #8392A6 }
+}
+
+@-webkit-keyframes blueToGray {
+  0% { background-color: #0509FF }
+  100% { background-color: #8392A6 }
+}
+
+.gray-to-blue {
+  animation: grayToBlue .4s forwards;
+  -webkit-animation: grayToBlue .4s forwards;
+}
+
+.blue-to-gray {
+  animation: blueToGray .4s forwards;
+  -webkit-animation: blueToGray .4s forwards;
+}
+
+
+
+
+
+@keyframes blueToGreen {
+  0% { background-color: #0509FF }
+  100% { background-color: #22C995 }
+}
+
+@-webkit-keyframes blueToGreen {
+  0% { background-color: #0509FF }
+  100% { background-color: #22C995 }
+}
+
+@keyframes greenToBlue {
+  0% { background-color: #22C995 }
+  100% { background-color: #0509FF }
+}
+
+@-webkit-keyframes greenToBlue {
+  0% { background-color: #22C995 }
+  100% { background-color: #0509FF }
+}
+
+.blue-to-green {
+  animation: blueToGreen .4s forwards;
+  -webkit-animation: blueToGreen .4s forwards;
+}
+
+.green-to-blue{
+  animation: greenToBlue .4s forwards;
+  -webkit-animation: greenToBlue .4s forwards;
+}
+
+
+
+
+
+@keyframes greenToYellow {
+  0% { background-color: #22C995 }
+  100% { background-color: #FFD83A }
+}
+
+@-webkit-keyframes greenToYellow {
+  0% { background-color: #22C995 }
+  100% { background-color: #FFD83A }
+}
+
+
+@keyframes yellowToGreen {
+  0% { background-color: #FFD83A }
+  100% { background-color: #22C995 }
+}
+
+@-webkit-keyframes yellowToGreen {
+  0% { background-color: #FFD83A }
+  100% { background-color: #22C995 }
+}
+
+.green-to-yellow {
+  animation: greenToYellow .4s forwards;
+  -webkit-animation: greenToYellow .4s forwards;
+}
+.yellow-to-green {
+  animation: yellowToGreen .4s forwards;
+  -webkit-animation: yellowToGreen .4s forwards;
 }
