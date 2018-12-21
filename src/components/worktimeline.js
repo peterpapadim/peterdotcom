@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import WorkTimelineItem from './worktimeline-item';
 import '../assets/styling/worktimeline.css';
 
+var smoothScroll = require('smoothscroll');
+
 class WorkTimeline extends Component {
   constructor(){
     super();
@@ -14,7 +16,8 @@ class WorkTimeline extends Component {
       containerWidth: 0,
       lineAnimation: '',
       scrollLeft: 0,
-      scrollDirection: ''
+      scrollDirection: 'right',
+      initialGrowth: true
     }
   }
 
@@ -27,6 +30,10 @@ class WorkTimeline extends Component {
 
   componentWillUnmount(){
     window.removeEventListener('resize', this.setPaddingLeftAndRight);
+  }
+
+  resetInitialGrowth = () => {
+    this.setState({initialGrowth: false})
   }
 
   setLineAnimation = (className) => {
@@ -81,14 +88,19 @@ class WorkTimeline extends Component {
         blurbLeft: blurbLeft,
       },
       containerWidth: containerWidth
-    })
+    }, this.initialItemGrowth())
+  }
+
+  initialItemGrowth = () => {
+    // debugger
+    // smoothScroll(this.refs.testing1);
   }
 
   render(){
     return(
       <div>
         <div ref="worktimelineContainer" className='worktimeline-container' style={this.state.styles}>
-          <WorkTimelineItem scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} blurbLeft={this.state.styles.blurbLeft} expand={true}/>
+          <WorkTimelineItem scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} blurbLeft={this.state.styles.blurbLeft} initialGrowth={this.state.initialGrowth} resetInitialGrowth={this.resetInitialGrowth}/>
           <WorkTimelineItem scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='black-to-gray' lineAnimationReverse='blue-to-gray' blurbLeft={this.state.styles.blurbLeft}/>
           <WorkTimelineItem scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='gray-to-blue' lineAnimationReverse='green-to-blue' blurbLeft={this.state.styles.blurbLeft}/>
           <WorkTimelineItem scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='blue-to-green' lineAnimationReverse='yellow-to-green' blurbLeft={this.state.styles.blurbLeft}/>

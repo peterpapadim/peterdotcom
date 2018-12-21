@@ -17,6 +17,7 @@ class WorkTimelineItem extends Component {
     //   elementLeft: this.refs.workTimelineItem.getBoundingClientRect().left
     // },)
     document.getElementsByClassName('worktimeline-container')[0].addEventListener('scroll', this.setElementLeft)
+    this.props.initialGrowth ? this.checkLocation() : null
   }
 
 
@@ -35,14 +36,17 @@ class WorkTimelineItem extends Component {
   }
 
   checkLocation = () => {
-    console.log("blurb-left", this.state.blurbLeft)
-    console.log("element-left", this.state.elementLeft)
+    // console.log("blurb-left", this.state.blurbLeft)
+    // console.log("element-left", this.state.elementLeft)
+    // if(this.state.elementLeft < this.state.blurbLeft - 188){
     if(this.state.elementLeft < this.state.blurbLeft - 188){
+
       this.setState({growAnimation: 'shrink', grownStatus: false})
       // if(this.props.scrollDirection === 'right'){
       //   this.props.setLineAnimation(this.props.lineAnimationForward)
       // }
     }
+
      else if(this.state.elementLeft <= this.state.blurbLeft + 140){
       console.log(this.props.scrollDirection)
       if(!this.state.grownStatus){
@@ -57,6 +61,7 @@ class WorkTimelineItem extends Component {
       }
       // this.props.setLineColor(this.props.color)
     }
+
     else if(this.state.elementLeft > this.state.blurbLeft - 110){
       this.setState({growAnimation: 'shrink', grownStatus: false})
       // this.props.setLineAnimation(this.props.lineAnimationReverse)
@@ -65,8 +70,8 @@ class WorkTimelineItem extends Component {
 
   render(){
     return(
-      <div style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2'}}>
-        <div className={this.state.growAnimation} ref="workTimelineItem" style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5', background: 'white', margin: '0 auto'}}></div>
+      <div ref="workTimelineItem" style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2'}}>
+        <div className={this.state.growAnimation} style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5', background: 'white', margin: '0 auto'}}></div>
       </div>
     )
   }

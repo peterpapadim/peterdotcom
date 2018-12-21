@@ -73,14 +73,24 @@
   100% { background-color: #8392A6 }
 }
 
+@keyframes grayToBlack {
+  0% { background-color: #8392A6 }
+  100% { background-color: #17202A }
+}
+
+@-webkit-keyframes grayToBlack {
+  0% { background-color: #8392A6 }
+  100% { background-color: #17202A }
+}
+
 .black-to-gray {
   animation: blackToGray .4s forwards;
   -webkit-animation: blackToGray .4s forwards;
 }
 
-.black-to-gray-reverse {
-  animation: blackToGray .4s reverse;
-  -webkit-animation: blackToGray .4s reverse;
+.gray-to-black {
+  animation: grayToBlack .4s forwards;
+  -webkit-animation: grayToBlack .4s forwards;
 }
 
 
