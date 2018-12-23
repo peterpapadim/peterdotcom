@@ -8,7 +8,7 @@
     src: url('assets/font/tiempos_headline-black.ttf');
 }
 
-.header {
+/* .header, .title {
   font-family: tiempos;
   color: #17202A
 }
@@ -16,10 +16,12 @@
 .blurb {
   font-family: avenirNext-Medium;
   color: #8392A6;
-}
+} */
 
 body {
   margin: 0px;
+  font-family: avenirNext-Medium;
+  color: #8392A6;
 }
 
 

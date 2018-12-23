@@ -32,6 +32,8 @@ class WorkTimelineItem extends Component {
     let offsetLeftInitial = this.state.offsetLeftInitial
     let offsetLeftAdjusting = this.state.offsetLeftAdjusting
     let blurbLeft = this.state.blurbLeft
+    let title = this.props.caseStudyInfo.title
+    let about = this.props.caseStudyInfo.about
 
     if(this.props.scrollDirection === 'right' || this.props.initialGrowth){
       if(!this.state.grownStatus){
@@ -43,6 +45,7 @@ class WorkTimelineItem extends Component {
             this.setState({growAnimation: 'grow', grownStatus: true})
           }
           this.props.setLineAnimation(this.props.lineAnimationForward)
+          this.props.updateTitleAndAbout(title, about)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}
         }
       }
@@ -63,6 +66,7 @@ class WorkTimelineItem extends Component {
             this.setState({growAnimation: 'grow', grownStatus: true})
           }
           this.props.setLineAnimation(this.props.lineAnimationReverse)
+          this.props.updateTitleAndAbout(title, about)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}
         }
       }
@@ -91,7 +95,7 @@ class WorkTimelineItem extends Component {
 
   handleItemClick = () => {
     $(document.getElementsByClassName('worktimeline-container')).animate({
-      scrollLeft: this.state.offsetLeftInitial
+      scrollLeft: this.state.offsetLeftInitial - 25
     })
   }
 

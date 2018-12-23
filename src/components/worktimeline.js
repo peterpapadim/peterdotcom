@@ -4,6 +4,13 @@ import $ from "jquery";
 import '../assets/styling/worktimeline.css';
 
 var smoothScroll = require('smoothscroll');
+var caseStudyInfo = {
+  baronFig: {title: "Baron Fig", about: "We make tools for thinkers."},
+  reelSquad: {title: "ReelSquad", about: "Reelsquad sample text"},
+  pageClub: {title: "Page Club", about: "Page Club sample text"},
+  instalytics: {title: "Instalytics", about: "Instalytics sample text"},
+  codePeter: {title: "CodePeter", about: "CodePeter sample text"}
+}
 
 class WorkTimeline extends Component {
   constructor(){
@@ -98,11 +105,11 @@ class WorkTimeline extends Component {
     return(
       <div>
         <div onScroll={(e) => this.handleContainerScroll(e)} ref="worktimelineContainer" className='worktimeline-container' style={this.state.styles}>
-          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} blurbLeft={this.state.styles.blurbLeft} setTriggerItemSizeCheck={this.setTriggerItemSizeCheck} initialGrowth={this.state.initialGrowth} resetInitialGrowth={this.resetInitialGrowth}/>
-          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='black-to-gray' lineAnimationReverse='blue-to-gray' blurbLeft={this.state.styles.blurbLeft}/>
-          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='gray-to-blue' lineAnimationReverse='green-to-blue' blurbLeft={this.state.styles.blurbLeft}/>
-          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='blue-to-green' lineAnimationReverse='yellow-to-green' blurbLeft={this.state.styles.blurbLeft}/>
-          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='green-to-yellow' lineAnimationReverse='yellow-to-green' blurbLeft={this.state.styles.blurbLeft}/>
+          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} blurbLeft={this.state.styles.blurbLeft} setTriggerItemSizeCheck={this.setTriggerItemSizeCheck} initialGrowth={this.state.initialGrowth} resetInitialGrowth={this.resetInitialGrowth} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.baronFig}/>
+          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='black-to-gray' lineAnimationReverse='blue-to-gray' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.reelSquad}/>
+          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='gray-to-blue' lineAnimationReverse='green-to-blue' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.pageClub}/>
+          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='blue-to-green' lineAnimationReverse='yellow-to-green' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.instalytics}/>
+          <WorkTimelineItem triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setLineAnimation={this.setLineAnimation} lineAnimationForward='green-to-yellow' lineAnimationReverse='yellow-to-green' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.codePeter}/>
             <div style={{width: '1600px', paddingLeft: '50px', position: 'absolute', top: '50%', transform: 'translateY(-50%)',  zIndex: '-1'}}>
               <div className={this.state.lineAnimation} style={{display: 'inline-block', verticalAlign: 'middle', height: '8px', width: '100%', backgroundColor: this.props.lineColor, position: 'relative',}}></div>
               <div className={this.state.lineAnimation} style={{display: 'inline-block', verticalAlign: 'middle', height: '40px', width: '40px', background: this.props.lineColor, position: 'relative', borderRadius: '20px', right: '2px'}}></div>

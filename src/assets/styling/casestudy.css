@@ -1,0 +1,86 @@
+.casestudy-container{
+    width: 663px;
+    position: relative;
+    padding-left: 18px;
+    /* left: 280px; */
+    font-size: 26px;
+    margin-left: 15%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: -20px;
+    /* margin: 40px auto 0px auto; */
+}
+
+.casestudy-container > .title-about-container {
+  position: relative;
+  right: 0px;
+}
+
+.casestudy-container > .title-about-container > .title{
+  font-family: tiempos;
+  color: #17202A;
+  margin: 0px;
+}
+
+.casestudy-container > .title-about-container > .about{
+  /* color: #17202A; */
+  font-size: 16px;
+  margin: 5px 0 0 0;
+  font-weight: 600;
+}
+
+
+@keyframes transitionOut {
+  0% {
+    opacity: 1;
+    right: 0px;
+  }
+  100% {
+    opacity: 0;
+    right: -75px;
+  }
+}
+
+@-webkit-keyframes transitionOut {
+  0% {
+    opacity: 1;
+    right: 0px;
+  }
+  100% {
+    opacity: 0;
+    right: -75px;
+  }
+}
+
+.transition-out {
+  animation: transitionOut 200ms forwards;
+  -webkit-animation: transitionOut 200ms forwards;
+}
+
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+    right: -75px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes transitionIn {
+  0% {
+    opacity: 0;
+    right: -75px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+.transition-in {
+  animation: transitionIn 200ms forwards;
+  -webkit-animation: transitionIn 200ms forwards;
+}
