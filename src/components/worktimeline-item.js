@@ -5,7 +5,8 @@ class WorkTimelineItem extends Component {
   constructor(){
     super();
     this.state = {
-      elementLeft: 0,
+      offsetLeftInitial: 0,
+      offsetLeftAdjusting: 0,
       blurbLeft: 0,
       growAnimation: 'shrink',
       grownStatus: false
@@ -13,64 +14,91 @@ class WorkTimelineItem extends Component {
   }
 
   componentDidMount(){
-    // this.setState({
-    //   elementLeft: this.refs.workTimelineItem.getBoundingClientRect().left
-    // },)
-    document.getElementsByClassName('worktimeline-container')[0].addEventListener('scroll', this.setElementLeft)
-    this.props.initialGrowth ? this.checkLocation() : null
+    let offsetValue = $(this.refs.workTimelineItem).offset().left
+    this.setState({offsetLeftInitial: offsetValue})
   }
 
 
   componentWillReceiveProps(nextProps){
-    this.setState({
-      // elementLeft: this.refs.workTimelineItem.getBoundingClientRect().left,
-      blurbLeft: nextProps.blurbLeft
-    })
-    // nextProps.expand ? this.setState({growAnimation: 'grow'}) : null
-  }
-
-  setElementLeft = () => {
-    this.setState({
-      elementLeft: this.refs.workTimelineItem.getBoundingClientRect().left,
-    }, this.checkLocation())
-  }
-
-  checkLocation = () => {
-    // console.log("blurb-left", this.state.blurbLeft)
-    // console.log("element-left", this.state.elementLeft)
-    // if(this.state.elementLeft < this.state.blurbLeft - 188){
-    if(this.state.elementLeft < this.state.blurbLeft - 188){
-
-      this.setState({growAnimation: 'shrink', grownStatus: false})
-      // if(this.props.scrollDirection === 'right'){
-      //   this.props.setLineAnimation(this.props.lineAnimationForward)
-      // }
+    if(nextProps.triggerItemSizeCheck){
+      this.setState({
+        blurbLeft: nextProps.blurbLeft,
+        offsetLeftAdjusting: $(this.refs.workTimelineItem).offset().left
+      }, this.checkLocation2())
     }
+  }
 
-     else if(this.state.elementLeft <= this.state.blurbLeft + 140){
-      console.log(this.props.scrollDirection)
+  checkLocation2 = () => {
+    let offsetLeftInitial = this.state.offsetLeftInitial
+    let offsetLeftAdjusting = this.state.offsetLeftAdjusting
+    let blurbLeft = this.state.blurbLeft
+
+    if(this.props.scrollDirection === 'right' || this.props.initialGrowth){
       if(!this.state.grownStatus){
-        this.setState({growAnimation: 'grow', grownStatus: true}, () => {
-          if(this.props.scrollDirection === 'right'){
-            this.props.setLineAnimation(this.props.lineAnimationForward)
+        if( offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 40){
+          if(this.state.growAnimation === 'hovered'){
+            this.setState({growAnimation: 'hovered-to-grow', grownStatus: true})
           }
-          else if(this.props.scrollDirection === 'left'){
-            this.props.setLineAnimation(this.props.lineAnimationReverse)
+          else{
+            this.setState({growAnimation: 'grow', grownStatus: true})
           }
-        })
+          this.props.setLineAnimation(this.props.lineAnimationForward)
+          if(this.props.initialGrowth){this.props.resetInitialGrowth()}
+        }
       }
-      // this.props.setLineColor(this.props.color)
+      else{
+        if( !(offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 40)){
+          if(this.props.id === '2'){console.log('shrink')}
+          this.setState({growAnimation: 'shrink', grownStatus: false})
+        }
+      }
     }
-
-    else if(this.state.elementLeft > this.state.blurbLeft - 110){
-      this.setState({growAnimation: 'shrink', grownStatus: false})
-      // this.props.setLineAnimation(this.props.lineAnimationReverse)
+    else if(this.props.scrollDirection === 'left'){
+      if(!this.state.grownStatus){
+        if( offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 200){
+          if(this.state.growAnimation === 'hovered'){
+            this.setState({growAnimation: 'hovered-to-grow', grownStatus: true})
+          }
+          else{
+            this.setState({growAnimation: 'grow', grownStatus: true})
+          }
+          this.props.setLineAnimation(this.props.lineAnimationReverse)
+          if(this.props.initialGrowth){this.props.resetInitialGrowth()}
+        }
+      }
+      else{
+        if( !(offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 200)){
+          if(this.props.id === '2'){console.log('shrink')}
+          this.setState({growAnimation: 'shrink', grownStatus: false})
+        }
+      }
     }
   }
+
+  handleItemMouseEnter = () => {
+    if(!this.state.grownStatus){
+      this.setState({growAnimation: 'hovered'})
+    }
+  }
+
+  handleItemMouseLeave = () => {
+    if(!this.state.grownStatus){
+      if(this.state.growAnimation !== 'shrink'){
+        this.setState({growAnimation: 'rested'})
+      }
+    }
+  }
+
+  handleItemClick = () => {
+    $(document.getElementsByClassName('worktimeline-container')).animate({
+      scrollLeft: this.state.offsetLeftInitial
+    })
+  }
+
 
   render(){
     return(
-      <div ref="workTimelineItem" style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2'}}>
+      <div ref="workTimelineItem" onClick={this.handleItemClick} onMouseEnter={this.handleItemMouseEnter} onMouseLeave={this.handleItemMouseLeave} style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2', cursor: 'pointer'}}>
         <div className={this.state.growAnimation} style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5', background: 'white', margin: '0 auto'}}></div>
       </div>
     )

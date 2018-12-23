@@ -45,21 +45,59 @@
 
 
 
-
-/* @keyframes fadeInColor {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+@keyframes hoveredToGrow {
+  0% { height: 235px; width: 235px; box-shadow: '0 2px 10px 0 #E8EEF5'}
+  100% { height: 270px; width: 270px; box-shadow: 0 2px 54px 0 #E8EEF5;}
 }
 
-@-webkit-keyframes fadeInColor {
-  0% { opacity: 0}
-  100% { opacity: 1 }
+@-webkit-keyframes hoveredToGrow {
+  0% { height: 235px; width: 235px; box-shadow: '0 2px 10px 0 #E8EEF5'}
+  100% { height: 270px; width: 270px; box-shadow: 0 2px 54px 0 #E8EEF5;}
 }
 
-.fade-in-color {
-  animation: fadeInColor .5s forwards;
-  -webkit-animation: fadeInColor .5s forwards;
-} */
+.hovered-to-grow {
+  /* background: red!important; */
+  animation: grow .4s forwards;
+  -webkit-animation: grow .4s forwards;
+}
+
+
+
+
+
+
+@keyframes rested {
+  0% { height: 235px; width: 235px;}
+  100% { height: 220px; width: 220px;}
+}
+
+@-webkit-keyframes rested {
+  0% { height: 235px; width: 235px;}
+  100% { height: 220px; width: 220px;}
+}
+
+.rested {
+  animation: rested .3s forwards;
+  -webkit-animation: rested .3s forwards;
+}
+
+
+@keyframes hovered {
+  0% { height: 220px; width: 220px;}
+  100% { height: 235px; width: 235px;}
+}
+
+@-webkit-keyframes hovered {
+  0% { height: 220px; width: 220px;}
+  100% { height: 235px; width: 235px;}
+}
+
+.hovered {
+  animation: hovered .3s forwards;
+  -webkit-animation: hovered .3s forwards;
+}
+
+
 
 
 
