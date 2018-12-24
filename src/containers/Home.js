@@ -13,7 +13,6 @@ class Home extends Component {
       title: "Baron Fig",
       about: "We make tools for thinkers.",
       transitionStatus: "transition-in"
-      // triggerCaseStudyAnimation: false
     }
   }
 
@@ -22,9 +21,6 @@ class Home extends Component {
     this.setState({lineColor: colorHex})
   }
 
-  // triggerCaseStudyAnimationUpadate = (bool) => {
-  //   this.setState({triggerCaseStudyAnimation: bool})
-  // }
 
   componentDidMount(){
     this.props.updatedLoadedComponent(
@@ -39,18 +35,6 @@ class Home extends Component {
   }
 
   updateTitleAndAbout = (title, about) => {
-    // let titleAboutContainerElement = document.getElementsByClassName('title-about-container')[0]
-    // $(titleAboutContainerElement).animate({
-    //   opacity: 0,
-    //   right: '-50px'
-    // }, 75, () => {
-    //   this.setState({title: title, about: about}, () => {
-    //     $(titleAboutContainerElement).animate({
-    //       opacity: 1,
-    //       right: '0px'
-    //     }, 75)
-    //   })
-    // })
     this.setState({transitionStatus: 'transition-out'}, () => {
       this.setState({title: title, about: about}, () => {
         this.setState({transitionStatus: 'transition-in'})

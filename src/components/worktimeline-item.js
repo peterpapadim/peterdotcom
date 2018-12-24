@@ -16,6 +16,7 @@ class WorkTimelineItem extends Component {
   componentDidMount(){
     let offsetValue = $(this.refs.workTimelineItem).offset().left
     this.setState({offsetLeftInitial: offsetValue})
+    this.props.updateInitialOffsetLeftValues(offsetValue)
   }
 
 
@@ -46,12 +47,13 @@ class WorkTimelineItem extends Component {
           }
           this.props.setLineAnimation(this.props.lineAnimationForward)
           this.props.updateTitleAndAbout(title, about)
+          this.props.updateOffsetLeftCurrentGrown(this.state.offsetLeftInitial)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}
         }
       }
       else{
         if( !(offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 40)){
-          if(this.props.id === '2'){console.log('shrink')}
+          // if(this.props.id === '2'){console.log('shrink')}
           this.setState({growAnimation: 'shrink', grownStatus: false})
         }
       }
@@ -67,12 +69,13 @@ class WorkTimelineItem extends Component {
           }
           this.props.setLineAnimation(this.props.lineAnimationReverse)
           this.props.updateTitleAndAbout(title, about)
+          this.props.updateOffsetLeftCurrentGrown(this.state.offsetLeftInitial)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}
         }
       }
       else{
         if( !(offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 200)){
-          if(this.props.id === '2'){console.log('shrink')}
+          // if(this.props.id === '2'){console.log('shrink')}
           this.setState({growAnimation: 'shrink', grownStatus: false})
         }
       }

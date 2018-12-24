@@ -53,8 +53,8 @@
 }
 
 .transition-out {
-  animation: transitionOut 200ms forwards;
-  -webkit-animation: transitionOut 200ms forwards;
+  animation: transitionOut 300ms forwards;
+  -webkit-animation: transitionOut 300ms forwards;
 }
 
 
@@ -81,6 +81,6 @@
 }
 
 .transition-in {
-  animation: transitionIn 200ms forwards;
-  -webkit-animation: transitionIn 200ms forwards;
+  animation: transitionIn 300ms forwards;
+  -webkit-animation: transitionIn 300ms forwards;
 }
