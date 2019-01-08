@@ -9,16 +9,12 @@ class Home extends Component {
   constructor(){
     super();
     this.state = {
-      lineColor: "#17202A",
+      initialColor: "#17202A",
+      colorAnimation: '',
       title: "Baron Fig",
       about: "We make tools for thinkers.",
       transitionStatus: "transition-in"
     }
-  }
-
-
-  setLineColor = (colorHex) => {
-    this.setState({lineColor: colorHex})
   }
 
 
@@ -34,6 +30,10 @@ class Home extends Component {
     )
   }
 
+  setColorAnimation = (className) => {
+    this.setState({colorAnimation: className})
+  }
+
   updateTitleAndAbout = (title, about) => {
     this.setState({transitionStatus: 'transition-out'}, () => {
       this.setState({title: title, about: about}, () => {
@@ -47,9 +47,9 @@ class Home extends Component {
       <div className="home fade-in">
         <div className="home item"><p className="header">Hi, I'm Peter!</p></div>
         <div className="home item"><p className="blurb">A Brooklyn hipster who doubles as a Full Stack Developer with a focus in Frontend Engineering.</p></div>
-        <WorkTimeline setLineColor={this.setLineColor} lineColor={this.state.lineColor} updateTitleAndAbout={this.updateTitleAndAbout}/>
+        <WorkTimeline updateTitleAndAbout={this.updateTitleAndAbout} initialColor={this.state.initialColor} colorAnimation={this.state.colorAnimation} setColorAnimation={this.setColorAnimation}/>
         <div className="home item">
-          <CaseStudy transitionStatus={this.state.transitionStatus} title={this.state.title} about={this.state.about}/>
+          <CaseStudy transitionStatus={this.state.transitionStatus} title={this.state.title} about={this.state.about} initialColor={this.state.initialColor} colorAnimation={this.state.colorAnimation}/>
         </div>
       </div>
     )

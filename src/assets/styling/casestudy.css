@@ -29,6 +29,21 @@
   font-weight: 600;
 }
 
+.casestudy-container  > .view-case-study-container > .view-case-study{
+  margin-top: 12px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.casestudy-container  > .view-case-study-container > .arrow-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  height: 28px;
+  width: 28px;
+}
+
 
 @keyframes transitionOut {
   0% {
@@ -83,4 +98,140 @@
 .transition-in {
   animation: transitionIn 300ms forwards;
   -webkit-animation: transitionIn 300ms forwards;
+}
+
+
+
+
+
+
+
+@keyframes blackToGrayText {
+  0% { color: #17202A; fill: #17202A;}
+  100% { color: #8392A6; fill: #8392A6; }
+}
+
+@-webkit-keyframes blackToGrayText {
+  0% { color: #17202A; fill: #17202A; }
+  100% { color: #8392A6; fill: #8392A6; }
+}
+
+@keyframes grayToBlackText {
+  0% { color: #8392A6; fill: #8392A6; }
+  100% { color: #17202A; fill: #17202A; }
+}
+
+@-webkit-keyframes grayToBlackText {
+  0% { color: #8392A6; fill: #8392A6; }
+  100% { color: #17202A; fill: #17202A; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.black-to-gray {
+  animation: blackToGrayText .4s forwards;
+  -webkit-animation: blackToGrayText .4s forwards;
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.gray-to-black {
+  animation: grayToBlackText .4s forwards;
+  -webkit-animation: grayToBlackText .4s forwards;
+}
+
+
+
+@keyframes grayToBlueText {
+  0% { color: #8392A6; fill: #8392A6; }
+  100% { color: #0509FF; fill: #0509FF; }
+}
+
+@-webkit-keyframes grayToBlueText {
+  0% { color: #8392A6; fill: #8392A6; }
+  100% { color: #0509FF; fill: #0509FF; }
+}
+
+@keyframes blueToGrayText {
+  0% { color: #0509FF; fill: #0509FF; }
+  100% { color: #8392A6; fill: #8392A6; }
+}
+
+@-webkit-keyframes blueToGrayText {
+  0% { color: #0509FF; fill: #0509FF; }
+  100% { color: #8392A6; fill: #8392A6; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.gray-to-blue {
+  animation: grayToBlueText .4s forwards;
+  -webkit-animation: grayToBlueText .4s forwards;
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-gray {
+  animation: blueToGrayText .4s forwards;
+  -webkit-animation: blueToGrayText .4s forwards;
+}
+
+
+
+
+
+@keyframes blueToGreenText {
+  0% { color: #0509FF; fill: #0509FF; }
+  100% { color: #22C995; fill: #22C995; }
+}
+
+@-webkit-keyframes blueToGreenText {
+  0% { color: #0509FF; fill: #0509FF; }
+  100% { color: #22C995; fill: #22C995; }
+}
+
+@keyframes greenToBlueText {
+  0% { color: #22C995; fill: #22C995; }
+  100% { color: #0509FF; fill: #0509FF; }
+}
+
+@-webkit-keyframes greenToBlueText {
+  0% { color: #22C995; fill: #22C995; }
+  100% { color: #0509FF; fill: #0509FF; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-green {
+  animation: blueToGreenText .4s forwards;
+  -webkit-animation: blueToGreenText .4s forwards;
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.green-to-blue{
+  animation: greenToBlueText .4s forwards;
+  -webkit-animation: greenToBlueText .4s forwards;
+}
+
+
+
+
+
+@keyframes greenToYellowText {
+  0% { color: #22C995; fill: #22C995; }
+  100% { color: #FFD83A; fill: #FFD83A; }
+}
+
+@-webkit-keyframes greenToYellowText {
+  0% { color: #22C995; fill: #22C995; }
+  100% { color: #FFD83A; fill: #FFD83A; }
+}
+
+
+@keyframes yellowToGreenText {
+  0% { color: #FFD83A; fill: #FFD83A; }
+  100% { color: #22C995; fill: #22C995; }
+}
+
+@-webkit-keyframes yellowToGreenText {
+  0% { color: #FFD83A; fill: #FFD83A; }
+  100% { color: #22C995; fill: #22C995; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.green-to-yellow {
+  animation: greenToYellowText .4s forwards;
+  -webkit-animation: greenToYellowText .4s forwards;
+}
+.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-green {
+  animation: yellowToGreenText .4s forwards;
+  -webkit-animation: yellowToGreenText .4s forwards;
 }

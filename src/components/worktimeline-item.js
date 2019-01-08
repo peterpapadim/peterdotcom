@@ -45,7 +45,7 @@ class WorkTimelineItem extends Component {
           else{
             this.setState({growAnimation: 'grow', grownStatus: true})
           }
-          this.props.setLineAnimation(this.props.lineAnimationForward)
+          this.props.setColorAnimation(this.props.colorAnimationForward)
           this.props.updateTitleAndAbout(title, about)
           this.props.updateOffsetLeftCurrentGrown(this.state.offsetLeftInitial)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}
@@ -67,7 +67,7 @@ class WorkTimelineItem extends Component {
           else{
             this.setState({growAnimation: 'grow', grownStatus: true})
           }
-          this.props.setLineAnimation(this.props.lineAnimationReverse)
+          this.props.setColorAnimation(this.props.colorAnimationReverse)
           this.props.updateTitleAndAbout(title, about)
           this.props.updateOffsetLeftCurrentGrown(this.state.offsetLeftInitial)
           if(this.props.initialGrowth){this.props.resetInitialGrowth()}

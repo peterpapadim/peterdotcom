@@ -102,23 +102,23 @@
 
 
 @keyframes blackToGray {
-  0% { background-color: #17202A }
-  100% { background-color: #8392A6 }
+  0% { background-color: #17202A; color: #17202A; fill: #17202A;}
+  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
 }
 
 @-webkit-keyframes blackToGray {
-  0% { background-color: #17202A }
-  100% { background-color: #8392A6 }
+  0% { background-color: #17202A; color: #17202A; fill: #17202A; }
+  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
 }
 
 @keyframes grayToBlack {
-  0% { background-color: #8392A6 }
-  100% { background-color: #17202A }
+  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+  100% { background-color: #17202A; color: #17202A; fill: #17202A; }
 }
 
 @-webkit-keyframes grayToBlack {
-  0% { background-color: #8392A6 }
-  100% { background-color: #17202A }
+  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+  100% { background-color: #17202A; color: #17202A; fill: #17202A; }
 }
 
 .black-to-gray {
@@ -134,23 +134,23 @@
 
 
 @keyframes grayToBlue {
-  0% { background-color: #8392A6 }
-  100% { background-color: #0509FF }
+  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
 @-webkit-keyframes grayToBlue {
-  0% { background-color: #8392A6 }
-  100% { background-color: #0509FF }
+  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
 @keyframes blueToGray {
-  0% { background-color: #0509FF }
-  100% { background-color: #8392A6 }
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
 }
 
 @-webkit-keyframes blueToGray {
-  0% { background-color: #0509FF }
-  100% { background-color: #8392A6 }
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
 }
 
 .gray-to-blue {
@@ -168,23 +168,23 @@
 
 
 @keyframes blueToGreen {
-  0% { background-color: #0509FF }
-  100% { background-color: #22C995 }
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
 }
 
 @-webkit-keyframes blueToGreen {
-  0% { background-color: #0509FF }
-  100% { background-color: #22C995 }
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
 }
 
 @keyframes greenToBlue {
-  0% { background-color: #22C995 }
-  100% { background-color: #0509FF }
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
 @-webkit-keyframes greenToBlue {
-  0% { background-color: #22C995 }
-  100% { background-color: #0509FF }
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
 .blue-to-green {
@@ -202,24 +202,24 @@
 
 
 @keyframes greenToYellow {
-  0% { background-color: #22C995 }
-  100% { background-color: #FFD83A }
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
 }
 
 @-webkit-keyframes greenToYellow {
-  0% { background-color: #22C995 }
-  100% { background-color: #FFD83A }
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
 }
 
 
 @keyframes yellowToGreen {
-  0% { background-color: #FFD83A }
-  100% { background-color: #22C995 }
+  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
 }
 
 @-webkit-keyframes yellowToGreen {
-  0% { background-color: #FFD83A }
-  100% { background-color: #22C995 }
+  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
 }
 
 .green-to-yellow {
