@@ -30,7 +30,7 @@ class App extends Component {
 
   render(){
     return(
-      <div style={{background: '#F8F9FC'}}>
+      <div style={{paddingBottom: '100px', background: '#F8F9FC'}}>
         <div>
           <BrowserRouter>
             <div>

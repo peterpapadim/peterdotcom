@@ -106,7 +106,8 @@ class WorkTimelineItem extends Component {
   render(){
     return(
       <div ref="workTimelineItem" onClick={this.handleItemClick} onMouseEnter={this.handleItemMouseEnter} onMouseLeave={this.handleItemMouseLeave} style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2', cursor: 'pointer'}}>
-        <div className={this.state.growAnimation} style={{position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5', background: 'white', margin: '0 auto'}}></div>
+        <div className={this.state.growAnimation} style={{ background: `url(${this.props.featuredImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5',  margin: '0 auto'}}>
+        </div>
       </div>
     )
   }

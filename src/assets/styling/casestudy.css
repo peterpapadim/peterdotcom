@@ -106,70 +106,15 @@
 
 
 
-@keyframes blackToGrayText {
-  0% { color: #17202A; fill: #17202A;}
-  100% { color: #8392A6; fill: #8392A6; }
-}
-
-@-webkit-keyframes blackToGrayText {
-  0% { color: #17202A; fill: #17202A; }
-  100% { color: #8392A6; fill: #8392A6; }
-}
-
-@keyframes grayToBlackText {
-  0% { color: #8392A6; fill: #8392A6; }
-  100% { color: #17202A; fill: #17202A; }
-}
-
-@-webkit-keyframes grayToBlackText {
-  0% { color: #8392A6; fill: #8392A6; }
-  100% { color: #17202A; fill: #17202A; }
-}
-
-.casestudy-container  > .view-case-study-container > .view-case-study.black-to-gray {
-  animation: blackToGrayText .4s forwards;
-  -webkit-animation: blackToGrayText .4s forwards;
-}
-
-.casestudy-container  > .view-case-study-container > .view-case-study.gray-to-black {
-  animation: grayToBlackText .4s forwards;
-  -webkit-animation: grayToBlackText .4s forwards;
-}
-
-
-
-@keyframes grayToBlueText {
-  0% { color: #8392A6; fill: #8392A6; }
+@keyframes greenToBlueText {
+  0% { color: #22C995; fill: #22C995; }
   100% { color: #0509FF; fill: #0509FF; }
 }
 
-@-webkit-keyframes grayToBlueText {
-  0% { color: #8392A6; fill: #8392A6; }
+@-webkit-keyframes greenToBlueText {
+  0% { color: #22C995; fill: #22C995; }
   100% { color: #0509FF; fill: #0509FF; }
 }
-
-@keyframes blueToGrayText {
-  0% { color: #0509FF; fill: #0509FF; }
-  100% { color: #8392A6; fill: #8392A6; }
-}
-
-@-webkit-keyframes blueToGrayText {
-  0% { color: #0509FF; fill: #0509FF; }
-  100% { color: #8392A6; fill: #8392A6; }
-}
-
-.casestudy-container  > .view-case-study-container > .view-case-study.gray-to-blue {
-  animation: grayToBlueText .4s forwards;
-  -webkit-animation: grayToBlueText .4s forwards;
-}
-
-.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-gray {
-  animation: blueToGrayText .4s forwards;
-  -webkit-animation: blueToGrayText .4s forwards;
-}
-
-
-
 
 
 @keyframes blueToGreenText {
@@ -182,56 +127,110 @@
   100% { color: #22C995; fill: #22C995; }
 }
 
-@keyframes greenToBlueText {
-  0% { color: #22C995; fill: #22C995; }
-  100% { color: #0509FF; fill: #0509FF; }
+.casestudy-container  > .view-case-study-container > .view-case-study.green-to-blue {
+  animation: greenToBlueText .4s forwards;
+  -webkit-animation: greenToBlueText .4s forwards;
 }
-
-@-webkit-keyframes greenToBlueText {
-  0% { color: #22C995; fill: #22C995; }
-  100% { color: #0509FF; fill: #0509FF; }
-}
-
 .casestudy-container  > .view-case-study-container > .view-case-study.blue-to-green {
   animation: blueToGreenText .4s forwards;
   -webkit-animation: blueToGreenText .4s forwards;
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.green-to-blue{
-  animation: greenToBlueText .4s forwards;
-  -webkit-animation: greenToBlueText .4s forwards;
-}
 
 
 
-
-
-@keyframes greenToYellowText {
-  0% { color: #22C995; fill: #22C995; }
+@keyframes blueToYellowText {
+  0% { color: #0509FF; fill: #0509FF; }
   100% { color: #FFD83A; fill: #FFD83A; }
 }
 
-@-webkit-keyframes greenToYellowText {
-  0% { color: #22C995; fill: #22C995; }
+@-webkit-keyframes blueToYellowText {
+  0% { color: #0509FF; fill: #0509FF; }
   100% { color: #FFD83A; fill: #FFD83A; }
 }
 
 
-@keyframes yellowToGreenText {
+@keyframes yellowToBlueText {
   0% { color: #FFD83A; fill: #FFD83A; }
-  100% { color: #22C995; fill: #22C995; }
+  100% { color: #0509FF; fill: #0509FF; }
 }
 
-@-webkit-keyframes yellowToGreenText {
+@-webkit-keyframes yellowToBlueText {
   0% { color: #FFD83A; fill: #FFD83A; }
-  100% { color: #22C995; fill: #22C995; }
+  100% { color: #0509FF; fill: #0509FF; }
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.green-to-yellow {
-  animation: greenToYellowText .4s forwards;
-  -webkit-animation: greenToYellowText .4s forwards;
+.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-yellow {
+  animation: blueToYellowText .4s forwards;
+  -webkit-animation: blueToYellowText .4s forwards;
 }
-.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-green {
-  animation: yellowToGreenText .4s forwards;
-  -webkit-animation: yellowToGreenText .4s forwards;
+.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-blue {
+  animation: yellowToBlueText .4s forwards;
+  -webkit-animation: yellowToBlueText .4s forwards;
+}
+
+
+
+
+@keyframes yellowToPurpleText {
+  0% { color: #FFD83A; fill: #FFD83A; }
+  100% { color: #764ABC; fill: #764ABC; }
+}
+
+@-webkit-keyframes yellowToPurpleText {
+  0% { color: #FFD83A; fill: #FFD83A; }
+  100% { color: #764ABC; fill: #764ABC; }
+}
+
+
+@keyframes purpleToYellowText {
+  0% { color: #764ABC; fill: #764ABC; }
+  100% { color: #FFD83A; fill: #FFD83A; }
+}
+
+@-webkit-keyframes purpleToYellowText {
+  0% { color: #764ABC; fill: #764ABC; }
+  100% { color: #FFD83A; fill: #FFD83A; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-purple {
+  animation: yellowToPurpleText .4s forwards;
+  -webkit-animation: yellowToPurpleText .4s forwards;
+}
+.casestudy-container  > .view-case-study-container > .view-case-study.purple-to-yellow {
+  animation: purpleToYellowText .4s forwards;
+  -webkit-animation: purpleToYellowText .4s forwards;
+}
+
+
+
+
+@keyframes purpleToNavyText {
+  0% { color: #764ABC; fill: #764ABC; }
+  100% { color: #0D2774; fill: #0D2774; }
+}
+
+@-webkit-keyframes purpleToNavyText {
+  0% { color: #764ABC; fill: #764ABC; }
+  100% { color: #0D2774; fill: #0D2774; }
+}
+
+
+@keyframes navyToPurpleText {
+  0% { color: #0D2774; fill: #0D2774; }
+  100% { color: #764ABC; fill: #764ABC; }
+}
+
+@-webkit-keyframes navyToPurpleText {
+  0% { color: #0D2774; fill: #0D2774; }
+  100% { color: #764ABC; fill: #764ABC; }
+}
+
+.casestudy-container  > .view-case-study-container > .view-case-study.purple-to-navy{
+  animation: purpleToNavyText .4s forwards;
+  -webkit-animation: purpleToNavyText .4s forwards;
+}
+.casestudy-container  > .view-case-study-container > .view-case-study.navy-to-purple {
+  animation: navyToPurpleText .4s forwards;
+  -webkit-animation: navyToPurpleText .4s forwards;
 }

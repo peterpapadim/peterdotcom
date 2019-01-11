@@ -101,70 +101,17 @@
 
 
 
-@keyframes blackToGray {
-  0% { background-color: #17202A; color: #17202A; fill: #17202A;}
-  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-}
-
-@-webkit-keyframes blackToGray {
-  0% { background-color: #17202A; color: #17202A; fill: #17202A; }
-  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-}
-
-@keyframes grayToBlack {
-  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-  100% { background-color: #17202A; color: #17202A; fill: #17202A; }
-}
-
-@-webkit-keyframes grayToBlack {
-  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-  100% { background-color: #17202A; color: #17202A; fill: #17202A; }
-}
-
-.black-to-gray {
-  animation: blackToGray .4s forwards;
-  -webkit-animation: blackToGray .4s forwards;
-}
-
-.gray-to-black {
-  animation: grayToBlack .4s forwards;
-  -webkit-animation: grayToBlack .4s forwards;
-}
 
 
-
-@keyframes grayToBlue {
-  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+@keyframes greenToBlue {
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
   100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
-@-webkit-keyframes grayToBlue {
-  0% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
+@-webkit-keyframes greenToBlue {
+  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
   100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
-
-@keyframes blueToGray {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-}
-
-@-webkit-keyframes blueToGray {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #8392A6; color: #8392A6; fill: #8392A6; }
-}
-
-.gray-to-blue {
-  animation: grayToBlue .4s forwards;
-  -webkit-animation: grayToBlue .4s forwards;
-}
-
-.blue-to-gray {
-  animation: blueToGray .4s forwards;
-  -webkit-animation: blueToGray .4s forwards;
-}
-
-
-
 
 
 @keyframes blueToGreen {
@@ -177,56 +124,110 @@
   100% { background-color: #22C995; color: #22C995; fill: #22C995; }
 }
 
-@keyframes greenToBlue {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+.green-to-blue {
+  animation: greenToBlue .4s forwards;
+  -webkit-animation: greenToBlue .4s forwards;
 }
-
-@-webkit-keyframes greenToBlue {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-}
-
 .blue-to-green {
   animation: blueToGreen .4s forwards;
   -webkit-animation: blueToGreen .4s forwards;
 }
 
-.green-to-blue{
-  animation: greenToBlue .4s forwards;
-  -webkit-animation: greenToBlue .4s forwards;
-}
 
 
 
-
-
-@keyframes greenToYellow {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+@keyframes blueToYellow {
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
   100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
 }
 
-@-webkit-keyframes greenToYellow {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
+@-webkit-keyframes blueToYellow {
+  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
   100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
 }
 
 
-@keyframes yellowToGreen {
+@keyframes yellowToBlue {
   0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
-@-webkit-keyframes yellowToGreen {
+@-webkit-keyframes yellowToBlue {
   0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
+  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
 }
 
-.green-to-yellow {
-  animation: greenToYellow .4s forwards;
-  -webkit-animation: greenToYellow .4s forwards;
+.blue-to-yellow {
+  animation: blueToYellow .4s forwards;
+  -webkit-animation: blueToYellow .4s forwards;
 }
-.yellow-to-green {
-  animation: yellowToGreen .4s forwards;
-  -webkit-animation: yellowToGreen .4s forwards;
+.yellow-to-blue {
+  animation: yellowToBlue .4s forwards;
+  -webkit-animation: yellowToBlue .4s forwards;
+}
+
+
+
+
+@keyframes yellowToPurple {
+  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+}
+
+@-webkit-keyframes yellowToPurple {
+  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+}
+
+
+@keyframes purpleToYellow {
+  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+}
+
+@-webkit-keyframes purpleToYellow {
+  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+}
+
+.yellow-to-purple {
+  animation: yellowToPurple .4s forwards;
+  -webkit-animation: yellowToPurple .4s forwards;
+}
+.purple-to-yellow {
+  animation: purpleToYellow .4s forwards;
+  -webkit-animation: purpleToYellow .4s forwards;
+}
+
+
+
+
+@keyframes purpleToNavy {
+  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+  100% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+}
+
+@-webkit-keyframes purpleToNavy {
+  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+  100% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+}
+
+
+@keyframes navyToPurple {
+  0% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+}
+
+@-webkit-keyframes navyToPurple {
+  0% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+}
+
+.purple-to-navy{
+  animation: purpleToNavy .4s forwards;
+  -webkit-animation: purpleToNavy .4s forwards;
+}
+.navy-to-purple {
+  animation: navyToPurple .4s forwards;
+  -webkit-animation: navyToPurple .4s forwards;
 }
