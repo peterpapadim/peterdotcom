@@ -38,7 +38,7 @@ class WorkTimelineItem extends Component {
 
     if(this.props.scrollDirection === 'right' || this.props.initialGrowth){
       if(!this.state.grownStatus){
-        if( offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 40){
+        if( offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 5){
           if(this.state.growAnimation === 'hovered'){
             this.setState({growAnimation: 'hovered-to-grow', grownStatus: true})
           }
@@ -52,7 +52,7 @@ class WorkTimelineItem extends Component {
         }
       }
       else{
-        if( !(offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 40)){
+        if( !(offsetLeftAdjusting > blurbLeft - 280 && offsetLeftAdjusting <= blurbLeft + 5)){
           // if(this.props.id === '2'){console.log('shrink')}
           this.setState({growAnimation: 'shrink', grownStatus: false})
         }
@@ -60,7 +60,7 @@ class WorkTimelineItem extends Component {
     }
     else if(this.props.scrollDirection === 'left'){
       if(!this.state.grownStatus){
-        if( offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 200){
+        if( offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 165){
           if(this.state.growAnimation === 'hovered'){
             this.setState({growAnimation: 'hovered-to-grow', grownStatus: true})
           }
@@ -74,7 +74,7 @@ class WorkTimelineItem extends Component {
         }
       }
       else{
-        if( !(offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 200)){
+        if( !(offsetLeftAdjusting > blurbLeft - 120 && offsetLeftAdjusting <= blurbLeft + 165)){
           // if(this.props.id === '2'){console.log('shrink')}
           this.setState({growAnimation: 'shrink', grownStatus: false})
         }
@@ -105,8 +105,8 @@ class WorkTimelineItem extends Component {
 
   render(){
     return(
-      <div ref="workTimelineItem" onClick={this.handleItemClick} onMouseEnter={this.handleItemMouseEnter} onMouseLeave={this.handleItemMouseLeave} style={{height: '270px', width: '270px', display: 'inline-block', margin: '0 25px', zIndex: '2', cursor: 'pointer'}}>
-        <div className={this.state.growAnimation} style={{ background: `url(${this.props.featuredImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '220px', width: '220px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5',  margin: '0 auto'}}>
+      <div ref="workTimelineItem" onClick={this.handleItemClick} onMouseEnter={this.handleItemMouseEnter} onMouseLeave={this.handleItemMouseLeave} style={{height: '255px', width: '255px', display: 'inline-block', margin: '0 15px', zIndex: '2', cursor: 'pointer'}}>
+        <div className={this.state.growAnimation} style={{ background: `url(${this.props.featuredImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '180px', width: '180px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5',  margin: '0 auto'}}>
         </div>
       </div>
     )
