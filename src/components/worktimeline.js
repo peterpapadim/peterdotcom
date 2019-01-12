@@ -12,7 +12,7 @@ var smoothScroll = require('smoothscroll');
 
 var caseStudyInfo = {
   baronFig: {title: "Baron Fig", about: "We make tools for thinkers."},
-  reelSquad: {title: "ReelSquad", about: "Reelsquad sample text"},
+  reelSquad: {title: "ReelSquad", about: "Groups and squads meets movie nights."},
   pageClub: {title: "Page Club", about: "Page Club sample text"},
   instalytics: {title: "Instalytics", about: "Instalytics sample text"},
   codePeter: {title: "CodePeter", about: "CodePeter sample text"}
@@ -145,7 +145,7 @@ class WorkTimeline extends Component {
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='blue-to-yellow' colorAnimationReverse='purple-to-yellow' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.pageClub} featuredImg={pageclubFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='yellow-to-purple' colorAnimationReverse='navy-to-purple' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.instalytics} featuredImg={instalyticsFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='purple-to-navy' colorAnimationReverse='navy-to-purple' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.codePeter} featuredImg={codePeterFeaturedImg}/>
-            <div style={{width: '1600px', paddingLeft: '50px', position: 'absolute', top: '50%', transform: 'translateY(-50%)',  zIndex: '-1'}}>
+            <div style={{width: '1365px', paddingLeft: '140px', position: 'absolute', top: '50%', transform: 'translateY(-50%)',  zIndex: '-1'}}>
               <div className={this.props.colorAnimation} style={{display: 'inline-block', verticalAlign: 'middle', height: '8px', width: '100%', backgroundColor: this.props.initialColor, position: 'relative',}}></div>
               <div className={this.props.colorAnimation} style={{display: 'inline-block', verticalAlign: 'middle', height: '40px', width: '40px', background: this.props.initialColor, position: 'relative', borderRadius: '20px', right: '2px'}}></div>
             </div>
