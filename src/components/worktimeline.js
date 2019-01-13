@@ -37,7 +37,42 @@ class WorkTimeline extends Component {
     }
   }
 
+  preventBackButtonOnContainerScroll = () => {
+     // This code is only valid for Mac
+     if (!navigator.userAgent.match(/Macintosh/)) {
+       return;
+     }
+
+     // Detect browsers
+     var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+     var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+     var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+     // Handle scroll events in Chrome, Safari, and Firefox
+     if (is_chrome || is_safari || is_firefox) {
+       $(window).on('mousewheel', function (e) {
+         var prevent_left, prevent_up;
+
+         // If none of the parents can be scrolled left when we try to scroll left
+         prevent_left = e.deltaX < 0 && $(e.target).parents().filter(function() {
+           return $(this).scrollLeft() > 0;
+         }).length === 0;
+
+         // If none of the parents can be scrolled up when we try to scroll up
+         prevent_up = e.deltaY > 0 && !$(e.target).parents().filter(function() {
+           return $(this).scrollTop() > 0;
+         }).length === 0;
+
+         // Prevent futile scroll, which would trigger the Back/Next page event
+         if (prevent_left || prevent_up) {
+           e.preventDefault();
+         }
+       });
+     }
+  }
+
   componentDidMount(){
+    this.preventBackButtonOnContainerScroll()
     window.addEventListener('resize', this.setPaddingLeftAndRight)
     this.setState({containerWidth: document.getElementsByClassName('worktimeline-container')[0].scrollWidth})
     this.setPaddingLeftAndRight()
