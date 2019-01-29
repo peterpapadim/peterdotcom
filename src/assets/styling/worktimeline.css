@@ -58,8 +58,8 @@
 
 .hovered-to-grow {
   /* background: red!important; */
-  animation: grow .4s forwards;
-  -webkit-animation: grow .4s forwards;
+  animation: hoveredToGrow .4s forwards;
+  -webkit-animation: hoveredToGrow .4s forwards;
 }
 
 

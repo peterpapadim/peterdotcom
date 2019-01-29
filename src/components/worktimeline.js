@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import WorkTimelineItem from './worktimeline-item';
 import $ from "jquery";
+import _ from "lodash";
 import baronFigFeaturedImg from '../assets/case-studies/baron-fig/baron-fig_home.png';
 import reelsquadFeaturedImg from '../assets/case-studies/reelsquad/reelsquad_home.png';
 import pageclubFeaturedImg from '../assets/case-studies/pageclub/pageclub_home.png';
@@ -38,6 +39,10 @@ class WorkTimeline extends Component {
   }
 
   componentDidMount(){
+    this.preventBackButtonOnContainerScroll()
+    $('.worktimeline-container').on('scroll', _.throttle(function(event){
+      this.handleContainerScroll(event);
+    }.bind(this), 25));
     window.addEventListener('resize', this.setPaddingLeftAndRight)
     this.setState({containerWidth: document.getElementsByClassName('worktimeline-container')[0].scrollWidth})
     this.setPaddingLeftAndRight()
@@ -49,6 +54,40 @@ class WorkTimeline extends Component {
     window.removeEventListener('resize', this.setPaddingLeftAndRight)
     window.removeEventListener('keydown', this.leftAndRightKeyEventListener)
   }
+
+  preventBackButtonOnContainerScroll = () => {
+   // This code is only valid for Mac
+   if (!navigator.userAgent.match(/Macintosh/)) {
+     return;
+   }
+
+   // Detect browsers
+   var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+   var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+   var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+   // Handle scroll events in Chrome, Safari, and Firefox
+   if (is_chrome || is_safari || is_firefox) {
+     $(window).on('mousewheel', function (e) {
+       var prevent_left, prevent_up;
+
+       // If none of the parents can be scrolled left when we try to scroll left
+       prevent_left = e.deltaX < 0 && $(e.target).parents().filter(function() {
+         return $(this).scrollLeft() > 0;
+       }).length === 0;
+
+       // If none of the parents can be scrolled up when we try to scroll up
+       prevent_up = e.deltaY > 0 && !$(e.target).parents().filter(function() {
+         return $(this).scrollTop() > 0;
+       }).length === 0;
+
+       // Prevent futile scroll, which would trigger the Back/Next page event
+       if (prevent_left || prevent_up) {
+         e.preventDefault();
+       }
+     });
+   }
+}
 
   leftAndRightKeyEventListener = (e) => {
     if(e.keyCode == 37) { // left arrow key
@@ -139,7 +178,7 @@ class WorkTimeline extends Component {
   render(){
     return(
       <div>
-        <div onScroll={(e) => this.handleContainerScroll(e)} ref="worktimelineContainer" className='worktimeline-container' style={this.state.styles}>
+        <div ref="worktimelineContainer" className='worktimeline-container' style={this.state.styles}>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} blurbLeft={this.state.styles.blurbLeft} setTriggerItemSizeCheck={this.setTriggerItemSizeCheck} initialGrowth={this.state.initialGrowth} resetInitialGrowth={this.resetInitialGrowth} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.baronFig} featuredImg={baronFigFeaturedImg} first={true}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='green-to-blue' colorAnimationReverse='yellow-to-blue' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.reelSquad} featuredImg={reelsquadFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='blue-to-yellow' colorAnimationReverse='purple-to-yellow' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.pageClub} featuredImg={pageclubFeaturedImg}/>
