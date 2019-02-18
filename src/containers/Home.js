@@ -28,6 +28,7 @@ class Home extends Component {
         resumeLoaded: false
       }
     )
+    this.props.updateBackgroundImage(null)
   }
 
   setColorAnimation = (className) => {

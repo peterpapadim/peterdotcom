@@ -8,29 +8,31 @@
     src: url('assets/font/tiempos_headline-black.ttf');
 }
 
-/* html, body {
-  height: 100%;
-} */
-
-
-body {
-  margin: 0px;
-  font-family: avenirNext-Medium;
-  color: #8392A6;
-}
-
-
-
 
 html {
     overflow: scroll;
     overflow-x: hidden;
+    height: 100%;
+    /* background: #F8F9FC; */
+    /* background: url('assets/background/bg_wave.svg'); */
 }
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
+
+body {
+  margin: 0px;
+  font-family: avenirNext-Medium;
+  color: #8392A6;
+  height: 100%;
+}
+
+
+#root {
+  height: 100%;
+}
 
 
 
@@ -40,7 +42,7 @@ html {
   100% { opacity: 1 }
 }
 
-@-webkit-keyframes fade-In {
+@-webkit-keyframes fadeIn {
   0% { opacity: 0 }
   100% { opacity: 1 }
 }
@@ -48,4 +50,21 @@ html {
 .fade-in {
   animation: fadeIn 1s forwards;
   -webkit-animation: fadeIn 1s forwards;
+}
+
+
+
+@keyframes fadeInPage {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@-webkit-keyframes fadeInPage {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.fade-in-page {
+  animation: fadeInPage .5s forwards;
+  -webkit-animation: fadeInPage .5s forwards;
 }

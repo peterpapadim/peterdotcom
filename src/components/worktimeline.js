@@ -43,6 +43,9 @@ class WorkTimeline extends Component {
     $('.worktimeline-container').on('scroll', _.throttle(function(event){
       this.handleContainerScroll(event);
     }.bind(this), 25));
+    $('.worktimeline-container').on('touchmove', function(e){
+      e.preventDefault()
+    })
     window.addEventListener('resize', this.setPaddingLeftAndRight)
     this.setState({containerWidth: document.getElementsByClassName('worktimeline-container')[0].scrollWidth})
     this.setPaddingLeftAndRight()
