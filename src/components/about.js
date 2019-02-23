@@ -22,57 +22,108 @@ class About extends Component {
 
   render(){
     return(
-      <div style={{width: '100%', position: 'absolute', top: '0', zIndex: '-1'}}>
-        <div style={{background: "url('assets/background/bg_wave-blur.svg')", position: 'relative', width: '100%', minHeight: '1000px', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
-          <div className='fade-in-page' style={{paddingTop: '150px'}}>
-            <p style={{marginTop: '0px'}}>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p>TESTING</p>
-            <p style={{marginBottom: '0px'}}>TESTING</p>
+        <div>
+          <div style={{backgroundImage: 'url(assets/background/bg_wave-50opac-2.svg)', backgroundRepeat: 'no-repeat', width: '100%', backgroundSize: '100%', position: 'absolute', top: '0', backgroundPosition: 'right top'}}>
+              <div className='fade-in-page' >
+                <p style={{marginTop: '0px'}}>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p style={{marginBottom: '0px'}}>TESTING</p>
+              </div>
           </div>
         </div>
-      </div>
     )
   }
 }
 
 export default About
+
+
+
+// <div>
+//   <img src='assets/background/bg_wave-50opac-2.svg' style={{width: '100%', position: 'absolute', top: '0'}}/>
+//   <div className='fade-in-page' >
+//     <p style={{marginTop: '0px'}}>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p>TESTING</p>
+//     <p style={{marginBottom: '0px'}}>TESTING</p>
+//   </div>
+// </div>
