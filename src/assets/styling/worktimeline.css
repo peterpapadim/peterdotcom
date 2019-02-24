@@ -232,3 +232,10 @@
   animation: navyToPurple .4s forwards;
   -webkit-animation: navyToPurple .4s forwards;
 }
+
+
+@media(max-width: 875px){
+  .worktimeline-container{
+    display: none;
+  }
+}
