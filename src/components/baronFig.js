@@ -1,0 +1,153 @@
+import React, {Component} from 'react'
+import BaronFigBackground from '../assets/works/baron-fig/baronfig_casestudy_header.png';
+
+class BaronFig extends Component {
+  constructor(){
+    super();
+    this.state = {}
+  }
+
+  componentDidMount(){
+    window.scrollTo(0, 0)
+    this.props.resetLoadedComponent()
+    this.props.updateBackgroundImage(BaronFigBackground)
+  }
+
+  render(){
+    return(
+        <div>
+          <div style={{backgroundImage: 'url(assets/background/bg_wave-50opac-2.svg)', backgroundRepeat: 'no-repeat', width: '100%', backgroundSize: '100%', position: 'absolute', top: '0', backgroundPosition: 'right top'}}>
+              <div className='fade-in-page' >
+                <p style={{marginTop: '0px'}}>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p>TESTING</p>
+                <p style={{marginBottom: '0px'}}>TESTING</p>
+              </div>
+          </div>
+        </div>
+    )
+  }
+}
+
+export default BaronFig;

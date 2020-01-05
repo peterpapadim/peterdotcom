@@ -2,18 +2,18 @@ import React, {Component} from 'react';
 import WorkTimelineItem from './worktimeline-item';
 import $ from "jquery";
 import _ from "lodash";
-import baronFigFeaturedImg from '../assets/case-studies/baron-fig/baron-fig_home.png';
-import reelsquadFeaturedImg from '../assets/case-studies/reelsquad/reelsquad_home.png';
-import pageclubFeaturedImg from '../assets/case-studies/pageclub/pageclub_home.png';
-import instalyticsFeaturedImg from '../assets/case-studies/instalytics/instalytics_home.png';
-import codePeterFeaturedImg from '../assets/case-studies/codepeter/code-peter_home.png';
+import baronFigFeaturedImg from '../assets/works/baron-fig/baron-fig_home.png';
+import haikuProjectFeaturedImg from '../assets/works/haikuProject/haiku-project_home.png';
+import pageclubFeaturedImg from '../assets/works/pageclub/pageclub_home.png';
+import instalyticsFeaturedImg from '../assets/works/instalytics/instalytics_home.png';
+import codePeterFeaturedImg from '../assets/works/codepeter/code-peter_home.png';
 import '../assets/styling/worktimeline.css';
 
 var smoothScroll = require('smoothscroll');
 
 var caseStudyInfo = {
   baronFig: {title: "Baron Fig", about: "We make tools for thinkers."},
-  reelSquad: {title: "ReelSquad", about: "Groups and squads meets movie nights."},
+  haikuProject: {title: "The Global Haiku Project", about: "Build haikus with people around the world."},
   pageClub: {title: "Page Club", about: "Page Club sample text"},
   instalytics: {title: "Instalytics", about: "Instalytics sample text"},
   codePeter: {title: "CodePeter", about: "CodePeter sample text"}
@@ -43,9 +43,9 @@ class WorkTimeline extends Component {
     $('.worktimeline-container').on('scroll', _.throttle(function(event){
       this.handleContainerScroll(event);
     }.bind(this), 25));
-    $('.worktimeline-container').on('touchmove', function(e){
-      e.preventDefault()
-    })
+    // $('.worktimeline-container').on('touchmove', function(e){
+    //   e.preventDefault()
+    // })
     window.addEventListener('resize', this.setPaddingLeftAndRight)
     this.setState({containerWidth: document.getElementsByClassName('worktimeline-container')[0].scrollWidth})
     this.setPaddingLeftAndRight()
@@ -93,7 +93,7 @@ class WorkTimeline extends Component {
 }
 
   leftAndRightKeyEventListener = (e) => {
-    if(e.keyCode == 37) { // left arrow key
+    if(e.keyCode === 37) { // left arrow key
       let currentIndex = this.state.offsetInitialValues.indexOf(this.state.offsetLeftCurrentGrown)
       if(currentIndex > 0){
         $(document.getElementsByClassName('worktimeline-container')).animate({
@@ -101,7 +101,7 @@ class WorkTimeline extends Component {
         })
       }
     }
-    else if(e.keyCode == 39) { // right arrow key
+    else if(e.keyCode === 39) { // right arrow key
       let currentIndex = this.state.offsetInitialValues.indexOf(this.state.offsetLeftCurrentGrown)
       if(currentIndex < 4){
         $(document.getElementsByClassName('worktimeline-container')).animate({
@@ -174,8 +174,10 @@ class WorkTimeline extends Component {
   }
 
   handleContainerScroll = (e) => {
-    this.setTriggerItemSizeCheck(true)
-    this.setScrollDirection(e)
+    if(e.target.scrollLeft >= 0){
+      this.setTriggerItemSizeCheck(true)
+      this.setScrollDirection(e)
+    }
   }
 
   render(){
@@ -183,7 +185,7 @@ class WorkTimeline extends Component {
       <div>
         <div ref="worktimelineContainer" className='worktimeline-container' style={this.state.styles}>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} blurbLeft={this.state.styles.blurbLeft} setTriggerItemSizeCheck={this.setTriggerItemSizeCheck} initialGrowth={this.state.initialGrowth} resetInitialGrowth={this.resetInitialGrowth} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.baronFig} featuredImg={baronFigFeaturedImg} first={true}/>
-          <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='green-to-blue' colorAnimationReverse='yellow-to-blue' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.reelSquad} featuredImg={reelsquadFeaturedImg}/>
+          <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='green-to-blue' colorAnimationReverse='yellow-to-blue' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.haikuProject} featuredImg={haikuProjectFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='blue-to-yellow' colorAnimationReverse='purple-to-yellow' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.pageClub} featuredImg={pageclubFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='yellow-to-purple' colorAnimationReverse='navy-to-purple' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.instalytics} featuredImg={instalyticsFeaturedImg}/>
           <WorkTimelineItem updateInitialOffsetLeftValues={this.updateInitialOffsetLeftValues} updateOffsetLeftCurrentGrown={this.updateOffsetLeftCurrentGrown} triggerItemSizeCheck={this.state.triggerItemSizeCheck} scrollDirection={this.state.scrollDirection} setColorAnimation={this.props.setColorAnimation} colorAnimationForward='purple-to-navy' colorAnimationReverse='navy-to-purple' blurbLeft={this.state.styles.blurbLeft} updateTitleAndAbout={this.props.updateTitleAndAbout} caseStudyInfo={caseStudyInfo.codePeter} featuredImg={codePeterFeaturedImg}/>

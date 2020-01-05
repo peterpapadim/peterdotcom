@@ -34,7 +34,7 @@
 
 @media(max-width: 875px){
   .casestudy-container{
-    display: none;
+    /* display: none; */
   }
   .home.item > .header{
     padding-left: 0px;

@@ -10,7 +10,7 @@ class Navbar extends Component {
     super();
     this.state = {
       mobileMenuOpened: false,
-      homeSelected: false,
+      homeSelected: true,
       aboutSelected: false,
       worksSelected: false,
       blogSelected: false,
@@ -33,6 +33,9 @@ class Navbar extends Component {
     }
     else if(props.loadedComponent.resumeLoaded){
       this.setState({ homeSelected: false, aboutSelected: false, worksSelected: false, blogSelected: false, resumeSelected: true})
+    }
+    else {
+      this.setState({ homeSelected: false, aboutSelected: false, worksSelected: false, blogSelected: false, resumeSelected: false})
     }
   }
 

@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import '../assets/styling/casestudy.css';
+import {Link} from 'react-router-dom';
 
 class CaseStudy extends Component {
   constructor(){
@@ -28,8 +29,10 @@ class CaseStudy extends Component {
           <p className='about'>{this.props.about}</p>
         </div>
         <div className='view-case-study-container'>
+          <Link to='/baron-fig'>
           <p className={this.props.colorAnimation + ' view-case-study'} style={{color: this.props.initialColor}}>View Case Study</p>
           {this.renderArrowSvg()}
+          </Link>
         </div>
       </div>
     )

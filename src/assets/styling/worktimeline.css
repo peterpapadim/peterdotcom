@@ -5,6 +5,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   position: relative;
+  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -236,6 +237,7 @@
 
 @media(max-width: 875px){
   .worktimeline-container{
-    display: none;
+    padding-left: 20px!important;
+    padding-right: 0px!important;
   }
 }

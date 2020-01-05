@@ -30,14 +30,14 @@
   width: 255px;
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study{
+.casestudy-container  > .view-case-study-container > a > .view-case-study{
   margin-top: 12px;
   font-size: 14px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.casestudy-container  > .view-case-study-container > .arrow-icon{
+.casestudy-container  > .view-case-study-container > a > .arrow-icon{
   display: inline-block;
   vertical-align: middle;
   margin-left: 12px;
@@ -128,11 +128,11 @@
   100% { color: #22C995; fill: #22C995; }
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.green-to-blue {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.green-to-blue {
   animation: greenToBlueText .4s forwards;
   -webkit-animation: greenToBlueText .4s forwards;
 }
-.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-green {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.blue-to-green {
   animation: blueToGreenText .4s forwards;
   -webkit-animation: blueToGreenText .4s forwards;
 }
@@ -161,11 +161,11 @@
   100% { color: #0509FF; fill: #0509FF; }
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.blue-to-yellow {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.blue-to-yellow {
   animation: blueToYellowText .4s forwards;
   -webkit-animation: blueToYellowText .4s forwards;
 }
-.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-blue {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.yellow-to-blue {
   animation: yellowToBlueText .4s forwards;
   -webkit-animation: yellowToBlueText .4s forwards;
 }
@@ -194,11 +194,11 @@
   100% { color: #FFD83A; fill: #FFD83A; }
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.yellow-to-purple {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.yellow-to-purple {
   animation: yellowToPurpleText .4s forwards;
   -webkit-animation: yellowToPurpleText .4s forwards;
 }
-.casestudy-container  > .view-case-study-container > .view-case-study.purple-to-yellow {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.purple-to-yellow {
   animation: purpleToYellowText .4s forwards;
   -webkit-animation: purpleToYellowText .4s forwards;
 }
@@ -227,11 +227,21 @@
   100% { color: #764ABC; fill: #764ABC; }
 }
 
-.casestudy-container  > .view-case-study-container > .view-case-study.purple-to-navy{
+.casestudy-container  > .view-case-study-container > a > .view-case-study.purple-to-navy{
   animation: purpleToNavyText .4s forwards;
   -webkit-animation: purpleToNavyText .4s forwards;
 }
-.casestudy-container  > .view-case-study-container > .view-case-study.navy-to-purple {
+.casestudy-container  > .view-case-study-container > a > .view-case-study.navy-to-purple {
   animation: navyToPurpleText .4s forwards;
   -webkit-animation: navyToPurpleText .4s forwards;
+}
+
+@media(max-width: 875px){
+  .casestudy-container {
+    width: 100%;
+    left: auto;
+    margin: 0px;
+    top: auto;
+    padding-left: 35px;
+  }
 }

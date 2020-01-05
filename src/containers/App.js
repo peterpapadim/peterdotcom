@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Navbar from '../components/navbar';
 import About from '../components/about';
+import BaronFig from '../components/baronFig';
 
 class App extends Component {
 
@@ -28,6 +29,16 @@ class App extends Component {
     this.setState({loadedComponent: state})
   }
 
+  resetLoadedComponent = () => {
+    this.setState({loadedComponent: {
+      homeLoaded: false,
+      aboutLoaded: false,
+      worksLoaded: false,
+      blogLoaded: false,
+      resumeLoaded: false
+    }}, console.log(this.state))
+  }
+
   updateBackgroundImage = (imgSrc) => {
     this.setState({backgroundImage: imgSrc})
   }
@@ -44,8 +55,9 @@ class App extends Component {
             <div>
               <Navbar loadedComponent={this.state.loadedComponent}/>
               <Switch>
-                <Route loadedComponent={this.state.loadedComponent} path="/about" render={() => (<About updatedLoadedComponent={this.updatedLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
-                <Route loadedComponent={this.state.loadedComponent} path="/" render={() => (<Home updatedLoadedComponent={this.updatedLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
+                <Route path="/about" render={() => (<About loadedComponent={this.state.loadedComponent} updatedLoadedComponent={this.updatedLoadedComponent} />)}/>
+                <Route path="/baron-fig" render={() => (<BaronFig resetLoadedComponent={this.resetLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
+                <Route path="/" render={() => (<Home loadedComponent={this.state.loadedComponent} updatedLoadedComponent={this.updatedLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
               </Switch>
           </div>
           </BrowserRouter>
