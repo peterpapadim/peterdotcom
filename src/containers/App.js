@@ -48,7 +48,7 @@ class App extends Component {
     return(
       <div style={{height: '100%'}}>
         <div style={{paddingBottom: '100px'}}>
-          <div style={{background: "url('assets/background/bg_wave-50opac-1.svg')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', minHeight: '100%', position: 'fixed', zIndex: '-1', backgroundPosition: 'top right'}}>
+          <div style={{background: "url('assets/background/bg_wave-50opac-1.svg')", backgroundRepeat: 'no-repeat', backgroundSize: '100%', width: '100%', minHeight: '100%', position: 'fixed', zIndex: '-1', backgroundPosition: 'right top'}}>
             {this.state.backgroundImage ? <div><img className="fade-in-page" style={{position: 'absolute', width: '50%', right: '0', top: '150px'}} src={this.state.backgroundImage}></img></div> : null}
           </div>
           <BrowserRouter>

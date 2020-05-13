@@ -15,8 +15,7 @@ class BaronFig extends Component {
 
   render(){
     return(
-        <div>
-          <div style={{backgroundImage: 'url(assets/background/bg_wave-50opac-2.svg)', backgroundRepeat: 'no-repeat', width: '100%', backgroundSize: '100%', position: 'absolute', top: '0', backgroundPosition: 'right top'}}>
+          <div className="test" style={{backgroundImage: 'url(assets/background/bg_wave-50opac-2.svg)', backgroundRepeat: 'no-repeat', width: '100%', backgroundSize: '100%', position: 'relative', top: '-90px', backgroundPosition: 'right top'}}>
               <div className='fade-in-page' >
                 <p style={{marginTop: '0px'}}>TESTING</p>
                 <p>TESTING</p>
@@ -145,7 +144,6 @@ class BaronFig extends Component {
                 <p style={{marginBottom: '0px'}}>TESTING</p>
               </div>
           </div>
-        </div>
     )
   }
 }

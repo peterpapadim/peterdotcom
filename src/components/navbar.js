@@ -94,7 +94,7 @@ class Navbar extends Component {
 
   render(){
     return (
-      <div className="navbar" style={{paddingTop: '40px', position: 'relative', zIndex: '10', left: '0', right: '0'}}>
+      <div className="navbar" style={{paddingTop: '40px', position: 'relative', zIndex: '10', left: '0', right: '0', display: 'flex', justifyContent: 'space-between'}}>
         <ul className="items left">
           <li><img src={logo_black}/></li>
           <li className="desktop-nav-item"><Link onClick={this.handleNavItemClick} className={this.state.homeSelected ? "selected" : ""} to='/'>Home</Link></li>

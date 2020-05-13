@@ -46,7 +46,7 @@ class Home extends Component {
   render(){
     return (
       <div>
-        <div style={{background: "url('assets/background/bg_wave-50opac-1.svg')", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', width: '100%', minHeight: '100%', position: 'fixed', zIndex: '-1', backgroundPosition: 'top right', top: '0'}}></div>
+        <div style={{background: "url('assets/background/bg_wave-50opac-1.svg')", backgroundRepeat: 'no-repeat', backgroundSize: '100%', width: '100%', minHeight: '100%', position: 'fixed', zIndex: '-1', backgroundPosition: 'right top', top: '0'}}></div>
         <div className="home fade-in">
           <div className="home item"><p className="header">Hi, I'm Peter!</p></div>
           <div className="home item"><p className="blurb">A Brooklyn hipster who doubles as a Full Stack Developer with a focus in Frontend Engineering.</p></div>
