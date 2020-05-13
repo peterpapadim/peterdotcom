@@ -16,7 +16,7 @@ var caseStudyInfo = {
   haikuProject: {title: "The Global Haiku Project", about: "Build haikus with people around the world."},
   pageClub: {title: "Page Club", about: "Page Club sample text"},
   instalytics: {title: "Instalytics", about: "Instalytics sample text"},
-  codePeter: {title: "CodePeter", about: "CodePeter sample text"}
+  codePeter: {title: "codepeter", about: "codepeter sample text"}
 }
 
 class WorkTimeline extends Component {
