@@ -29,7 +29,7 @@ class CaseStudy extends Component {
           <p className='about'>{this.props.about}</p>
         </div>
         <div className='view-case-study-container'>
-          <Link to='/baron-fig'>
+          <Link to='/baronfig'>
           <p className={this.props.colorAnimation + ' view-case-study'} style={{color: this.props.initialColor}}>View Case Study</p>
           {this.renderArrowSvg()}
           </Link>

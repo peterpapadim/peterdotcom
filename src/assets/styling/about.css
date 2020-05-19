@@ -1,0 +1,59 @@
+.about-page .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+.about-page .page-container .title {
+    margin-left: 15%;
+    padding-left: 15px;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    font-family: tiempos;
+    color: #17202A;
+    width: 663px;
+    font-size: 80px;
+    position: relative;
+}
+
+.about-page .page-container .blurb {
+    max-width: 710px;
+    position: relative;
+    padding: 0 15px;
+    font-size: 26px;
+    margin: 0px 15% 180px 15%;
+}
+
+.about-page .page-container .technical-skills {
+    max-width: 710px;
+    position: relative;
+    padding: 0 15px;
+    margin: 0 15%;
+}
+
+.about-page .page-container .technical-skills-title {
+    font-size: 26px;
+    font-family: tiempos;
+    color: #17202A;
+    margin-bottom: 30px;
+}
+
+.about-page .page-container .technical-skills-list-container {
+    display: flex;
+}
+
+.about-page .page-container .technical-skills-list-container .skills-col {
+    width: 193px;
+    margin-right: 65px;
+}
+
+.about-page .page-container .technical-skills-list-container .skills-col p {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 26px;
+}
+
+
+
+
+

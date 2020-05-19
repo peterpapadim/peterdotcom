@@ -9,9 +9,9 @@ class Home extends Component {
   constructor(){
     super();
     this.state = {
-      initialColor: "#22C995",
+      initialColor: "#855267",
       colorAnimation: '',
-      title: "Baron Fig",
+      title: "Baronfig",
       about: "We make tools for thinkers.",
       transitionStatus: "transition-in"
     }

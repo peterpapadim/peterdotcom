@@ -8,7 +8,9 @@
   -webkit-overflow-scrolling: touch;
 }
 
-
+.worktimeline-container .haiku {
+  border: 2px solid #bd362c;
+}
 
 
 @keyframes shrink {
@@ -105,133 +107,133 @@
 
 
 
-@keyframes greenToBlue {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+@keyframes figToRed {
+  0% { background-color: #855267; color: #855267; fill: #855267; }
+  100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
 }
 
-@-webkit-keyframes greenToBlue {
-  0% { background-color: #22C995; color: #22C995; fill: #22C995; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-}
-
-
-@keyframes blueToGreen {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
-}
-
-@-webkit-keyframes blueToGreen {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #22C995; color: #22C995; fill: #22C995; }
-}
-
-.green-to-blue {
-  animation: greenToBlue .4s forwards;
-  -webkit-animation: greenToBlue .4s forwards;
-}
-.blue-to-green {
-  animation: blueToGreen .4s forwards;
-  -webkit-animation: blueToGreen .4s forwards;
+@-webkit-keyframes figToRed {
+  0% { background-color: #855267; color: #855267; fill: #855267; }
+  100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
 }
 
 
-
-
-@keyframes blueToYellow {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+@keyframes redToFig {
+  0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
+  100% { background-color: #855267; color: #855267; fill: #855267; }
 }
 
-@-webkit-keyframes blueToYellow {
-  0% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
+@-webkit-keyframes redToFig {
+  0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
+  100% { background-color: #855267; color: #855267; fill: #855267; }
 }
 
-
-@keyframes yellowToBlue {
-  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
+.fig-to-red {
+  animation: figToRed .4s forwards;
+  -webkit-animation: figToRed .4s forwards;
 }
-
-@-webkit-keyframes yellowToBlue {
-  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #0509FF; color: #0509FF; fill: #0509FF; }
-}
-
-.blue-to-yellow {
-  animation: blueToYellow .4s forwards;
-  -webkit-animation: blueToYellow .4s forwards;
-}
-.yellow-to-blue {
-  animation: yellowToBlue .4s forwards;
-  -webkit-animation: yellowToBlue .4s forwards;
+.red-to-fig {
+  animation: redToFig .4s forwards;
+  -webkit-animation: redToFig .4s forwards;
 }
 
 
 
 
-@keyframes yellowToPurple {
-  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+@keyframes redToBlue {
+  0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
+  100% { background-color: #00279a; color: #00279a; fill: #00279a; }
 }
 
-@-webkit-keyframes yellowToPurple {
-  0% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
-}
-
-
-@keyframes purpleToYellow {
-  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
-  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-}
-
-@-webkit-keyframes purpleToYellow {
-  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
-  100% { background-color: #FFD83A; color: #FFD83A; fill: #FFD83A; }
-}
-
-.yellow-to-purple {
-  animation: yellowToPurple .4s forwards;
-  -webkit-animation: yellowToPurple .4s forwards;
-}
-.purple-to-yellow {
-  animation: purpleToYellow .4s forwards;
-  -webkit-animation: purpleToYellow .4s forwards;
+@-webkit-keyframes redToBlue {
+  0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
+  100% { background-color: #00279a; color: #00279a; fill: #00279a; }
 }
 
 
-
-
-@keyframes purpleToNavy {
-  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
-  100% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+@keyframes blueToRed {
+  0% { background-color: #00279a; color: #00279a; fill: #00279a; }
+  100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
 }
 
-@-webkit-keyframes purpleToNavy {
-  0% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
-  100% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
+@-webkit-keyframes blueToRed {
+  0% { background-color: #00279a; color: #00279a; fill: #00279a; }
+  100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
+}
+
+.red-to-blue {
+  animation: redToBlue .4s forwards;
+  -webkit-animation: redToBlue .4s forwards;
+}
+.blue-to-red {
+  animation: blueToRed .4s forwards;
+  -webkit-animation: blueToRed .4s forwards;
 }
 
 
-@keyframes navyToPurple {
-  0% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
-  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+
+
+@keyframes blueToAqua {
+  0% { background-color: #00279a; color: #00279a; fill: #00279a; }
+  100% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
 }
 
-@-webkit-keyframes navyToPurple {
-  0% { background-color: #0D2774; color: #0D2774; fill: #0D2774; }
-  100% { background-color: #764ABC; color: #764ABC; fill: #764ABC; }
+@-webkit-keyframes blueToAqua {
+  0% { background-color: #00279a; color: #00279a; fill: #00279a; }
+  100% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
 }
 
-.purple-to-navy{
-  animation: purpleToNavy .4s forwards;
-  -webkit-animation: purpleToNavy .4s forwards;
+
+@keyframes aquaToBlue {
+  0% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+  100% { background-color: #00279a; color: #00279a; fill: #00279a; }
 }
-.navy-to-purple {
-  animation: navyToPurple .4s forwards;
-  -webkit-animation: navyToPurple .4s forwards;
+
+@-webkit-keyframes aquaToBlue {
+  0% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+  100% { background-color: #00279a; color: #00279a; fill: #00279a; }
+}
+
+.blue-to-aqua {
+  animation: blueToAqua .4s forwards;
+  -webkit-animation: blueToAqua .4s forwards;
+}
+.aqua-to-blue {
+  animation: aquaToBlue .4s forwards;
+  -webkit-animation: aquaToBlue .4s forwards;
+}
+
+
+
+
+@keyframes aquaToBlack {
+  0% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+  100% { background-color: #000000; color: #000000; fill: #000000; }
+}
+
+@-webkit-keyframes aquaToBlack {
+  0% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+  100% { background-color: #000000; color: #000000; fill: #000000; }
+}
+
+
+@keyframes blackToAqua {
+  0% { background-color: #000000; color: #000000; fill: #000000; }
+  100% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+}
+
+@-webkit-keyframes blackToAqua {
+  0% { background-color: #000000; color: #000000; fill: #000000; }
+  100% { background-color: #1aa7bb; color: #1aa7bb; fill: #1aa7bb; }
+}
+
+.aqua-to-black{
+  animation: aquaToBlack .4s forwards;
+  -webkit-animation: aquaToBlack .4s forwards;
+}
+.black-to-aqua {
+  animation: blackToAqua .4s forwards;
+  -webkit-animation: blackToAqua .4s forwards;
 }
 
 

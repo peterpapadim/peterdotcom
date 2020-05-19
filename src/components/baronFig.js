@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import BaronFigBackground from '../assets/works/baron-fig/baronfig_casestudy_header.png';
+import BaronFigBackground from '../assets/works/baronfig/baronfig_casestudy_header.png';
 
 class BaronFig extends Component {
   constructor(){

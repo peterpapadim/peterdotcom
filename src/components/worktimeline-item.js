@@ -102,11 +102,10 @@ class WorkTimelineItem extends Component {
     })
   }
 
-
   render(){
     return(
       <div ref="workTimelineItem" onClick={this.handleItemClick} onMouseEnter={this.handleItemMouseEnter} onMouseLeave={this.handleItemMouseLeave} style={{height: '255px', width: '255px', display: 'inline-block', margin: '0 15px', zIndex: '2', cursor: 'pointer'}}>
-        <div className={this.state.growAnimation} style={{ background: `url(${this.props.featuredImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '180px', width: '180px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5',  margin: '0 auto'}}>
+        <div className={`${this.state.growAnimation} ${this.props.caseStudyInfo.title === "The Global Haiku Project" ? "haiku" : ""}`} style={{ background: `url(${this.props.featuredImg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', position: 'relative', top: '50%', transform: 'translateY(-50%)', height: '180px', width: '180px', borderRadius: '20px', boxShadow: '0 2px 10px 0 #E8EEF5',  margin: '0 auto'}}>
         </div>
       </div>
     )

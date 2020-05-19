@@ -36,7 +36,7 @@ class App extends Component {
       worksLoaded: false,
       blogLoaded: false,
       resumeLoaded: false
-    }}, console.log(this.state))
+    }})
   }
 
   updateBackgroundImage = (imgSrc) => {
@@ -47,7 +47,7 @@ class App extends Component {
   render(){
     return(
       <div style={{height: '100%'}}>
-        <div style={{paddingBottom: '100px'}}>
+        <div style={{paddingBottom: this.state.loadedComponent.homeLoaded ? '100px' : ''}}>
           <div style={{background: "url('assets/background/bg_wave-50opac-1.svg')", backgroundRepeat: 'no-repeat', backgroundSize: '100%', width: '100%', minHeight: '100%', position: 'fixed', zIndex: '-1', backgroundPosition: 'right top'}}>
             {this.state.backgroundImage ? <div><img className="fade-in-page" style={{position: 'absolute', width: '50%', right: '0', top: '150px'}} src={this.state.backgroundImage}></img></div> : null}
           </div>
@@ -55,8 +55,8 @@ class App extends Component {
             <div>
               <Navbar loadedComponent={this.state.loadedComponent}/>
               <Switch>
-                <Route path="/about" render={() => (<About loadedComponent={this.state.loadedComponent} updatedLoadedComponent={this.updatedLoadedComponent} />)}/>
-                <Route path="/baron-fig" render={() => (<BaronFig resetLoadedComponent={this.resetLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
+                <Route path="/about" render={() => (<About loadedComponent={this.state.loadedComponent} updatedLoadedComponent={this.updatedLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
+                <Route path="/baronfig" render={() => (<BaronFig resetLoadedComponent={this.resetLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)} />)}/>
                 <Route path="/" render={() => (<Home loadedComponent={this.state.loadedComponent} updatedLoadedComponent={this.updatedLoadedComponent} updateBackgroundImage={this.updateBackgroundImage}/>)}/>
               </Switch>
           </div>

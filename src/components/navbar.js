@@ -96,7 +96,7 @@ class Navbar extends Component {
     return (
       <div className="navbar" style={{paddingTop: '40px', position: 'relative', zIndex: '10', left: '0', right: '0', display: 'flex', justifyContent: 'space-between'}}>
         <ul className="items left">
-          <li><img src={logo_black}/></li>
+          <li><Link onClick={this.handleNavItemClick} className={this.state.homeSelected ? "selected" : ""} to='/'><img src={logo_black}/></Link></li>
           <li className="desktop-nav-item"><Link onClick={this.handleNavItemClick} className={this.state.homeSelected ? "selected" : ""} to='/'>Home</Link></li>
           <li className="desktop-nav-item"><Link onClick={this.handleNavItemClick} className={this.state.aboutSelected ? "selected" : ""} to='/about'>About Me</Link></li>
           <li className="desktop-nav-item"><Link onClick={this.handleNavItemClick} className={this.state.worksSelected ? "selected" : ""} to='/works'>Works</Link></li>
