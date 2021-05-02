@@ -9,7 +9,7 @@ class Home extends Component {
   constructor(){
     super();
     this.state = {
-      initialColor: "#855267",
+      initialColor: "#000000",
       colorAnimation: '',
       title: "Baronfig",
       about: "We make tools for thinkers.",

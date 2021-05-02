@@ -50,7 +50,7 @@ class About extends Component {
                           <p>HTML</p>
                           <p>Shopify Themes & Storefront API</p>
                           <p>Heroku/AWS</p>
-                          <p>VWO A/B Testing</p>
+                          <p>VWO, Convert, & Optimize A/B Testing</p>
                         </div>
                       </div>
                     </div>

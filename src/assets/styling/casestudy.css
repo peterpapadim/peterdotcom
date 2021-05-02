@@ -27,7 +27,6 @@
   font-size: 16px;
   margin: 5px 0 0 0;
   font-weight: 600;
-  width: 255px;
 }
 
 .casestudy-container  > .view-case-study-container > a > .view-case-study{
@@ -108,24 +107,24 @@
 
 
 @keyframes figToRedText {
-  0% { color: #855267; fill: #855267; }
+  0% { color: #000000; fill: #000000; }
   100% { color: #bd362c; fill: #bd362c; }
 }
 
 @-webkit-keyframes figToRedText {
-  0% { color: #855267; fill: #855267; }
+  0% { color: #000000; fill: #000000; }
   100% { color: #bd362c; fill: #bd362c; }
 }
 
 
 @keyframes redToFigText {
   0% { color: #bd362c; fill: #bd362c; }
-  100% { color: #855267; fill: #855267; }
+  100% { color: #000000; fill: #000000; }
 }
 
 @-webkit-keyframes redToFigText {
   0% { color: #bd362c; fill: #bd362c; }
-  100% { color: #855267; fill: #855267; }
+  100% { color: #000000; fill: #000000; }
 }
 
 .casestudy-container  > .view-case-study-container > a > .view-case-study.fig-to-red {

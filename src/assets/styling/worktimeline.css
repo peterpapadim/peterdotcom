@@ -8,9 +8,9 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.worktimeline-container .haiku {
+/* .worktimeline-container .haiku {
   border: 2px solid #bd362c;
-}
+} */
 
 
 @keyframes shrink {
@@ -108,24 +108,24 @@
 
 
 @keyframes figToRed {
-  0% { background-color: #855267; color: #855267; fill: #855267; }
+  0% { background-color: #000000; color: #000000; fill: #000000; }
   100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
 }
 
 @-webkit-keyframes figToRed {
-  0% { background-color: #855267; color: #855267; fill: #855267; }
+  0% { background-color: #000000; color: #000000; fill: #000000; }
   100% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
 }
 
 
 @keyframes redToFig {
   0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
-  100% { background-color: #855267; color: #855267; fill: #855267; }
+  100% { background-color: #000000; color: #000000; fill: #000000; }
 }
 
 @-webkit-keyframes redToFig {
   0% { background-color: #bd362c; color: #bd362c; fill: #bd362c; }
-  100% { background-color: #855267; color: #855267; fill: #855267; }
+  100% { background-color: #000000; color: #000000; fill: #000000; }
 }
 
 .fig-to-red {
